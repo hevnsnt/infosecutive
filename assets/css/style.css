@@ -9,9 +9,19 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+:root {
+  --color-primary: #1a237e;    /* deep navy */
+  --color-secondary: #283593;  /* indigo */
+  --color-accent: #ff6f00;     /* amber */
+  --color-light: #f5f5f5;
+  --font-heading: 'Raleway', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
 body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
+  font-family: var(--font-body);
+  color: #333;
+  background: var(--color-light);
 }
 
 a {
@@ -24,13 +34,17 @@ a:hover {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Raleway", sans-serif;
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+}
+.btn-get-started, .cta .cta-btn, .pricing .btn-buy {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.btn-get-started:hover, .cta .cta-btn:hover, .pricing .btn-buy:hover {
+  background: #ffa000;
+  border-color: #ffa000;
 }
 
 /*--------------------------------------------------------------
@@ -341,6 +355,19 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+#hero { position: relative; }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 1;
+}
+#hero .carousel-container {
+  position: relative;
+  z-index: 2;
+}
+
 #hero {
   width: 100%;
   overflow: hidden;
@@ -679,7 +706,12 @@ section {
   background: #2a2c39;
   padding: 80px 0;
 }
-
+.cta-tagline {
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
 .cta h3 {
   color: #fff;
   font-size: 28px;
@@ -778,6 +810,28 @@ section {
   line-height: 24px;
   margin-bottom: 0;
 }
+
+.take-home-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.feature-item {
+  display: flex;
+  align-items: start;
+}
+.feature-item i {
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.25rem;
+}
+.feature-item p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+
 
 /*--------------------------------------------------------------
 # Portfolio
