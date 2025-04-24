@@ -1632,3 +1632,24 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+/* Make every .member-img a fixed-height “window” */
+.member-img {
+  height: 300px;         /* pick whatever uniform height you like */
+  overflow: hidden;
+  border-radius: 8px;    /* optional: round the corners to match your design */
+}
+
+/* Force the img to fill that window, crop with object-fit, and go grayscale */
+.member-img img {
+  width: 100%;
+  height: 100%;
+  object-position: top;    /* <-- anchor to the top edge */
+  object-fit: cover;     /* fills the box, cropping when needed */
+  filter: grayscale(100%);
+  transition: filter .3s ease; /* optional: smooth hover transition */
+}
+
+/* If you’d like them to pop back into color on hover: */
+.member-img img:hover {
+  filter: none;
+}
