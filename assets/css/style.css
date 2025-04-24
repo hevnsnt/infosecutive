@@ -989,11 +989,14 @@ section {
 
 .testimonials .testimonial-item {
   box-sizing: content-box;
-  padding: 30px 30px 0 30px;
-  margin: 30px 15px;
+  padding: 20px;
+  margin: 15px;
   text-align: center;
-  min-height: 350px;
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  max-width: 420px;
+  min-height: auto;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  border-radius: 12px;
 }
 
 .testimonials .testimonial-item .testimonial-img {
