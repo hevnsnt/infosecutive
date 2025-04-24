@@ -1634,7 +1634,7 @@ section {
 }
 /* Make every .member-img a fixed-height “window” */
 .member-img {
-  height: 400px;         /* pick whatever uniform height you like */
+  height: 500px;         /* pick whatever uniform height you like */
   overflow: hidden;
   border-radius: 8px;    /* optional: round the corners to match your design */
 }
