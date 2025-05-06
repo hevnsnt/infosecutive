@@ -404,17 +404,41 @@
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container">
-
-        <div class="row" data-aos="zoom-out">
+    
+        <div class="row align-items-center" data-aos="zoom-out">
           <div class="col-lg-9 text-center text-lg-start">
-            <h3>REGISTER NOW</h3>
-            <p> Classes are extremely limited and will sell out. </p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">REGISTER NOW</a>
+            <h3>Be First in Line!</h3>
+            <p class="lead">
+              We’re gauging interest to make this Kansas City bootcamp happen! Reserve your spot in line today with no obligation to buy. You’ll only get essential updates and event dates (we promise no spam!).
+            </p>
+    
+            <form id="interest-form" action="https://formspree.io/f/meoggnlr" method="POST" class="row g-2">
+              <div class="col-sm-8">
+                <label for="email" class="visually-hidden">Email address</label>
+                <input
+                  type="email"
+                  class="form-control form-control-lg"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                >
+              </div>
+              <div class="col-sm-4">
+                <button type="submit" class="btn btn-primary btn-lg w-100">
+                  Keep me informed
+                </button>
+              </div>
+              <div class="col-12">
+                <small class="text-muted">
+                  We respect your inbox—only get updates on this event.
+                </small>
+              </div>
+            </form>
+            <!-- replace the container with a plain full‑width div -->
+            <div id="interest-form-status" class="mt-3 w-100"></div>
           </div>
         </div>
-        <p class="cta-tagline">Only 100 seats left for June 19, 2025!</p>
       </div>
     </section><!-- End Cta Section -->
 
