@@ -1653,3 +1653,20 @@ section {
 .member-img img:hover {
   filter: none;
 }
+
+/* 1) Orange “Keep me informed” button */
+#interest-form .btn {
+  background-color: #ef6603;   /* match your existing REGISTER button orange */
+  border-color:   #ef6603;
+  color:           #fff;       /* ensure the text stays white */
+}
+#interest-form .btn:hover,
+#interest-form .btn:focus {
+  background-color: #e68300;   /* a slightly darker hover state */
+  border-color:   #e68300;
+}
+
+/* 2) Lighten the “We respect your inbox…” text */
+#interest-form small.text-muted {
+  color: #ddd !important;      /* light grey so it’s legible on dark bg */
+}
