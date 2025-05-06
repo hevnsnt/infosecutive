@@ -1670,8 +1670,10 @@ section {
 #interest-form small.text-muted {
   color: #ddd !important;      /* light grey so it’s legible on dark bg */
 }
-#interest-form-status .alert {
-  font-size: 1rem;
-  max-width: 400px;
-  margin: 0 auto;
+
+/* make sure that alert really stands out */
+#interest-form-status .alert-light {
+  background-color: #fff !important;
+  color: #2a2c39 !important;
+  border: 1px solid #ddd !important;
 }
