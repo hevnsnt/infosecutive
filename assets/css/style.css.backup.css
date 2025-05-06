@@ -1,22 +1,21 @@
+/**
+* Template Name: Selecao
+* Updated: Sep 18 2023 with Bootstrap v5.3.2
+* Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
 
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 :root {
-  /* Palette */
-  --color-primary:   #1a237e;
-  --color-secondary: #283593;
-  --color-accent:    #ff6f00;
-  --color-light:     #f5f5f5;
-
-  /* Typography */
+  --color-primary: #1a237e;    /* deep navy */
+  --color-secondary: #283593;  /* indigo */
+  --color-accent: #ff6f00;     /* amber */
+  --color-light: #f5f5f5;
   --font-heading: 'Raleway', sans-serif;
-  --font-body:    'Open Sans', sans-serif;
-
-  /* CTA overrides */
-  --btn-accent:    var(--color-accent);
-  --btn-accent-h:  #e68300;
-  --text-light:    rgba(255,255,255,0.85);
+  --font-body: 'Open Sans', sans-serif;
 }
 
 body {
@@ -1657,48 +1656,71 @@ section {
 
 /*--------------------------------------------------------------
 # Custom Inline‑Form Overrides
-# Consolidated, simplified overrides for .interest-form
+# ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# Consolidated, no !important, uses CSS vars for brand colors
 --------------------------------------------------------------*/
-/* Inline‑form Flex Layout */
-.interest-form {
-  display:     flex;
-  flex-wrap:   wrap;
-  align-items: center;
-  gap:         0.5rem;
-  margin-bottom: 1rem;
+
+/* 1) Brand colors */
+:root {
+  --btn-accent:    var(--color-accent);     /* amber from template */
+  --btn-accent-h:  #e68300;                /* slightly darker hover */
 }
 
-.interest-form .form-control {
-  flex:      1 1 auto;
-  min-width: 0;
-}
-
+/* 2) Style the “Keep me informed” button */
 .interest-form .btn {
-  flex: 0 0 auto;
-  width: auto;
   background-color: var(--btn-accent);
   border-color:     var(--btn-accent);
   color:            #fff;
+  width:            auto;    /* override any w-100 */
+  margin:           0;       /* remove grid gutters */
+  flex:             0 0 auto;
 }
-
-.interest-form .btn:hover {
+.interest-form .btn:hover,
+.interest-form .btn:focus {
   background-color: var(--btn-accent-h);
   border-color:     var(--btn-accent-h);
 }
 
+/* 3) Make the form itself a flex‑row container */
+.interest-form {
+  display:     flex;
+  flex-wrap:   wrap;       /* allow small disclaimer to wrap below */
+  align-items: center;     /* vertically center input + button */
+  gap:         0.5rem;     /* space between input & button */
+  margin-bottom: 1rem;     /* optional, space from status */
+}
+
+/* 4) Let the input grow, keep its min-width so it doesn’t collapse */
+.interest-form .form-control {
+  flex:      1 1 auto;
+  min-width: 0; 
+}
+
+/* 5) Force disclaimer to its own line below */
 .interest-form small {
   flex-basis: 100%;
   margin-top: 0.5rem;
-  color: var(--text-light) !important;
+  color:      #ddd;        /* ensure light grey on dark bg */
 }
 
-/* Override Bootstrap‑grid widths for siblings */
+/* 6) Override Bootstrap grid widths inside the flex container */
 .interest-form > .col-sm-8,
 .interest-form > .col-sm-4,
 .interest-form > .col-12 {
-  padding: 0;
-  width:   auto;
+  padding-left:  0;
+  padding-right: 0;
+  width:         auto;
 }
-.interest-form > .col-sm-8 { flex: 1 1 auto; }
-.interest-form > .col-sm-4 { flex: 0 0 auto; }
-.interest-form > .col-12    { flex-basis: 100%; }
+.interest-form > .col-sm-8 {
+  flex: 1 1 auto;
+}
+.interest-form > .col-sm-4 {
+  flex: 0 0 auto;
+}
+.interest-form > .col-12 {
+  flex-basis: 100%;
+}
+/* Force the disclaimer under the input/button to a light grey */
+.interest-form small.text-muted {
+  color: #ddd !important;
+}
