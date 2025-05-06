@@ -1702,3 +1702,31 @@ section {
 .interest-form > .col-sm-8 { flex: 1 1 auto; }
 .interest-form > .col-sm-4 { flex: 0 0 auto; }
 .interest-form > .col-12    { flex-basis: 100%; }
+
+/* Accent color from your variables */
+.text-accent {
+  color: var(--btn-accent);
+}
+
+/* Upcoming Dates list styling */
+.upcoming-dates .list-group-item {
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.upcoming-dates .date {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.upcoming-dates .location {
+  font-size: 0.9rem;
+  color: #555; /* a dark grey for contrast */
+}
+
+/* Larger calendar icon */
+.upcoming-dates .bi-calendar-event-fill {
+  line-height: 1;
+  margin-top: 2px;
+}
