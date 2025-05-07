@@ -18,16 +18,19 @@
   --btn-accent-h:  #e68300;
   --text-light:    rgba(255,255,255,0.85);
 }
-/* make room for the fixed header so it doesn’t cover page content */
-body {
-  padding-top: 70px;  /* adjust this value to match your header’s actual height */
+#heroCarousel .carousel-container h2 {
+  /* min 1.8rem, fluid up to 3rem */
+  font-size: clamp(1.8rem, 6vw, 3rem);
 }
 
-/* on tablet/desktop, if you have a taller header */
-@media (min-width: 768px) {
-  body {
-    padding-top: 80px;
-  }
+#heroCarousel .carousel-container p {
+  /* min 1rem, fluid up to 1.25rem */
+  font-size: clamp(1rem, 3vw, 1.25rem);
+}
+
+#heroCarousel .btn-get-started {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 2.5vw, 1.5rem);
 }
 
 body {
