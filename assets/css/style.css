@@ -18,6 +18,17 @@
   --btn-accent-h:  #e68300;
   --text-light:    rgba(255,255,255,0.85);
 }
+/* make room for the fixed header so it doesn’t cover page content */
+body {
+  padding-top: 70px;  /* adjust this value to match your header’s actual height */
+}
+
+/* on tablet/desktop, if you have a taller header */
+@media (min-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+}
 
 body {
   font-family: var(--font-body);
