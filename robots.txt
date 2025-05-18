@@ -1,0 +1,6 @@
+# robots.txt for SixCyber
+User-agent: *
+Allow: /
+
+# Specify the sitemap location
+Sitemap: https://sixcyber.com/sitemap.xml
