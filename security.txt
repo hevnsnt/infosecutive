@@ -1,0 +1,5 @@
+# security.txt for sixcyber.com
+Contact: mailto:inifo@sixcyber.com
+Expires: 2030-12-31T23:59:00.000Z
+Preferred-Languages: en
+Policy: https://sixcyber.com/security-policy.html
