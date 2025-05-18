@@ -1,0 +1,16 @@
+/* TEAM */
+Developer: Bill Swearingen (Founder & Primary Instructor, SixCyber)
+Designer: BootstrapMade (Template Design)
+Content: Bill Swearingen (Founder & Primary Instructor, SixCyber)
+Content: Kristian Kennison (Event Coordinator)
+Content: [Other team members or contributors...]
+
+/* SITE */
+Site: SixCyber – Executive Cybersecurity Training for Small Businesses
+URL: https://sixcyber.com
+Location: Overland Park, Kansas, USA
+Launch: 2025
+
+/* TECHNOLOGY */
+Built with: HTML5, CSS3, Bootstrap framework
+Hosted on: GitHub Pages
