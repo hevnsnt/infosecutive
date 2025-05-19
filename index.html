@@ -159,7 +159,7 @@
             </p>
 
             <div class="text-center">
-              <button type="button" class="btn btn-primary btn-lg" id="openModal">
+              <button type="button" class="btn btn-primary btn-lg" id="openModalOne">
                 Reserve My Spot Now
               </button>
               <p class="text-muted mt-2" style="font-size: 0.9em;">
@@ -441,7 +441,7 @@
             </p>
     
             <div class="text-center">
-              <button type="button" class="btn btn-primary btn-lg" id="openModal">
+              <button type="button" class="btn btn-primary btn-lg" id="openModalTwo">
                 Register Now
               </button>
             </div>
@@ -733,19 +733,29 @@
     <span id="closeModal" style="position:absolute; top:10px; right:20px; font-size:28px; cursor:pointer;">&times;</span>
     <h3 class="mb-4">Ready to Register?</h3>
     <p>This will open our secure checkout powered by Brushfire.</p>
-    <a href="https://brushfire.com/sixcybercom/infosecutive/605573/register" target="_blank" class="btn btn-warning btn-lg mt-3">
+    <button class="btn btn-warning btn-lg mt-3" onclick="window.open('https://brushfire.com/sixcybercom/infosecutive/605573/register', '_blank')">
       Continue to Registration
-    </a>
+    </button>
   </div>
 </div>
+<!-- Modal Java Script -->
 <script>
   const modal = document.getElementById('registerModal');
-  const openModal = document.getElementById('openModal');
   const closeModal = document.getElementById('closeModal');
 
-  openModal.onclick = () => modal.style.display = 'block';
+  // Attach to both buttons
+  const openModalOne = document.getElementById('openModalOne');
+  const openModalTwo = document.getElementById('openModalTwo');
+
+  [openModalOne, openModalTwo].forEach(btn => {
+    if (btn) btn.onclick = () => modal.style.display = 'block';
+  });
+
   closeModal.onclick = () => modal.style.display = 'none';
-  window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = 'none';
+  };
 </script>
 </body>
 
