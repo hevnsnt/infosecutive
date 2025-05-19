@@ -439,29 +439,11 @@
               We’re gauging interest to make this Kansas City bootcamp happen! Reserve your spot in line today with no obligation to buy. You’ll only get essential updates and event dates (we promise no spam!).
             </p>
     
-            <form class="interest-form" action="https://formspree.io/f/meoggnlr" method="POST">
-              <div class="col-sm-8">
-                <label for="email" class="visually-hidden">Email address</label>
-                <input
-                  type="email"
-                  class="form-control form-control-lg"
-                  id="email"
-                  name="email"
-                  placeholder="you@example.com"
-                  required
-                >
-              </div>
-              <div class="col-sm-4">
-                <button type="submit" class="btn btn-primary btn-lg w-100">
-                  Keep me informed
-                </button>
-              </div>
-              <div class="col-12">
-                <small class="text-muted">
-                  We respect your inbox—only get updates on this event.
-                </small>
-              </div>
-            </form>
+            <div class="text-center">
+              <button type="button" class="btn btn-primary btn-lg" id="openModal">
+                Register Now
+              </button>
+            </div>
             <!-- replace the container with a plain full‑width div -->
             <div class="interest-form-status mt-3 w-100"></div>
           </div>
@@ -744,7 +726,26 @@
 
   gtag('config', 'G-LGZH2G1K23');
 </script>
+<!-- Modal Structure -->
+<div id="registerModal" class="modal" style="display:none; position:fixed; z-index:1000; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8);">
+  <div class="modal-dialog" style="max-width:600px; margin:10% auto; background:#fff; border-radius:8px; padding:30px; position:relative; text-align:center;">
+    <span id="closeModal" style="position:absolute; top:10px; right:20px; font-size:28px; cursor:pointer;">&times;</span>
+    <h3 class="mb-4">Ready to Register?</h3>
+    <p>This will open our secure checkout powered by Brushfire.</p>
+    <a href="https://brushfire.com/sixcybercom/infosecutive/605573/register" target="_blank" class="btn btn-warning btn-lg mt-3">
+      Continue to Registration
+    </a>
+  </div>
+</div>
+<script>
+  const modal = document.getElementById('registerModal');
+  const openModal = document.getElementById('openModal');
+  const closeModal = document.getElementById('closeModal');
 
+  openModal.onclick = () => modal.style.display = 'block';
+  closeModal.onclick = () => modal.style.display = 'none';
+  window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+</script>
 </body>
 
 </html>
