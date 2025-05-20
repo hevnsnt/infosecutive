@@ -325,13 +325,13 @@
                       <div class="location">St. Louis</div>
                       <br/>
                       <p class="mb-2">Registration isn’t open yet. Enter your email and we’ll notify you when it is.</p>
-                      <form id="my-form" action="https://formspree.io/f/meoggnlr" method="POST">
+                      <form id="ajax-email" action="https://formspree.io/f/meoggnlr" method="POST">
                         <div class="mb-2">
                           <input type="email" name="email" class="form-control form-control-sm" placeholder="you@example.com" required>
                         </div>
                         <input type="hidden" name="message" value="St. Louis registration interest">
-                        <button id="my-form-button" class="btn btn-primary btn-sm w-100">Notify Me</button>
-                        <p id="my-form-status" class="form-text mt-1"></p>
+                        <button id="ajax-email-button" class="btn btn-primary btn-sm w-100">Notify Me</button>
+                        <p id="ajax-email-status" class="form-text mt-1"></p>
                       </form>
                     </div>
                   </li>
@@ -720,6 +720,42 @@
 
   gtag('config', 'G-LGZH2G1K23');
 </script>
+
+<!-- Email Capture AJAX -->
+<script>
+  var form = document.getElementById("ajax-email");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("ajax-email-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset();
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form.";
+          }
+        });
+      }
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form.";
+    });
+  }
+  
+  form.addEventListener("submit", handleSubmit);
+</script>
+<!-- End Email Capture AJAX -->
 </body>
 
 </html>
