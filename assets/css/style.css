@@ -123,6 +123,7 @@ h1, h2, h3, h4 {
   background: rgba(42, 44, 57, 0.9);
 }
 
+/*
 #header .logo h1 {
   font-size: 28px;
   margin: 0;
@@ -130,7 +131,17 @@ h1, h2, h3, h4 {
   line-height: 1;
   font-weight: 700;
   letter-spacing: 1px;
+} */
+#header .logo h1 {
+  /* shrink/grow between 1.2rem and 2rem based on viewport width */
+  font-size: clamp(1.2rem, 6vw, 2rem);
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
+
 
 #header .logo h1 a,
 #header .logo h1 a:hover {
