@@ -1755,3 +1755,13 @@ section {
   line-height: 1;
   margin-top: 2px;
 }
+
+
+/*--------------------------------------------------------------
+# Success Page
+--------------------------------------------------------------*/
+#success {
+  background-color: #ffffff; /* Ensure it’s solid white, not light gray */
+  padding-top: 140px;        /* Keeps the  header from overlapping content */
+  padding-bottom: 80px;
+}
