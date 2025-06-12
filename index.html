@@ -60,17 +60,48 @@
       }
     }
     </script>
+
+  <style>
+    /* 1. Make the banner fixed at the very top */
+    #flash-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1031;          /* sit above the header */
+      background: #28a745;     /* or whatever “modern” green you like */
+      color: #fff;
+      text-align: center;
+      padding: 8px 0;
+      font-weight: bold;
+    }
+
+    /* 2. Restore header to static, then position it below banner */
+    #header {
+      position: fixed !important;
+      top: 40px;               /* match banner height */
+      width: 100%;
+      z-index: 1030;
+    }
+
+    /* 3. Push page content down so nothing sits underneath banner+header */
+    body {
+      padding-top: calc(40px /* banner */ + 60px /* header height */);
+    }
+  </style>
 </head>
 
 <body>
   <!-- Flash-sale banner -->
-  <div class="bg-success text-white text-center py-2 fw-bold">
+  <div id="flash-banner">
     ⚡ 48-Hour Flash Sale ends Sunday at midnight — save 35%! 
     <a href="#cta-one" class="text-white text-decoration-underline ms-1">Register Now</a>
   </div>
-  
+
+
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+  <!-- <header id="header" class="fixed-top d-flex align-items-center  header-transparent "> -->
+  <header id="header" class="d-flex align-items-center header-transparent"></header>  
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
