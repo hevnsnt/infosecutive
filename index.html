@@ -61,34 +61,45 @@
     }
     </script>
 
-  <style>
-    /* 1. Make the banner fixed at the very top */
-    #flash-banner {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1031;          /* sit above the header */
-      background: #28a745;     /* or whatever “modern” green you like */
-      color: #fff;
-      text-align: center;
-      padding: 8px 0;
-      font-weight: bold;
-    }
+<style>
+  /* 1) Flash banner stays green */
+  #flash-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1031;
+    background: #28a745;
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    font-weight: bold;
+  }
 
-    /* 2. Restore header to static, then position it below banner */
-    #header {
-      position: fixed !important;
-      top: 40px;               /* match banner height */
-      width: 100%;
-      z-index: 1030;
-    }
+  /* 2) Header pinned below the banner */
+  #header {
+    position: fixed !important;
+    top: 40px;             /* match the banner’s height */
+    width: 100%;
+    z-index: 1030;
+    background-color: transparent !important; /* force it transparent */
+  }
 
-    /* 3. Push page content down so nothing sits underneath banner+header */
-    body {
-      padding-top: calc(40px /* banner */ + 60px /* header height */);
-    }
-  </style>
+  /* 3) Keep your “header-transparent” link colors */
+  #header.header-transparent .navbar a {
+    color: #fff !important;
+  }
+
+  /* 4) When it scrolls, restore your normal background */
+  #header.header-scrolled {
+    background-color: rgba(255,255,255,0.9) !important;
+  }
+
+  /* 5) Push the page content down so nothing hides */
+  body {
+    padding-top: calc(40px /* banner */ + 60px /* header */);
+  }
+</style>
 </head>
 
 <body>
