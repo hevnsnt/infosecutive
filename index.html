@@ -1621,23 +1621,32 @@
       .then(response => response.json())
       .then(data => {
         const primaryCity = data.city || "Kansas City";
-        const nearbyCities = [primaryCity, "Kansas City", "Leawood", "Lenexa", "Olathe"]; // customize your cities
+        const nearbyCities = [primaryCity, "Kansas City", "Leawood", "Lenexa", "Olathe"];
         let currentIndex = 0;
-
         const cityElement = document.getElementById('user-city');
 
+        // Set initial city
+        cityElement.textContent = nearbyCities[currentIndex] + "'s";
+        cityElement.classList.add('show');
+
         function cycleCities() {
-          cityElement.textContent = nearbyCities[currentIndex] + "'s";
-          currentIndex = (currentIndex + 1) % nearbyCities.length;
+          // Fade out
+          cityElement.classList.remove('show');
+
+          setTimeout(() => {
+            // Update city after fade-out completes
+            currentIndex = (currentIndex + 1) % nearbyCities.length;
+            cityElement.textContent = nearbyCities[currentIndex] + "'s";
+
+            // Fade in
+            cityElement.classList.add('show');
+          }, 500); // matches CSS transition duration
         }
 
-        // Immediately show the user's detected city
-        cycleCities();
-
-        // Set interval for cycling through the cities (first city for 3 seconds, then others every 5 seconds)
+        // Start cycling after 3 seconds
         setTimeout(() => {
-          cycleCities(); // move to the next city after 3 seconds
-          setInterval(cycleCities, 5000); // then cycle every 5 seconds
+          cycleCities();
+          setInterval(cycleCities, 5000);
         }, 3000);
       })
       .catch(() => {
