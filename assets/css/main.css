@@ -4419,13 +4419,15 @@ section,
 }
 
 /* Custom Fade Animation for City Name Cycling - Added June 2025 */
-#user-city.fade {
+#user-city {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-#user-city.fade.show {
+#user-city.show {
   opacity: 1;
+  transform: scale(1);
 }
 
 /*--------------------------------------------------------------
