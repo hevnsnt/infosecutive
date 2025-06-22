@@ -1617,73 +1617,95 @@
   
   <!-- CityGetter JS -->
   <script>
-  fetch('https://ipapi.co/json/')
-    .then(r => r.json())
-    .then(userLocation => {
-      const cityEl = document.getElementById('user-city');
-      const { latitude, longitude } = userLocation;
-      const headers = {
-        'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
-        'x-rapidapi-key': '7af57ec512msh3e3807c0c39b82fp122b96jsna807f59fdea4'
-      };
-      const buildUrl = offset =>
-        `https://wft-geo-db.p.rapidapi.com/v1/geo/cities` +
-        `?location=${latitude}${longitude}` +
-        `&radius=50&limit=10&offset=${offset}&sort=-population`;
+    // 1️⃣ Suppress SES lockdown errors
+    window.onerror = function(msg, src) {
+      if (src && (src.includes('lockdown-install.js') || src.includes('lockdown-run.js'))) {
+        return true; 
+      }
+    };
 
-      // Fetch 2 pages → 20 total
-      Promise.all([
-        fetch(buildUrl(0), { method: 'GET', headers }).then(r => r.json()),
-        fetch(buildUrl(10), { method: 'GET', headers }).then(r => r.json())
-      ])
-      .then(results => {
-        // Combine and log the raw 20 names
-        const allPlaces = results.flatMap(page => page.data.map(p => p.name));
-        console.log('Fetched places (top 20):', allPlaces);
+    // 2️⃣ Main logic
+    fetch('https://ipapi.co/json/')
+      .then(r => {
+        if (!r.ok) throw new Error('Failed to get user location');
+        return r.json();
+      })
+      .then(userLocation => {
+        const cityEl = document.getElementById('user-city');
+        const { latitude, longitude, city: fallbackCity } = userLocation;
+        const headers = {
+          'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
+          'x-rapidapi-key': '7af57ec512msh3e3807c0c39b82fp122b96jsna807f59fdea4'
+        };
+        const buildUrl = offset =>
+          `https://wft-geo-db.p.rapidapi.com/v1/geo/cities` +
+          `?location=${latitude}${longitude}` +
+          `&radius=50&limit=10&offset=${offset}&sort=-population`;
 
-        // Filter out unwanted entries, dedupe
-        const cities = [...new Set(
-          allPlaces.filter(name =>
-            !name.includes(' County') &&
-            !name.toLowerCase().includes('metropolitan')
-          )
-        )];
-        console.log('Filtered cities:', cities);
-
-        // Fallback default
-        if (cities.length === 0) {
-          cities.push(userLocation.city || 'Kansas City');
-          console.log('Using fallback city:', cities);
+        // Helper to fetch one page safely
+        function fetchPage(offset) {
+          return fetch(buildUrl(offset), { headers })
+            .then(r => {
+              if (!r.ok) {
+                console.warn(`GeoDB API page ${offset/10} returned HTTP ${r.status}`);
+                return { data: [] };
+              }
+              return r.json();
+            })
+            .catch(err => {
+              console.error(`Error fetching page ${offset/10}:`, err);
+              return { data: [] };
+            });
         }
 
-        // Initialize cycling through every filtered city
-        let idx = 0;
-        cityEl.textContent = cities[idx] + "'s";
-        cityEl.classList.add('show');
+        // Fetch two pages (0 and 10)
+        Promise.all([fetchPage(0), fetchPage(10)])
+          .then(pages => {
+            // 3️⃣ Combine, log raw, filter & log filtered
+            const allPlaces = pages.flatMap(p => p.data.map(p => p.name));
+            console.log('Fetched places (up to 20):', allPlaces);
 
-        function cycle() {
-          cityEl.classList.remove('show');
-          setTimeout(() => {
-            idx = (idx + 1) % cities.length;
+            const cities = [...new Set(
+              allPlaces.filter(name =>
+                !name.includes(' County') &&
+                !name.toLowerCase().includes('metropolitan')
+              )
+            )];
+            console.log('Filtered cities:', cities);
+
+            // 4️⃣ Fallback if needed
+            if (!cities.length) {
+              cities.push(fallbackCity || 'Kansas City');
+              console.log('Using fallback city:', cities);
+            }
+
+            // 5️⃣ Cycle through whatever’s left
+            let idx = 0;
             cityEl.textContent = cities[idx] + "'s";
             cityEl.classList.add('show');
-          }, 500); // match your CSS transition
-        }
 
-        setTimeout(() => {
-          cycle();
-          setInterval(cycle, 5000);
-        }, 3000);
+            function cycle() {
+              cityEl.classList.remove('show');
+              setTimeout(() => {
+                idx = (idx + 1) % cities.length;
+                cityEl.textContent = cities[idx] + "'s";
+                cityEl.classList.add('show');
+              }, 500);
+            }
+
+            setTimeout(() => {
+              cycle();
+              setInterval(cycle, 5000);
+            }, 3000);
+          });
       })
       .catch(err => {
-        console.error('Error fetching nearby cities:', err);
-        cityEl.textContent = userLocation.city + "'s";
+        console.error('Overall error:', err);
+        // On any failure, just show the detected city
+        const cityEl = document.getElementById('user-city');
+        cityEl.textContent = err.city + "'s";
         cityEl.classList.add('show');
       });
-    })
-    .catch(err => {
-      console.error('Could not fetch user location:', err);
-    });
   </script>
   <!-- End CityGetter JS -->
 
