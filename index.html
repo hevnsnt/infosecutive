@@ -1622,8 +1622,9 @@
     .then(userLocation => {
       const cityElement = document.getElementById('user-city');
 
-      // GeoDB API endpoint, sorted by population descending to get largest nearby cities
-      fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/locations/${userLocation.latitude}${userLocation.longitude}/nearbyCities?radius=50&limit=10&sort=-population`, {
+      const { latitude, longitude } = userLocation;
+
+      fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/cities?location=${latitude}${longitude}&radius=50&limit=10&sort=-population`, {
         method: 'GET',
         headers: {
           'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
@@ -1632,9 +1633,10 @@
       })
       .then(response => response.json())
       .then(data => {
-        // Ensure only unique city names
-        const cities = [...new Set(data.data.map(city => city.city))];
+        // Get unique city names explicitly
+        const cities = [...new Set(data.data.map(city => city.name))];
 
+        // Fallback if no cities found
         if (cities.length === 0) {
           cities.push(userLocation.city || "Kansas City");
         }
