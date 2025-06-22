@@ -1621,33 +1621,42 @@
     .then(r => r.json())
     .then(userLocation => {
       const cityEl = document.getElementById('user-city');
+      const { latitude, longitude } = userLocation;
+      const headers = {
+        'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
+        'x-rapidapi-key': '7af57ec512msh3e3807c0c39b82fp122b96jsna807f59fdea4'
+      };
+      const buildUrl = offset =>
+        `https://wft-geo-db.p.rapidapi.com/v1/geo/cities` +
+        `?location=${latitude}${longitude}` +
+        `&radius=50&limit=10&offset=${offset}&sort=-population`;
 
-      fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/cities?location=${userLocation.latitude}${userLocation.longitude}&radius=50&limit=15&sort=-population`, {
-        method: 'GET',
-        headers: {
-          'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
-          'x-rapidapi-key': '7af57ec512msh3e3807c0c39b82fp122b96jsna807f59fdea4'
-        }
-      })
-      .then(r => r.json())
-      .then(data => {
-        // Get all fetched place names and log them
-        const allPlaces = data.data.map(place => place.name);
-        console.log('Fetched places (top 10):', allPlaces);
+      // Fetch 2 pages → 20 total
+      Promise.all([
+        fetch(buildUrl(0), { method: 'GET', headers }).then(r => r.json()),
+        fetch(buildUrl(10), { method: 'GET', headers }).then(r => r.json())
+      ])
+      .then(results => {
+        // Combine and log the raw 20 names
+        const allPlaces = results.flatMap(page => page.data.map(p => p.name));
+        console.log('Fetched places (top 20):', allPlaces);
 
-        // Filter out counties and any 'Metropolitan' entries, then take top 5
-        const cities = allPlaces
-          .filter(name =>
+        // Filter out unwanted entries, dedupe
+        const cities = [...new Set(
+          allPlaces.filter(name =>
             !name.includes(' County') &&
             !name.toLowerCase().includes('metropolitan')
           )
-          .slice(0, 5);
+        )];
+        console.log('Filtered cities:', cities);
 
-        // Fallback if nothing left
-        if (!cities.length) {
+        // Fallback default
+        if (cities.length === 0) {
           cities.push(userLocation.city || 'Kansas City');
+          console.log('Using fallback city:', cities);
         }
 
+        // Initialize cycling through every filtered city
         let idx = 0;
         cityEl.textContent = cities[idx] + "'s";
         cityEl.classList.add('show');
@@ -1658,7 +1667,7 @@
             idx = (idx + 1) % cities.length;
             cityEl.textContent = cities[idx] + "'s";
             cityEl.classList.add('show');
-          }, 500);
+          }, 500); // match your CSS transition
         }
 
         setTimeout(() => {
@@ -1666,13 +1675,14 @@
           setInterval(cycle, 5000);
         }, 3000);
       })
-      .catch(() => {
+      .catch(err => {
+        console.error('Error fetching nearby cities:', err);
         cityEl.textContent = userLocation.city + "'s";
         cityEl.classList.add('show');
       });
     })
-    .catch(() => {
-      console.error('Could not fetch user location');
+    .catch(err => {
+      console.error('Could not fetch user location:', err);
     });
   </script>
   <!-- End CityGetter JS -->
