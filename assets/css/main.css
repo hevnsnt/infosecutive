@@ -4421,13 +4421,14 @@ section,
 /* Custom Fade Animation for City Name Cycling - Added June 2025 */
 #user-city {
   opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: rotateX(-90deg);
+  transform-origin: top;
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 #user-city.show {
   opacity: 1;
-  transform: scale(1);
+  transform: rotateX(0deg);
 }
 
 /*--------------------------------------------------------------
