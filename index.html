@@ -1631,16 +1631,19 @@
       })
       .then(r => r.json())
       .then(data => {
-        // Filter out counties and any 'Metropolitan' entries
-        const cities = data.data
-          .map(place => place.name)
+        // Get all fetched place names and log them
+        const allPlaces = data.data.map(place => place.name);
+        console.log('Fetched places (top 10):', allPlaces);
+
+        // Filter out counties and any 'Metropolitan' entries, then take top 5
+        const cities = allPlaces
           .filter(name =>
             !name.includes(' County') &&
             !name.toLowerCase().includes('metropolitan')
           )
-          .slice(0, 5);  // take top 5 actual cities
+          .slice(0, 5);
 
-        // fallback if nothing left
+        // Fallback if nothing left
         if (!cities.length) {
           cities.push(userLocation.city || 'Kansas City');
         }
