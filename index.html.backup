@@ -177,6 +177,35 @@
               <p>After seeing too many companies devastated by preventable breaches, he created SixCyber to bring nation-state-level security to SMBs. Our mission is simple: enterprise-grade cybersecurity for small and medium sized businesses via friendly local experts. We harness Bill’s unmatched expertise and our talent network to deliver big-company protection on a small-business budget. With SixCyber, you get a confident partner who speaks your language and genuinely cares about keeping your business safe.</p>
 
               </div>
+
+              <!--<h4 class="values-title mt-4 mb-3" data-aos="fade-up" data-aos-delay="400">Fundamental Principles</h4>
+
+               <div class="values-list" data-aos="fade-up" data-aos-delay="500">
+                <div class="value-item">
+                  <div class="value-icon"><i class="bi bi-check2"></i></div>
+                  <span class="value-text">Expertise</span>
+                </div>
+                <div class="value-item">
+                  <div class="value-icon"><i class="bi bi-check2"></i></div>
+                  <span class="value-text">Quality</span>
+                </div>
+                <div class="value-item">
+                  <div class="value-icon"><i class="bi bi-check2"></i></div>
+                  <span class="value-text">Creativity</span>
+                </div>
+                <div class="value-item">
+                  <div class="value-icon"><i class="bi bi-check2"></i></div>
+                  <span class="value-text">Response</span>
+                </div>
+                <div class="value-item">
+                  <div class="value-icon"><i class="bi bi-check2"></i></div>
+                  <span class="value-text">Collaboration</span>
+                </div>
+                <div class="value-item">
+                  <div class="value-icon"><i class="bi bi-check2"></i></div>
+                  <span class="value-text">Growth Mindset</span>
+                </div>
+              </div>-->
             </div>
           </div>
         </div>
@@ -184,6 +213,54 @@
       </div>
 
     </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <!-- <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="stats-wrapper">
+              <div class="stats-item" data-aos="zoom-in" data-aos-delay="150">
+                <div class="icon-wrapper">
+                  <i class="bi bi-emoji-smile"></i>
+                </div>
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Happy Clients</p>
+              </div> 
+              <!-- End Stats Item 
+
+              <div class="stats-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-wrapper">
+                  <i class="bi bi-journal-richtext"></i>
+                </div>
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Projects</p>
+              </div><!-- End Stats Item 
+
+              <div class="stats-item" data-aos="zoom-in" data-aos-delay="250">
+                <div class="icon-wrapper">
+                  <i class="bi bi-headset"></i>
+                </div>
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hours Of Support</p>
+              </div><!-- End Stats Item 
+
+              <div class="stats-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon-wrapper">
+                  <i class="bi bi-people"></i>
+                </div>
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hard Workers</p>
+              </div><!-- End Stats Item 
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
 
     <!-- Services Section -->
     <section id="services" class="services section">
@@ -209,11 +286,11 @@
             <div class="col-lg-3" data-aos="fade-left">
               <div class="services-stats">
                 <div class="stat-item">
-                  <span class="stat-number">SMB Focused</span>
+                  <span class="stat-number">Industry Experts</span>
                   <!--<span class="stat-label">We only use industry known experts</span>-->
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number">Industry Experts</span>
+                  <span class="stat-number">SMB Focused</span>
                    <!--<span class="stat-label">Client Satisfaction</span>-->
                 </div>
                 <!--<div class="stat-item">
@@ -224,6 +301,61 @@
             </div>
           </div>
         </div>
+
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card">
+              <div class="service-card-inner">
+                <div class="service-icon">
+                  <!-- <i class="bi bi-lightbulb"></i> -->
+                  <i class="bi bi-shield-lock"></i>
+                </div>
+                <h3>All-in-One Security Platform</h3>
+                <p>Our AI-driven cybersecurity platform is built exclusively for SMBs. This single dashboard allows us to protects and monitor your email system, endpoints, cloud apps, and users. From blocking phishing emails to stopping malware on laptops, Our solution provides enterprise-grade protection.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card">
+              <div class="service-card-inner">
+                <div class="service-icon">
+                  <!-- <i class="bi bi-bar-chart"></i>-->
+                  <i class="bi bi-cloud-check"></i>
+                </div>
+                <h3>Vulnerability Scanning</h3>
+                <p>We run daily scans of your websites and network looking for vulnerabilities. These continuous “hacker-style” scans proactively find and alert us to any weaknesses in your internet-facing systems – like open ports, unpatched software, or misconfigurations – before attackers can exploit them. By catching issues early, we help you fix them fast and stay one step ahead of threats.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card">
+              <div class="service-card-inner">
+                <div class="service-icon">
+                  <!--<i class="bi bi-people"></i>-->
+                  <i class="bi bi-diagram-3"></i>
+                </div>
+                <h3>Asset Inventory</h3>
+                <p>You can’t secure what you don’t know about. We use a powerful asset discovery tool that finds every device on your network – PCs, servers, phones, even that forgotten Wi-Fi printer – and keeps an up-to-date inventory. This ensures no device or hidden subnet slips through the cracks.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card">
+              <div class="service-card-inner">
+                <div class="service-icon">
+                  <!--<i class="bi bi-graph-up-arrow"></i>-->
+                  <i class="bi bi-mortarboard"></i>
+                </div>
+                <h3>Adversary Deception Honeypots</h3>
+                <p>We set up decoy systems inside your network to act as early-warning traps. These fake file servers or services look tempting to hackers, but any interaction with them triggers instant alerts to our team. In other words, if an intruder ever somehow gets past the front door, we’ll know immediately when they poke around. It’s an extra layer of stealth defense to spot and stop suspicious activity inside your network before real damage is done.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </section><!-- /Services Section -->
@@ -319,15 +451,58 @@
                 <div class="feature-details">
                   <h3>Ongoing Support</h3>
                   <p>SixCyber becomes your long-term security partner—tuning protections, rolling updates, and standing by 24/7. No offshore call centers—just local experts who know your business and have your back.</p>
-                  <!--<div class="feature-status scheduled">
+                  <div class="feature-status scheduled">
                     <span class="status-indicator"></span>
-                    <span class="status-text">Scheduled</span>-->
+                    <span class="status-text">Scheduled</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!--<div class="additional-features" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gx-4 gy-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="additional-feature-card">
+                <div class="icon-container">
+                  <i class="bi bi-gear-wide-connected"></i>
+                </div>
+                <h4>Workflow Optimization</h4>
+                <p>Streamline your daily operations through intelligent, automated workflow solutions.</p>
+                <div class="feature-tag active">
+                  <i class="bi bi-check-circle"></i> Active
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="additional-feature-card">
+                <div class="icon-container">
+                  <i class="bi bi-bar-chart-line"></i>
+                </div>
+                <h4>Performance Monitoring</h4>
+                <p>Monitor key metrics and identify growth opportunities with detailed performance analytics.</p>
+                <div class="feature-tag pending">
+                  <i class="bi bi-arrow-repeat"></i> Pending
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="additional-feature-card">
+                <div class="icon-container">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <h4>Strategic Growth</h4>
+                <p>Develop strategies and implement tactics for achieving sustainable revenue expansion.</p>
+                <div class="feature-tag scheduled">
+                  <i class="bi bi-calendar-check"></i> Planned
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>-->
       </div>
 
     </section><!-- /Features Section -->
@@ -347,7 +522,7 @@
                       <i class="bi bi-people"></i>
                     </div>
                     <div class="ms-3">
-                      <h4>All-in-One Security Platform</h4>
+                      <h4>Vestibulum ante ipsum</h4>
                       <p>Proin iaculis purus consequat</p>
                     </div>
                   </div>
@@ -360,7 +535,7 @@
                       <i class="bi bi-heart"></i>
                     </div>
                     <div class="ms-3">
-                      <h4>Vulnerability Scanning</h4>
+                      <h4>Curabitur aliquet quam</h4>
                       <p>Nulla quis lorem ut libero</p>
                     </div>
                   </div>
@@ -373,7 +548,7 @@
                       <i class="bi bi-house-heart"></i>
                     </div>
                     <div class="ms-3">
-                      <h4>Asset Inventory</h4>
+                      <h4>Luna stride flared</h4>
                       <p>Sed ut perspiciatis unde omnis</p>
                     </div>
                   </div>
@@ -386,7 +561,7 @@
                       <i class="bi bi-person-heart"></i>
                     </div>
                     <div class="ms-3">
-                      <h4>Adversary Deception</h4>
+                      <h4>Quisque Velit Nisi</h4>
                       <p>Duis aute irure dolor in</p>
                     </div>
                   </div>
@@ -399,7 +574,7 @@
                       <i class="bi bi-briefcase"></i>
                     </div>
                     <div class="ms-3">
-                      <h4>Quarterly Reviews</h4>
+                      <h4>Curabitur Aliquet</h4>
                       <p>Excepteur sint occaecat cupidatat</p>
                     </div>
                   </div>
@@ -414,9 +589,11 @@
                 <div class="content-box">
                   <div class="row g-4">
                     <div class="col-lg-6">
-                      <h3>All-in-One Security Platform</h3>
-                      <p>Our AI-driven cybersecurity platform is built exclusively for SMBs. This single dashboard allows us to protects and monitor your email system, endpoints, cloud apps, and users. From blocking phishing emails to stopping malware on laptops, Our solution provides enterprise-grade protection.</p>
-                      <p class="highlight">Block phishing, malware and cloud-app threats all from one unified, AI-driven dashboard and monitored by SixCyber</p>
+                      <h3>Nullam Lacinia Consectetur</h3>
+                      <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec velit
+                        neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+                      <p class="highlight">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam
+                        sit amet quam vehicula elementum sed sit amet dui.</p>
                       <ul class="features-list">
                         <li>
                           <i class="bi bi-check2-circle"></i>
@@ -449,9 +626,11 @@
                 <div class="content-box">
                   <div class="row g-4">
                     <div class="col-lg-6">
-                      <h3>Vulnerability Scanning</h3>
-                      <p>We run daily scans of your websites and network looking for vulnerabilities. These continuous “hacker-style” scans proactively find and alert us to any weaknesses in your internet-facing systems – like open ports, unpatched software, or misconfigurations – before attackers can exploit them. By catching issues early, we help you fix them fast and stay one step ahead of threats.</p>
-                      <p class="highlight">Continuous, hacker-style scans that uncover and remediate internet-facing weaknesses before criminals can strike.</p>
+                      <h3>Sed Porttitor Lectus Nibh</h3>
+                      <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus.
+                        Vestibulum ante ipsum primis in faucibus.</p>
+                      <p class="highlight">Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero
+                        malesuada feugiat.</p>
                       <ul class="features-list">
                         <li>
                           <i class="bi bi-check2-circle"></i>
@@ -484,9 +663,11 @@
                 <div class="content-box">
                   <div class="row g-4">
                     <div class="col-lg-6">
-                      <h3>Asset Inventory</h3>
-                      <p>You can’t secure what you don’t know about. We use a powerful asset discovery tool that finds every device on your network – PCs, servers, phones, even that forgotten Wi-Fi printer – and keeps an up-to-date inventory. This ensures no device or hidden subnet slips through the cracks.</p>
-                      <p class="highlight">Complete visibility into every device on your network—so no server, workstation or IoT device ever slips through the cracks.</p>
+                      <h3>Praesent Sapien Massa</h3>
+                      <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in
+                        faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+                      <p class="highlight">Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam vehicula
+                        elementum sed sit amet dui.</p>
                       <ul class="features-list">
                         <li>
                           <i class="bi bi-check2-circle"></i>
@@ -519,9 +700,11 @@
                 <div class="content-box">
                   <div class="row g-4">
                     <div class="col-lg-6">
-                      <h3>Adversary Deception </h3>
-                      <p>We set up decoy systems inside your network to act as early-warning traps. These fake file servers or services look tempting to hackers, but any interaction with them triggers instant alerts to our team. In other words, if an intruder ever somehow gets past the front door, we’ll know immediately when they poke around. It’s an extra layer of stealth defense to spot and stop suspicious activity inside your network before real damage is done.</p>
-                      <p class="highlight">Instant alerts the moment a honeypot is touched—your silent, early-warning system inside the network.</p>
+                      <h3>Curabitur Aliquet Quam</h3>
+                      <p>Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit
+                        amet dui. Curabitur aliquet quam id dui posuere blandit.</p>
+                      <p class="highlight">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur
+                        non nulla sit amet nisl tempus.</p>
                       <ul class="features-list">
                         <li>
                           <i class="bi bi-check2-circle"></i>
@@ -554,9 +737,11 @@
                 <div class="content-box">
                   <div class="row g-4">
                     <div class="col-lg-6">
-                      <h3>Quarterly Reviews</h3>
-                      <p>Every three months, your SixCyber expert sits down with you—on-site or via Zoom—to review metrics (blocked attacks, patched vulnerabilities, etc.), map progress against CIS/NIST/ISO, and update your security roadmap for the next quarter.</p>
-                      <p class="highlight">Continuous improvement that keeps pace with your growth and the ever-evolving threat landscape.</p>
+                      <h3>Vestibulum Ante Ipsum</h3>
+                      <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Quisque velit nisi, pretium ut
+                        lacinia in, elementum id enim.</p>
+                      <p class="highlight">Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula
+                        elementum sed sit amet dui.</p>
                       <ul class="features-list">
                         <li>
                           <i class="bi bi-check2-circle"></i>
@@ -667,7 +852,141 @@
 
     </section><!-- /Call To Action Section -->
 
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
 
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">Portfolio</span>
+        <h2>Portfolio</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <div class="row">
+            <div class="col-lg-3 filter-sidebar">
+              <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
+                <ul class="portfolio-filters isotope-filters">
+                  <li data-filter="*" class="filter-active">All Projects</li>
+                  <li data-filter=".filter-photography">Photography</li>
+                  <li data-filter=".filter-design">Design</li>
+                  <li data-filter=".filter-automotive">Automotive</li>
+                  <li data-filter=".filter-nature">Nature</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-9">
+              <div class="row gy-4 portfolio-container isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/portfolio-portrait-1.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Photography</span>
+                        <h4>Capturing Moments</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/portfolio-portrait-1.webp" class="glightbox" title="Capturing Moments"><i class="bi bi-plus-lg"></i></a>
+                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Web Design</span>
+                        <h4>Woodcraft Design</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/portfolio-2.webp" class="glightbox" title="Woodcraft Design"><i class="bi bi-plus-lg"></i></a>
+                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-automotive">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/portfolio-portrait-2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Automotive</span>
+                        <h4>Classic Beauty</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/portfolio-portrait-2.webp" class="glightbox" title="Classic Beauty"><i class="bi bi-plus-lg"></i></a>
+                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-nature">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/portfolio-portrait-4.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Nature</span>
+                        <h4>Natural Growth</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/portfolio-portrait-4.webp" class="glightbox" title="Natural Growth"><i class="bi bi-plus-lg"></i></a>
+                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Photography</span>
+                        <h4>Urban Stories</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/portfolio-5.webp" class="glightbox" title="Urban Stories"><i class="bi bi-plus-lg"></i></a>
+                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Web Design</span>
+                        <h4>Digital Experience</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox" title="Digital Experience"><i class="bi bi-plus-lg"></i></a>
+                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+              </div><!-- End Portfolio Container -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing section">
@@ -676,7 +995,7 @@
       <div class="container section-title" data-aos="fade-up">
         <span class="description-title">Pricing</span>
         <h2>Pricing</h2>
-        <p>Transparent, per-user pricing—every tool, quarterly review and 24/7 support included for one simple monthly fee.</p>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -685,16 +1004,15 @@
 
           <!-- Basic Plan -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="pricing-item featured">
-              <div class="pricing-badge">Small Sized Business</div>
+            <div class="pricing-item">
               <div class="pricing-icon">
                 <i class="bi bi-star"></i>
               </div>
-              <h3>Up to 25 Employees</h3>
+              <h3>Standard</h3>
               <div class="price">
-                <span class="currency">$</span>35<span class="period">/person</span>
+                <span class="currency">$</span>9<span class="period">/month</span>
               </div>
-              <p class="description">All-inclusive cybersecurity stack, ongoing monitoring, quarterly reviews and incident support for companies with 25 employees or less</p>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
               <ul class="features-list">
                 <li>
                   <i class="bi bi-check2"></i>
@@ -716,15 +1034,15 @@
           <!-- Professional Plan -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="pricing-item featured">
-              <div class="pricing-badge">Medium Sized Business</div>
+              <div class="pricing-badge">Recommended</div>
               <div class="pricing-icon">
                 <i class="bi bi-stars"></i>
               </div>
-              <h3>Up to 100 Employees</h3>
+              <h3>Professional</h3>
               <div class="price">
-                <span class="currency">$</span>30<span class="period">/month</span>
+                <span class="currency">$</span>29<span class="period">/month</span>
               </div>
-              <p class="description">All-inclusive cybersecurity stack, ongoing monitoring, quarterly reviews and incident support for companies with 25 employees or less</p>
+              <p class="description">Maecenas tempus tellus eget condimentum rhoncus semper.</p>
               <ul class="features-list">
                 <li>
                   <i class="bi bi-check2"></i>
@@ -749,23 +1067,23 @@
               <div class="pricing-icon">
                 <i class="bi bi-star-fill"></i>
               </div>
-              <h3>Incident Response & CISO on-Demand</h3>
+              <h3>Ultimate</h3>
               <div class="price">
-                <span class="currency">$</span>400<span class="period">/hour</span>
+                <span class="currency">$</span>49<span class="period">/month</span>
               </div>
-              <p class="description">Rapid, expert-led breach containment and hands-on CISO leadership for critical events.</p>
+              <p class="description">Etiam rhoncus maecenas tempus tellus eget condimentum.</p>
               <ul class="features-list">
                 <li>
                   <i class="bi bi-check2"></i>
-                  24/7 emergency incident command
+                  Phasellus viverra nulla
                 </li>
                 <li>
                   <i class="bi bi-check2"></i>
-                  Forensic investigation & root-cause analysis
+                  Quisque rutrum aenean
                 </li>
                 <li>
                   <i class="bi bi-check2"></i>
-                  High-level security strategy & board-room advising
+                  Etiam ultricies nisi vel
                 </li>
               </ul>
               <a href="#" class="btn-pricing">Buy Now</a>
