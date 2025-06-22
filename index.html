@@ -91,7 +91,7 @@
             </div>
 
             <h1 class="title">
-              For <span class="highlight">Kansas City's</span> small and medium sized businesses
+              For <span class="highlight" id="user-city">Kansas City's</span> small and medium sized businesses
             </h1>
 
             <div class="description">
@@ -1614,6 +1614,25 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+  <!-- CityGetter JS -->
+  <script>
+  fetch('https://ipapi.co/json/')
+    .then(response => response.json())
+    .then(data => {
+      const cityElement = document.getElementById('user-city');
+      const city = data.city;
+      const region = data.region;
+
+      if (city && region) {
+        cityElement.textContent = `${city}'s`;
+      }
+    })
+    .catch(() => {
+      // Keep default city if location can't be fetched
+      console.log("Could not fetch user's location");
+    });
+</script>
 
 </body>
 
