@@ -1622,51 +1622,48 @@
     .then(userLocation => {
       const cityElement = document.getElementById('user-city');
 
-      // Fetch nearest cities from GeoDB API
-      fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/cities?location=${userLocation.latitude}${userLocation.longitude}&radius=50&limit=5&sort=distance`, {
+      fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/locations/${userLocation.latitude}${userLocation.longitude}/nearbyCities?radius=50&limit=5`, {
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key': '7af57ec512msh3e3807c0c39b82fp122b96jsna807f59fdea4',
-          'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
+          'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
+          'x-rapidapi-key': '7af57ec512msh3e3807c0c39b82fp122b96jsna807f59fdea4'
         }
       })
       .then(response => response.json())
       .then(data => {
-        const cities = data.data.map(city => city.name);
+        const cities = data.data.map(city => city.city);
         let currentIndex = 0;
 
-        // Set initial city
+        if (cities.length === 0) {
+          cities.push(userLocation.city || "Kansas City");
+        }
+
         cityElement.textContent = cities[currentIndex] + "'s";
         cityElement.classList.add('show');
 
         function cycleCities() {
-          // Fade out
           cityElement.classList.remove('show');
 
           setTimeout(() => {
-            // Update city after fade-out completes
             currentIndex = (currentIndex + 1) % cities.length;
             cityElement.textContent = cities[currentIndex] + "'s";
-
-            // Fade in
             cityElement.classList.add('show');
-          }, 500); // matches CSS transition duration
+          }, 500);
         }
 
-        // Start cycling after 3 seconds
         setTimeout(() => {
           cycleCities();
           setInterval(cycleCities, 5000);
         }, 3000);
       })
-      .catch(() => {
-        console.log("Couldn't retrieve nearby cities, defaulting to detected city.");
+      .catch(error => {
+        console.error("Couldn't retrieve nearby cities:", error);
         cityElement.textContent = userLocation.city + "'s";
         cityElement.classList.add('show');
       });
     })
-    .catch(() => {
-      console.log("Could not fetch user's primary location");
+    .catch(error => {
+      console.error("Could not fetch user's primary location:", error);
     });
   </script>
   <!-- End CityGetter JS -->
