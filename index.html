@@ -1618,56 +1618,55 @@
   <!-- CityGetter JS -->
   <script>
   fetch('https://ipapi.co/json/')
-    .then(response => response.json())
+    .then(r => r.json())
     .then(userLocation => {
-      const cityElement = document.getElementById('user-city');
+      const cityEl = document.getElementById('user-city');
 
-      const { latitude, longitude } = userLocation;
-
-      fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/cities?location=${latitude}${longitude}&radius=50&limit=10&sort=-population`, {
+      fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/cities?location=${userLocation.latitude}${userLocation.longitude}&radius=50&limit=10&sort=-population`, {
         method: 'GET',
         headers: {
           'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
           'x-rapidapi-key': '7af57ec512msh3e3807c0c39b82fp122b96jsna807f59fdea4'
         }
       })
-      .then(response => response.json())
+      .then(r => r.json())
       .then(data => {
-        // Get unique city names explicitly
-        const cities = [...new Set(data.data.map(city => city.name))];
+        // Filter out any entries that are counties
+        const cities = data.data
+          .map(place => place.name)
+          .filter(name => !name.includes(' County'))
+          .slice(0, 5);          // take top 5 actual cities
 
-        // Fallback if no cities found
+        // fallback if nothing left
         if (cities.length === 0) {
-          cities.push(userLocation.city || "Kansas City");
+          cities.push(userLocation.city || 'Kansas City');
         }
 
-        let currentIndex = 0;
-        cityElement.textContent = cities[currentIndex] + "'s";
-        cityElement.classList.add('show');
+        let idx = 0;
+        cityEl.textContent = cities[idx] + "'s";
+        cityEl.classList.add('show');
 
-        function cycleCities() {
-          cityElement.classList.remove('show');
-
+        function cycle() {
+          cityEl.classList.remove('show');
           setTimeout(() => {
-            currentIndex = (currentIndex + 1) % cities.length;
-            cityElement.textContent = cities[currentIndex] + "'s";
-            cityElement.classList.add('show');
+            idx = (idx + 1) % cities.length;
+            cityEl.textContent = cities[idx] + "'s";
+            cityEl.classList.add('show');
           }, 500);
         }
 
         setTimeout(() => {
-          cycleCities();
-          setInterval(cycleCities, 5000);
+          cycle();
+          setInterval(cycle, 5000);
         }, 3000);
       })
-      .catch(error => {
-        console.error("Couldn't retrieve nearby cities:", error);
-        cityElement.textContent = userLocation.city + "'s";
-        cityElement.classList.add('show');
+      .catch(() => {
+        cityEl.textContent = userLocation.city + "'s";
+        cityEl.classList.add('show');
       });
     })
-    .catch(error => {
-      console.error("Could not fetch user's primary location:", error);
+    .catch(() => {
+      console.error('Could not fetch user location');
     });
   </script>
   <!-- End CityGetter JS -->
