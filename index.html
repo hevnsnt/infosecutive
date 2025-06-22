@@ -1631,14 +1631,17 @@
       })
       .then(r => r.json())
       .then(data => {
-        // Filter out any entries that are counties
+        // Filter out counties and any 'Metropolitan' entries
         const cities = data.data
           .map(place => place.name)
-          .filter(name => !name.includes(' County'))
-          .slice(0, 5);          // take top 5 actual cities
+          .filter(name =>
+            !name.includes(' County') &&
+            !name.toLowerCase().includes('metropolitan')
+          )
+          .slice(0, 5);  // take top 5 actual cities
 
         // fallback if nothing left
-        if (cities.length === 0) {
+        if (!cities.length) {
           cities.push(userLocation.city || 'Kansas City');
         }
 
