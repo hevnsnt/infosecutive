@@ -1622,7 +1622,7 @@
     .then(userLocation => {
       const cityEl = document.getElementById('user-city');
 
-      fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/cities?location=${userLocation.latitude}${userLocation.longitude}&radius=50&limit=20&sort=-population`, {
+      fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/cities?location=${userLocation.latitude}${userLocation.longitude}&radius=50&limit=15&sort=-population`, {
         method: 'GET',
         headers: {
           'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
