@@ -4431,6 +4431,57 @@ section,
   transform: rotateX(0deg);
 }
 
+/* Double Column Features List */
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.features-list li i {
+  margin-top: 0.2rem;   /* vertically center the icon */
+  margin-right: 0.5rem; /* space between icon & text */
+  flex-shrink: 0;
+}
+
+  /* add this to your main stylesheet */
+  .features-list {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 0;
+  }
+  .features-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  .features-list li i {
+    flex-shrink: 0;
+    font-size: 1.25rem;
+    margin-right: .75rem;
+    color: #4fc08d; /* or your brand accent */
+  }
+  .features-list li span {
+    line-height: 1.4;
+  }
+  /* add at the bottom of your pricing section in main.css */
+.pricing .pricing-item .features-list {
+  display: block;            /* undo the grid */
+  margin: 1.5rem 0;          /* your vertical spacing */
+}
+.pricing .pricing-item .features-list li {
+  display: flex;             /* icon + text on one line */
+  align-items: center;
+  margin-bottom: 1rem;
+}
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
