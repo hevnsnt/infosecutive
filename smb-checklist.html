@@ -27,9 +27,42 @@
     .slider-label { font-weight: 600; margin-top: 1rem; }
     .progress-nav { margin-top: 1.5rem; }
   </style>
+  <style>
+  /* Scope everything to the checklist page */
+  body.smb-checklist-page {
+    /* if you want a different page background, adjust here */
+  }
+
+  /* Ensure the card itself stays white with dark text */
+  body.smb-checklist-page .card {
+    background-color: #ffffff;
+    color: #212529; /* Bootstrap’s default body text color */
+  }
+
+  /* Headings inside the cards */
+  body.smb-checklist-page .card-body h3 {
+    color: #212529;
+  }
+
+  /* Paragraphs and slider labels inside cards */
+  body.smb-checklist-page .card-body p,
+  body.smb-checklist-page .card-body .slider-label {
+    color: #212529;
+  }
+
+  /* Next/Previous buttons styling (optional tweak) */
+  body.smb-checklist-page .progress-nav .btn-outline-primary {
+    color: #0d6efd;
+    border-color: #0d6efd;
+  }
+  body.smb-checklist-page .progress-nav .btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: #ffffff;
+  }
+</style>
 </head>
 
-<body class="starter-page-page">
+<body class="starter-page-page smb-checklist-page">
 
   <header id="header" class="header d-flex align-items-center position-relative">
     <div class="container-fluid d-flex align-items-center justify-content-between">
