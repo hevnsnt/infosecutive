@@ -22,8 +22,19 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <style>
-    .step-card { display: none; }
-    .step-card.active { display: block; }
+/* Default for crawlers & non-JS: show everything */
+.step-card {
+  display: block;
+  opacity: 1;    /* if you’d rather fade-in with JS, handle that later */
+}
+
+/* Once JS kicks in, we’ll add the “js-enabled” class */
+.js-enabled .step-card {
+  display: none;
+}
+.js-enabled .step-card.active {
+  display: block;
+}
     .slider-label { font-weight: 600; margin-top: 1rem; }
     .progress-nav { margin-top: 1.5rem; }
   </style>
@@ -63,6 +74,10 @@
 </head>
 
 <body class="starter-page-page smb-checklist-page">
+    <script>
+    // as soon as possible, flag that JS is on
+    document.documentElement.classList.add('js-enabled');
+    </script>
 
   <header id="header" class="header d-flex align-items-center position-relative">
     <div class="container-fluid d-flex align-items-center justify-content-between">
