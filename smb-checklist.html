@@ -107,241 +107,222 @@
     <p>To the best of your ability, Select the statement that best matches your current state, and receive a prioritized, detailed action plan at the end!  FREE!</p>
   </div>
 
-  <section id="quiz" class="container" data-aos="fade-up">
+  <section id="quiz" data-aos="fade-up">
     <div id="steps-container">
-      <!-- Step 1 -->
+
+      <!-- Email Security -->
       <div class="step-card active" data-step="1">
-        <div class="card">
-          <div class="card-body">
-            <h3>Email Security & Phishing Protection</h3>
-            <p class="importance">Why it matters: Malicious attachments and links remain the top initial vector for breaches. An email gateway that filters spam, blocks malicious attachments, and enforces URL rewriting stops most phishing attempts before they ever hit your inbox.</p>
-            <p>Which best describes your organization?</p>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r1" id="r1-1" value="1" checked>
-              <label class="form-check-label" for="r1-1">We rely solely on user vigilance for phishing emails</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r1" id="r1-2" value="2">
-              <label class="form-check-label" for="r1-2">We have basic spam filtering but no attachment/URL protection</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r1" id="r1-3" value="3">
-              <label class="form-check-label" for="r1-3">We enforce advanced email security (attachment sandboxing, URL rewriting, AI-driven threat scanning)</label>
-            </div>
+        <div class="card mb-4"><div class="card-body">
+          <h3>Email Security &amp; Phishing Protection</h3>
+          <p class="importance">Most breaches start in the inbox. Filtering and scanning every message stops spam, scams and malicious attachments before they reach your team.</p>
+          <p>Which fits your setup?</p>
+          <div class="form-check">
+            <input type="radio" name="r1" id="r1-1" value="1" class="form-check-input" checked>
+            <label for="r1-1" class="form-check-label">We trust employees to spot every phishing email.</label>
           </div>
-        </div>
+          <div class="form-check">
+            <input type="radio" name="r1" id="r1-2" value="2" class="form-check-input">
+            <label for="r1-2" class="form-check-label">We have basic spam filters but no advanced scanning.</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="r1" id="r1-3" value="3" class="form-check-input">
+            <label for="r1-3" class="form-check-label">We run AI-driven email scanning with attachment sandboxing.</label>
+          </div>
+        </div></div>
       </div>
 
-      <!-- Step 2 -->
+      <!-- MFA -->
       <div class="step-card" data-step="2">
-        <div class="card">
-          <div class="card-body">
-            <h3>Access Controls &amp; Multi-Factor Authentication</h3>
-            <p class="importance">Why it matters: Passwords alone can be stolen or guessed, but adding a quick second check—like a code on your phone—blocks most hackers outright. Enforcing MFA everywhere stops over 90% of account-takeover attempts. It’s a small step that delivers big protection for every user in your organization.</p>
-            <p>Which best describes your controls?</p>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r2" id="r2-1" value="1" checked>
-              <label class="form-check-label" for="r2-1">No MFA or password policies in place.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r2" id="r2-2" value="2">
-              <label class="form-check-label" for="r2-2">MFA on some critical systems only.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r2" id="r2-3" value="3">
-              <label class="form-check-label" for="r2-3">MFA and strong password rules for all users.</label>
-            </div>
+        <div class="card mb-4"><div class="card-body">
+          <h3>Access Controls &amp; Multi-Factor Authentication</h3>
+          <p class="importance">Strong login rules block stolen passwords and stop over 90% of account-takeover attempts.</p>
+          <p>Which fits your setup?</p>
+          <div class="form-check">
+            <input type="radio" name="r2" id="r2-1" value="1" class="form-check-input" checked>
+            <label for="r2-1" class="form-check-label">No MFA or password policies in place.</label>
           </div>
-        </div>
+          <div class="form-check">
+            <input type="radio" name="r2" id="r2-2" value="2" class="form-check-input">
+            <label for="r2-2" class="form-check-label">MFA on some key systems only.</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="r2" id="r2-3" value="3" class="form-check-input">
+            <label for="r2-3" class="form-check-label">MFA and strong rules for every user.</label>
+          </div>
+        </div></div>
       </div>
 
-      <!-- Step 3 -->
+      <!-- EDR -->
       <div class="step-card" data-step="3">
-        <div class="card">
-          <div class="card-body">
-            <h3>Endpoint Detection &amp; Response (EDR)</h3>
-            <p class="importance">Why it matters: EDR isn’t just a smarter antivirus—it also collects detailed activity data from every computer so your incident response team can see exactly what happened, where, and how to stop it. That means if something slips through, you have the full story at your fingertips to contain the issue quickly and get everyone back to work. For an SMB, EDR delivers both proactive protection and the insights you need to recover fast from any security event.</p>
-            <p>Which best describes your endpoint security?</p>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r3" id="r3-1" value="1" checked>
-              <label class="form-check-label" for="r3-1">Only basic antivirus installed.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r3" id="r3-2" value="2">
-              <label class="form-check-label" for="r3-2">EDR installed but rarely monitored.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r3" id="r3-3" value="3">
-              <label class="form-check-label" for="r3-3">EDR on all devices and actively monitored 24/7.</label>
-            </div>
+        <div class="card mb-4"><div class="card-body">
+          <h3>Endpoint Detection &amp; Response (EDR)</h3>
+          <p class="importance">Seeing activity on every device lets you catch and stop attacks fast—before they spread and disrupt your operations.</p>
+          <p>Which fits your setup?</p>
+          <div class="form-check">
+            <input type="radio" name="r3" id="r3-1" value="1" class="form-check-input" checked>
+            <label for="r3-1" class="form-check-label">Only basic antivirus on devices.</label>
           </div>
-        </div>
+          <div class="form-check">
+            <input type="radio" name="r3" id="r3-2" value="2" class="form-check-input">
+            <label for="r3-2" class="form-check-label">EDR installed but rarely checked.</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="r3" id="r3-3" value="3" class="form-check-input">
+            <label for="r3-3" class="form-check-label">24/7 EDR monitoring on every device.</label>
+          </div>
+        </div></div>
       </div>
 
-      <!-- Step 4 -->
+      <!-- Vulnerability -->
       <div class="step-card" data-step="4">
-        <div class="card">
-          <div class="card-body">
-            <h3>Vulnerability Scanning &amp; Patch Management</h3>
-            <p class="importance">Why it matters: Software updates regularly fix security holes that criminals love to exploit. Daily scans show you exactly where those gaps are, and timely patching closes them before bad actors get in. Staying up to date keeps your systems one step ahead of the simplest, most common attacks.</p>
-            <p>Which best describes your process?</p>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r4" id="r4-1" value="1" checked>
-              <label class="form-check-label" for="r4-1">No consistent scanning or patch schedule.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r4" id="r4-2" value="2">
-              <label class="form-check-label" for="r4-2">Monthly scanning; manual patching.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r4" id="r4-3" value="3">
-              <label class="form-check-label" for="r4-3">Daily scans and automated patches deployed.</label>
-            </div>
+        <div class="card mb-4"><div class="card-body">
+          <h3>Vulnerability Scanning &amp; Patch Management</h3>
+          <p class="importance">Unpatched software is hacker gold. Automated scans and updates close holes before criminals can exploit them.</p>
+          <p>Which fits your setup?</p>
+          <div class="form-check">
+            <input type="radio" name="r4" id="r4-1" value="1" class="form-check-input" checked>
+            <label for="r4-1" class="form-check-label">No regular scans or updates.</label>
           </div>
-        </div>
+          <div class="form-check">
+            <input type="radio" name="r4" id="r4-2" value="2" class="form-check-input">
+            <label for="r4-2" class="form-check-label">Monthly scans; manual patching.</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="r4" id="r4-3" value="3" class="form-check-input">
+            <label for="r4-3" class="form-check-label">Daily scans with automatic patch installs.</label>
+          </div>
+        </div></div>
       </div>
 
-      <!-- Step 5 -->
+      <!-- Cloud -->
       <div class="step-card" data-step="5">
-        <div class="card">
-          <div class="card-body">
-            <h3>Cloud Application &amp; Data Security</h3>
-            <p class="importance">Why it matters: Cloud services make collaboration easy—but a single misconfigured setting can expose your files to the world. Regular checks ensure your online apps and storage are locked down and any strange activity is caught right away. That peace of mind protects customer information no matter where you work.</p>
-            <p>Which best describes your cloud security?</p>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r5" id="r5-1" value="1" checked>
-              <label class="form-check-label" for="r5-1">No cloud monitoring or alerts.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r5" id="r5-2" value="2">
-              <label class="form-check-label" for="r5-2">Partial monitoring; gaps remain.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r5" id="r5-3" value="3">
-              <label class="form-check-label" for="r5-3">Full 24/7 monitoring of all cloud environments.</label>
-            </div>
+        <div class="card mb-4"><div class="card-body">
+          <h3>Cloud Application &amp; Data Security</h3>
+          <p class="importance">One mis-set in SaaS or cloud can leak your data. Continuous monitoring stops misconfigurations and unauthorized access instantly.</p>
+          <p>Which fits your setup?</p>
+          <div class="form-check">
+            <input type="radio" name="r5" id="r5-1" value="1" class="form-check-input" checked>
+            <label for="r5-1" class="form-check-label">No cloud monitoring in place.</label>
           </div>
-        </div>
+          <div class="form-check">
+            <input type="radio" name="r5" id="r5-2" value="2" class="form-check-input">
+            <label for="r5-2" class="form-check-label">Partial checks on select apps.</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="r5" id="r5-3" value="3" class="form-check-input">
+            <label for="r5-3" class="form-check-label">24/7 monitoring for every cloud service.</label>
+          </div>
+        </div></div>
       </div>
 
-      <!-- Step 6 -->
+      <!-- Inventory -->
       <div class="step-card" data-step="6">
-        <div class="card">
-          <div class="card-body">
-            <h3>Asset Inventory &amp; Configuration</h3>
-            <p class="importance">Why it matters: You can’t secure what you don’t know you have. A real-time list of every laptop, phone, printer, and server means nothing slips through the cracks. Having full visibility lets you enforce consistent settings and ensures every device is properly protected.</p>
-            <p>Which best describes your asset management?</p>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r6" id="r6-1" value="1" checked>
-              <label class="form-check-label" for="r6-1">No centralized asset inventory.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r6" id="r6-2" value="2">
-              <label class="form-check-label" for="r6-2">Inventory exists but not real-time.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r6" id="r6-3" value="3">
-              <label class="form-check-label" for="r6-3">Real-time discovery and config management in place.</label>
-            </div>
+        <div class="card mb-4"><div class="card-body">
+          <h3>Asset Inventory &amp; Configuration</h3>
+          <p class="importance">You can’t secure what you don’t see. A live device list ensures every PC, phone and printer is up-to-date and protected.</p>
+          <p>Which fits your setup?</p>
+          <div class="form-check">
+            <input type="radio" name="r6" id="r6-1" value="1" class="form-check-input" checked>
+            <label for="r6-1" class="form-check-label">No central inventory.</label>
           </div>
-        </div>
+          <div class="form-check">
+            <input type="radio" name="r6" id="r6-2" value="2" class="form-check-input">
+            <label for="r6-2" class="form-check-label">Inventory exists but isn’t real-time.</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="r6" id="r6-3" value="3" class="form-check-input">
+            <label for="r6-3" class="form-check-label">Real-time tracking with automated alerts.</label>
+          </div>
+        </div></div>
       </div>
 
-      <!-- Step 7 -->
+      <!-- Incident Response -->
       <div class="step-card" data-step="7">
-        <div class="card">
-          <div class="card-body">
-            <h3>Incident Response Planning &amp; Testing</h3>
-            <p class="importance">Why it matters: When an attack happens, uncertainty costs time and money. A clear, practiced plan tells everyone exactly what to do—who to call, what steps to take, and how to recover. Regular drills build confidence so you can contain an incident quickly and get back to business.</p>
-            <p>Which best describes your IR readiness?</p>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r7" id="r7-1" value="1" checked>
-              <label class="form-check-label" for="r7-1">No documented incident response plan.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r7" id="r7-2" value="2">
-              <label class="form-check-label" for="r7-2">Plan exists but not regularly tested.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r7" id="r7-3" value="3">
-              <label class="form-check-label" for="r7-3">IR plan is documented and tested quarterly.</label>
-            </div>
+        <div class="card mb-4"><div class="card-body">
+          <h3>Incident Response Planning &amp; Testing</h3>
+          <p class="importance">When seconds count, a practiced playbook stops panic, cuts damage and gets you back to normal fast.</p>
+          <p>Which fits your setup?</p>
+          <div class="form-check">
+            <input type="radio" name="r7" id="r7-1" value="1" class="form-check-input" checked>
+            <label for="r7-1" class="form-check-label">No documented plan.</label>
           </div>
-        </div>
+          <div class="form-check">
+            <input type="radio" name="r7" id="r7-2" value="2" class="form-check-input">
+            <label for="r7-2" class="form-check-label">Plan exists but no drills.</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="r7" id="r7-3" value="3" class="form-check-input">
+            <label for="r7-3" class="form-check-label">Plan documented and tested quarterly.</label>
+          </div>
+        </div></div>
       </div>
 
-      <!-- Step 8 -->
+      <!-- Training -->
       <div class="step-card" data-step="8">
-        <div class="card">
-          <div class="card-body">
-            <h3>Staff Training &amp; Phishing Simulations</h3>
-            <p class="importance">Why it matters: Your team is your first line of defense, but without guidance even smart people can fall for a trick email. Short, engaging training and harmless phishing tests teach everyone to spot scams. That awareness dramatically cuts the chance of a breach caused by human error.</p>
-            <p>Which best describes your training program?</p>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r8" id="r8-1" value="1" checked>
-              <label class="form-check-label" for="r8-1">No formal cybersecurity training for staff.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r8" id="r8-2" value="2">
-              <label class="form-check-label" for="r8-2">Training offered but lacks phishing drills.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r8" id="r8-3" value="3">
-              <label class="form-check-label" for="r8-3">Regular training and simulated phishing campaigns conducted.</label>
-            </div>
+        <div class="card mb-4"><div class="card-body">
+          <h3>Staff Training &amp; Phishing Simulations</h3>
+          <p class="importance">Your team is your first line of defense. Short drills and simulations turn employees into cyber-aware allies.</p>
+          <p>Which fits your setup?</p>
+          <div class="form-check">
+            <input type="radio" name="r8" id="r8-1" value="1" class="form-check-input" checked>
+            <label for="r8-1" class="form-check-label">No formal training.</label>
           </div>
-        </div>
+          <div class="form-check">
+            <input type="radio" name="r8" id="r8-2" value="2" class="form-check-input">
+            <label for="r8-2" class="form-check-label">Training but no phishing tests.</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="r8" id="r8-3" value="3" class="form-check-input">
+            <label for="r8-3" class="form-check-label">Regular training + simulated phishing.</label>
+          </div>
+        </div></div>
       </div>
 
-      <!-- Step 9 -->
+      <!-- Backup -->
       <div class="step-card" data-step="9">
-        <div class="card">
-          <div class="card-body">
-            <h3>Data Backup &amp; Recovery</h3>
-            <p class="importance">Why it matters: Ransomware or server crashes can lock you out of critical files overnight. Automated backups plus occasional recovery tests ensure you can restore data fast, with minimal loss. For an SMB, that reliability is the difference between a brief hiccup and a business-ending disaster.</p>
-            <p>Which best describes your backup strategy?</p>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r9" id="r9-1" value="1" checked>
-              <label class="form-check-label" for="r9-1">Backups are manual and inconsistent.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r9" id="r9-2" value="2">
-              <label class="form-check-label" for="r9-2">Automated backups but recovery untested.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r9" id="r9-3" value="3">
-              <label class="form-check-label" for="r9-3">Automated backups and recovery drills performed regularly.</label>
-            </div>
+        <div class="card mb-4"><div class="card-body">
+          <h3>Data Backup &amp; Recovery</h3>
+          <p class="importance">Lost data can shut you down. Automated backups + restore tests ensure you recover quickly and fully.</p>
+          <p>Which fits your setup?</p>
+          <div class="form-check">
+            <input type="radio" name="r9" id="r9-1" value="1" class="form-check-input" checked>
+            <label for="r9-1" class="form-check-label">Manual, inconsistent backups.</label>
           </div>
-        </div>
+          <div class="form-check">
+            <input type="radio" name="r9" id="r9-2" value="2" class="form-check-input">
+            <label for="r9-2" class="form-check-label">Auto backups but no tests.</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="r9" id="r9-3" value="3" class="form-check-input">
+            <label for="r9-3" class="form-check-label">Auto backups + quarterly restores.</label>
+          </div>
+        </div></div>
       </div>
 
-      <!-- Step 10 -->
+      <!-- Compliance -->
       <div class="step-card" data-step="10">
-        <div class="card">
-          <div class="card-body">
-            <h3>Compliance &amp; Framework Mapping</h3>
-            <p class="importance">Why it matters: Aligning with proven guides like CIS, NIST or ISO isn’t just red tape—it shows you exactly which safeguards matter most. Mapping your practices to a framework highlights weaknesses and steers your next improvements. Staying on track builds customer confidence and makes any audit or insurance process smoother.</p>
-            <p>Which best describes your compliance posture?</p>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r10" id="r10-1" value="1" checked>
-              <label class="form-check-label" for="r10-1">No alignment with any security framework.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r10" id="r10-2" value="2">
-              <label class="form-check-label" for="r10-2">Partial mapping but no formal program.</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="r10" id="r10-3" value="3">
-              <label class="form-check-label" for="r10-3">Fully aligned and reviewed quarterly.</label>
-            </div>
+        <div class="card mb-4"><div class="card-body">
+          <h3>Compliance &amp; Framework Mapping</h3>
+          <p class="importance">Following CIS, NIST or ISO shows you exactly which steps matter and simplifies audits or insurance reviews.</p>
+          <p>Which fits your setup?</p>
+          <div class="form-check">
+            <input type="radio" name="r10" id="r10-1" value="1" class="form-check-input" checked>
+            <label for="r10-1" class="form-check-label">No alignment with any framework.</label>
           </div>
-        </div>
+          <div class="form-check">
+            <input type="radio" name="r10" id="r10-2" value="2" class="form-check-input">
+            <label for="r10-2" class="form-check-label">Partial mapping, no formal program.</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="r10" id="r10-3" value="3" class="form-check-input">
+            <label for="r10-3" class="form-check-label">Fully aligned and reviewed quarterly.</label>
+          </div>
+        </div></div>
       </div>
 
     </div>
 
-    <!-- Navigation Buttons -->
+    <!-- Navigation -->
     <div class="d-flex justify-content-between progress-nav">
       <button id="prevBtn" class="btn btn-outline-primary" disabled>Previous</button>
       <button id="nextBtn" class="btn btn-primary">Next</button>
@@ -403,7 +384,7 @@
     7: 'Build and test a documented incident-response playbook with quarterly drills. SixCyber’s on-demand IR team helps you practice scenarios, so you react swiftly and smoothly when real incidents happen.',
     8: 'Launch engaging micro-trainings and realistic phishing tests for your team. SixCyber’s platform boosts awareness and cuts human-error breaches by over 70%.',
     9: 'Configure continuous, encrypted backups with routine restore exercises. SixCyber’s backup service ensures you can recover data and resume operations in minutes.',
-    10: 'Map your controls to CIS, NIST or ISO frameworks and track progress in real time. SixCyber’s compliance dashboard keeps you audit-ready and insurer-friendly.'
+    10:'Map your controls to CIS, NIST or ISO frameworks and track progress in real time. SixCyber’s compliance dashboard keeps you audit-ready and insurer-friendly.'
   };
 
   const resourceLinks = {
@@ -416,7 +397,7 @@
     7: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-incident-response" target="_blank">SBA Incident Response</a>, <a href="https://www.cisecurity.org/controls/incident-response-management/" target="_blank">CIS Control 17</a>',
     8: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-training" target="_blank">SBA Training</a>, <a href="https://www.cisecurity.org/controls/security-awareness-and-skills-training/" target="_blank">CIS Control 14</a>',
     9: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-backup" target="_blank">SBA Backup & Recovery</a>, <a href="https://www.cisecurity.org/controls/data-protection/" target="_blank">CIS Control 11</a>',
-    10: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-compliance" target="_blank">SBA Compliance</a>, <a href="https://www.cisecurity.org/controls/supply-chain-management/" target="_blank">CIS Control 15</a>'
+    10:'<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-compliance" target="_blank">SBA Compliance</a>, <a href="https://www.cisecurity.org/controls/supply-chain-management/" target="_blank">CIS Control 15</a>'
   };
 
   function showStep(i){
