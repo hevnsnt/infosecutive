@@ -2,301 +2,449 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SMB Cybersecurity Confidence Assessment – SixCyber</title>
-  <meta name="description"
-        content="Evaluate your small or medium business cybersecurity readiness with our interactive confidence assessment. Learn why EDR, vulnerability scanning, cloud monitoring and more are critical for SMB cybersecurity." >
-  <meta name="keywords"
-        content="SMB cybersecurity assessment, small business cybersecurity confidence, cybersecurity readiness quiz, EDR importance, vulnerability scanning benefits, cloud security for SMB, asset inventory, adversary deception, compliance reviews">
+  <meta name="description" content="Interactive SMB cybersecurity assessment with prioritized action plan, based on SBA & CIS best practices.">
+  <meta name="keywords" content="SMB cybersecurity action plan, SBA cybersecurity guide, CIS Top 20, small business security survey">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Vendor CSS Files -->
+  <!-- CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <style>
-/* Default for crawlers & non-JS: show everything */
-.step-card {
-  display: block;
-  opacity: 1;    /* if you’d rather fade-in with JS, handle that later */
-}
+<style>
+  /* Default for indexers */
+  .step-card { display: block; opacity: 1; }
 
-/* Once JS kicks in, we’ll add the “js-enabled” class */
-.js-enabled .step-card {
-  display: none;
-}
-.js-enabled .step-card.active {
-  display: block;
-}
-    .slider-label { font-weight: 600; margin-top: 1rem; }
-    .progress-nav { margin-top: 1.5rem; }
-  </style>
-  <style>
-  /* Scope everything to the checklist page */
-  body.smb-checklist-page {
-    /* if you want a different page background, adjust here */
-  }
+  /* JS-enabled: one-at-a-time UI */
+  .js-enabled .step-card { display: none; }
+  .js-enabled .step-card.active { display: block; }
 
-  /* Ensure the card itself stays white with dark text */
+  /* Card and text colors */
   body.smb-checklist-page .card {
     background-color: #ffffff;
-    color: #212529; /* Bootstrap’s default body text color */
-  }
-
-  /* Headings inside the cards */
-  body.smb-checklist-page .card-body h3 {
     color: #212529;
   }
-
-  /* Paragraphs and slider labels inside cards */
+  body.smb-checklist-page .card-body h3,
   body.smb-checklist-page .card-body p,
-  body.smb-checklist-page .card-body .slider-label {
+  body.smb-checklist-page .form-check-label {
     color: #212529;
   }
+  .importance {
+    font-style: italic;
+    color: #333333;
+    margin-bottom: 1rem;
+  }
 
-  /* Next/Previous buttons styling (optional tweak) */
-  body.smb-checklist-page .progress-nav .btn-outline-primary {
+  /* Navigation buttons */
+  .progress-nav { margin-top: 1.5rem; }
+  body.smb-checklist-page .btn-outline-primary {
     color: #0d6efd;
     border-color: #0d6efd;
   }
-  body.smb-checklist-page .progress-nav .btn-outline-primary:hover {
+  body.smb-checklist-page .btn-outline-primary:hover {
     background-color: #0d6efd;
     color: #ffffff;
   }
+
+  /* High-priority (gaps): darker red/pink background */
+  .action-high {
+    background-color: #ffe5e5;
+    border-left: 4px solid #dc3545;
+    padding: 1rem;
+    margin-bottom: .75rem;
+    color: #842029;
+  }
+  .action-high h5, .action-high p {
+    color: #842029;
+  }
+
+  /* Medium-priority: softer yellow */
+  .action-medium {
+    background-color: #fff8e5;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin-bottom: .75rem;
+    color: #664d03;
+  }
+  .action-medium h5, .action-medium p {
+    color: #664d03;
+  }
+
+  /* Good-job (strongest): light green */
+  .action-good {
+    background-color: #e6f4ea;
+    border-left: 4px solid #198754;
+    padding: 1rem;
+    margin-bottom: .75rem;
+    color: #0f5132;
+  }
+  .action-good h5, .action-good p {
+    color: #0f5132;
+  }
 </style>
 </head>
-
 <body class="starter-page-page smb-checklist-page">
-    <script>
-    // as soon as possible, flag that JS is on
-    document.documentElement.classList.add('js-enabled');
-    </script>
+<script>document.documentElement.classList.add('js-enabled');</script>
 
-  <header id="header" class="header d-flex align-items-center position-relative">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">SixCyber</h1>
-      </a>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-    </div>
-  </header>
+<header id="header" class="header d-flex align-items-center position-relative">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <a href="index.html" class="logo"><h1>SixCyber</h1></a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <i class="mobile-nav-toggle bi bi-list"></i>
+    </nav>
+  </div>
+</header>
 
-  <main class="main">
-    <div class="page-title" data-aos="fade">
-      <div class="container text-center">
-        <h1>SMB Cybersecurity Confidence Assessment</h1>
-        <p class="mb-0">Rate your confidence on each key cybersecurity practice and discover where to strengthen your defenses.</p>
-      </div>
-    </div>
+<main class="main">
+  <div class="page-title text-center my-5">
+    <h1>SMB Cybersecurity Confidence Assessment</h1>
+    <p>Select the statement that best matches your setup; receive a prioritized, detailed action plan at the end.</p>
+  </div>
 
-    <section id="confidence-quiz" class="section">
-      <div class="container" data-aos="fade-up">
-        <!-- Step cards -->
-        <div id="steps-container">
-          <!-- Step 1: EDR -->
-          <div class="step-card active" data-step="1">
-            <div class="card">
-              <div class="card-body">
-                <h3>Endpoint Detection &amp; Response</h3>
-                <p>How confident are you that all your workstations and laptops are protected by enterprise-grade EDR, continuously monitoring for malicious behavior and automated response?</p>
-                <label class="slider-label" for="s1">Confidence: <span id="s1-val">50</span>%</label>
-                <input type="range" id="s1" min="0" max="100" value="50" class="form-range">
-                <p>EDR solutions detect and mitigate advanced malware, fileless attacks, and zero-day threats. For SMB cybersecurity, robust EDR ensures quick incident containment and minimal downtime.</p>
-              </div>
+  <section id="quiz" class="container" data-aos="fade-up">
+    <div id="steps-container">
+      <!-- Step 1 -->
+      <div class="step-card active" data-step="1">
+        <div class="card">
+          <div class="card-body">
+            <h3>Organizational Security Assessment</h3>
+            <p class="importance">A formal security assessment uncovers gaps in your policies, procedures, and physical controls, building a strong foundation to protect customer data and operations.</p>
+            <p>Which best describes your organization?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r1" id="r1-1" value="1" checked>
+              <label class="form-check-label" for="r1-1">Never conducted an assessment.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r1" id="r1-2" value="2">
+              <label class="form-check-label" for="r1-2">Reviewed some areas but no full audit.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r1" id="r1-3" value="3">
+              <label class="form-check-label" for="r1-3">Full assessment completed annually.</label>
             </div>
           </div>
-          <!-- Step 2: Vulnerability Scanning -->
-          <div class="step-card" data-step="2">
-            <div class="card">
-              <div class="card-body">
-                <h3>Vulnerability Scanning</h3>
-                <p>How confident are you that you run daily, hacker-style vulnerability scans to uncover misconfigurations, unpatched software, and open ports before attackers exploit them?</p>
-                <label class="slider-label" for="s2">Confidence: <span id="s2-val">50</span>%</label>
-                <input type="range" id="s2" min="0" max="100" value="50" class="form-range">
-                <p>Continuous vulnerability scanning is essential for SMB risk management. Early detection of security weaknesses helps prioritize remediation and prevents costly data breaches.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Step 3: Cloud Monitoring -->
-          <div class="step-card" data-step="3">
-            <div class="card">
-              <div class="card-body">
-                <h3>Cloud Application &amp; Data Monitoring</h3>
-                <p>How confident are you that your cloud apps and data stores are monitored 24/7 for suspicious activities, unauthorized access attempts, and data exfiltration?</p>
-                <label class="slider-label" for="s3">Confidence: <span id="s3-val">50</span>%</label>
-                <input type="range" id="s3" min="0" max="100" value="50" class="form-range">
-                <p>Cloud monitoring provides visibility into user behavior, configuration drift, and detect threats in SaaS and IaaS environments. It’s vital for comprehensive SMB cybersecurity coverage.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Step 4: Asset Inventory -->
-          <div class="step-card" data-step="4">
-            <div class="card">
-              <div class="card-body">
-                <h3>Asset Inventory</h3>
-                <p>How confident are you that you maintain a real-time inventory of every device on your network, including servers, desktops, mobile devices, and IoT endpoints?</p>
-                <label class="slider-label" for="s4">Confidence: <span id="s4-val">50</span>%</label>
-                <input type="range" id="s4" min="0" max="100" value="50" class="form-range">
-                <p>Complete asset inventory enables targeted patching, vulnerability management, and insider threat detection. For SMBs, knowing all networked devices eliminates blind spots.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Step 5: Adversary Deception -->
-          <div class="step-card" data-step="5">
-            <div class="card">
-              <div class="card-body">
-                <h3>Adversary Deception</h3>
-                <p>How confident are you that you’ve deployed decoy systems or honeypots to trap intruders and trigger real-time alerts if attackers bypass perimeter defenses?</p>
-                <label class="slider-label" for="s5">Confidence: <span id="s5-val">50</span>%</label>
-                <input type="range" id="s5" min="0" max="100" value="50" class="form-range">
-                <p>Adversary deception adds an extra stealth layer of defense. Honeytokens and decoys inside your network provide early breach detection and forensic insights for SMB threat mitigation.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Step 6: Compliance &amp; Reviews -->
-          <div class="step-card" data-step="6">
-            <div class="card">
-              <div class="card-body">
-                <h3>Quarterly Security Reviews</h3>
-                <p>How confident are you that you conduct formal quarterly reviews mapping progress against CIS, NIST, or ISO cybersecurity frameworks and update your security roadmap?</p>
-                <label class="slider-label" for="s6">Confidence: <span id="s6-val">50</span>%</label>
-                <input type="range" id="s6" min="0" max="100" value="50" class="form-range">
-                <p>Regular security assessments keep pace with evolving SMB cyber threats. Framework-based reviews ensure continuous improvement, compliance readiness, and ROI visibility.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <div class="d-flex justify-content-between progress-nav">
-          <button id="prevBtn" class="btn btn-outline-primary" disabled>Previous</button>
-          <button id="nextBtn" class="btn btn-primary">Next</button>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Summary Section -->
-    <section id="summary" class="section" style="display:none;">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title text-center">
-          <span class="description-title">Your Assessment</span>
-          <h2>Review Your Cybersecurity Confidence</h2>
-          <p>Based on your inputs, here’s where your strengths are and where to focus improvements.</p>
-        </div>
-        <div id="results-list" class="list-group mb-4"></div>
-        <div class="text-center">
-          <a href="#contact" class="btn btn-success">Schedule a Free Security Review</a>
         </div>
       </div>
-    </section>
 
-  </main>
+      <!-- Step 2 -->
+      <div class="step-card" data-step="2">
+        <div class="card">
+          <div class="card-body">
+            <h3>Access Controls &amp; Multi-Factor Authentication</h3>
+            <p class="importance">Enforcing MFA and strict access rules blocks unauthorized logins and protects critical accounts.</p>
+            <p>Which best describes your controls?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r2" id="r2-1" value="1" checked>
+              <label class="form-check-label" for="r2-1">No MFA or password policies in place.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r2" id="r2-2" value="2">
+              <label class="form-check-label" for="r2-2">MFA on some critical systems only.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r2" id="r2-3" value="3">
+              <label class="form-check-label" for="r2-3">MFA and strong password rules for all users.</label>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <footer id="footer" class="footer">
-    <div class="container footer-top text-center">
-      <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-        <span class="sitename">SixCyber</span>
-      </a>
-      <p>Enterprise-grade cybersecurity for SMBs nationwide. Local expertise, global standards.</p>
+      <!-- Step 3 -->
+      <div class="step-card" data-step="3">
+        <div class="card">
+          <div class="card-body">
+            <h3>Endpoint Detection &amp; Response (EDR)</h3>
+            <p class="importance">EDR collects detailed activity data from every device so your incident response team can see exactly what happened and stop threats fast.</p>
+            <p>Which best describes your endpoint security?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r3" id="r3-1" value="1" checked>
+              <label class="form-check-label" for="r3-1">Only basic antivirus installed.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r3" id="r3-2" value="2">
+              <label class="form-check-label" for="r3-2">EDR installed but rarely monitored.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r3" id="r3-3" value="3">
+              <label class="form-check-label" for="r3-3">EDR on all devices and actively monitored 24/7.</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-card" data-step="4">
+        <div class="card">
+          <div class="card-body">
+            <h3>Vulnerability Scanning &amp; Patch Management</h3>
+            <p class="importance">Regular scans and timely patching close security holes before attackers can exploit them.</p>
+            <p>Which best describes your process?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r4" id="r4-1" value="1" checked>
+              <label class="form-check-label" for="r4-1">No consistent scanning or patch schedule.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r4" id="r4-2" value="2">
+              <label class="form-check-label" for="r4-2">Monthly scanning; manual patching.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r4" id="r4-3" value="3">
+              <label class="form-check-label" for="r4-3">Daily scans and automated patches deployed.</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step-card" data-step="5">
+        <div class="card">
+          <div class="card-body">
+            <h3>Cloud Application &amp; Data Security</h3>
+            <p class="importance">Monitoring cloud services prevents misconfigurations and data leaks in SaaS and IaaS environments.</p>
+            <p>Which best describes your cloud security?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r5" id="r5-1" value="1" checked>
+              <label class="form-check-label" for="r5-1">No cloud monitoring or alerts.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r5" id="r5-2" value="2">
+              <label class="form-check-label" for="r5-2">Partial monitoring; gaps remain.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r5" id="r5-3" value="3">
+              <label class="form-check-label" for="r5-3">Full 24/7 monitoring of all cloud environments.</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="step-card" data-step="6">
+        <div class="card">
+          <div class="card-body">
+            <h3>Asset Inventory &amp; Configuration</h3>
+            <p class="importance">Tracking every device and its settings ensures nothing slips through the cracks and keeps configurations consistent.</p>
+            <p>Which best describes your asset management?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r6" id="r6-1" value="1" checked>
+              <label class="form-check-label" for="r6-1">No centralized asset inventory.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r6" id="r6-2" value="2">
+              <label class="form-check-label" for="r6-2">Inventory exists but not real-time.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r6" id="r6-3" value="3">
+              <label class="form-check-label" for="r6-3">Real-time discovery and config management in place.</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 7 -->
+      <div class="step-card" data-step="7">
+        <div class="card">
+          <div class="card-body">
+            <h3>Incident Response Planning &amp; Testing</h3>
+            <p class="importance">A practiced response plan minimizes confusion and downtime when an incident occurs, so you can recover quickly.</p>
+            <p>Which best describes your IR readiness?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r7" id="r7-1" value="1" checked>
+              <label class="form-check-label" for="r7-1">No documented incident response plan.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r7" id="r7-2" value="2">
+              <label class="form-check-label" for="r7-2">Plan exists but not regularly tested.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r7" id="r7-3" value="3">
+              <label class="form-check-label" for="r7-3">IR plan is documented and tested quarterly.</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 8 -->
+      <div class="step-card" data-step="8">
+        <div class="card">
+          <div class="card-body">
+            <h3>Staff Training &amp; Phishing Simulations</h3>
+            <p class="importance">Ongoing training and simple phishing tests turn your team into a human firewall, stopping social-engineering attacks.</p>
+            <p>Which best describes your training program?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r8" id="r8-1" value="1" checked>
+              <label class="form-check-label" for="r8-1">No formal cybersecurity training for staff.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r8" id="r8-2" value="2">
+              <label class="form-check-label" for="r8-2">Training offered but lacks phishing drills.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r8" id="r8-3" value="3">
+              <label class="form-check-label" for="r8-3">Regular training and simulated phishing campaigns conducted.</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 9 -->
+      <div class="step-card" data-step="9">
+        <div class="card">
+          <div class="card-body">
+            <h3>Data Backup &amp; Recovery</h3>
+            <p class="importance">Automated backups and periodic recovery tests ensure you never lose critical data to attacks or failures.</p>
+            <p>Which best describes your backup strategy?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r9" id="r9-1" value="1" checked>
+              <label class="form-check-label" for="r9-1">Backups are manual and inconsistent.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r9" id="r9-2" value="2">
+              <label class="form-check-label" for="r9-2">Automated backups but recovery untested.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r9" id="r9-3" value="3">
+              <label class="form-check-label" for="r9-3">Automated backups and recovery drills performed regularly.</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 10 -->
+      <div class="step-card" data-step="10">
+        <div class="card">
+          <div class="card-body">
+            <h3>Compliance &amp; Framework Mapping</h3>
+            <p class="importance">Mapping to CIS, NIST or ISO gives you a clear roadmap of best practices and simplifies audits.</p>
+            <p>Which best describes your compliance posture?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r10" id="r10-1" value="1" checked>
+              <label class="form-check-label" for="r10-1">No alignment with any security framework.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r10" id="r10-2" value="2">
+              <label class="form-check-label" for="r10-2">Partial mapping but no formal program.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="r10" id="r10-3" value="3">
+              <label class="form-check-label" for="r10-3">Fully aligned and reviewed quarterly.</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="container text-center mt-3">
-      <p>© <strong>SixCyber LLC</strong> • All Rights Reserved</p>
+
+    <!-- Navigation Buttons -->
+    <div class="d-flex justify-content-between progress-nav">
+      <button id="prevBtn" class="btn btn-outline-primary" disabled>Previous</button>
+      <button id="nextBtn" class="btn btn-primary">Next</button>
     </div>
-  </footer>
+  </section>
 
-  <!-- Back to top -->
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
+  <section id="summary" class="container" style="display:none;" data-aos="fade-up">
+    <div class="section-title text-center mb-4">
+      <h2>Your Customized Action Plan</h2>
+      <p>Recommendations prioritized by your weakest areas first, with detailed explanations and resource links.</p>
+    </div>
+    <div id="action-plan"></div>
+  </section>
+</main>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+<footer class="footer text-center py-4">
+  <p>© SixCyber LLC • Small Business Cybersecurity Experts</p>
+</footer>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+  <i class="bi bi-arrow-up-short"></i>
+</a>
 
-  <script>
-    (function() {
-      const steps = document.querySelectorAll('.step-card');
-      let current = 0;
-      const total = steps.length;
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
-      const summary = document.getElementById('summary');
-      const resultsList = document.getElementById('results-list');
+<!-- JS -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+(function(){
+  const steps = document.querySelectorAll('.step-card');
+  const total = steps.length;
+  let current = 0;
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const summary = document.getElementById('summary');
+  const planContainer = document.getElementById('action-plan');
+  const questionTitles = [
+    'Organizational Security Assessment',
+    'Access Controls & Multi-Factor Authentication',
+    'Endpoint Detection & Response (EDR)',
+    'Vulnerability Scanning & Patch Management',
+    'Cloud Application & Data Security',
+    'Asset Inventory & Configuration',
+    'Incident Response Planning & Testing',
+    'Staff Training & Phishing Simulations',
+    'Data Backup & Recovery',
+    'Compliance & Framework Mapping'
+  ];
 
-      // Update slider labels
-      for (let i = 1; i <= total; i++) {
-        const slider = document.getElementById('s' + i);
-        const label = document.getElementById('s' + i + '-val');
-        slider.addEventListener('input', () => {
-          label.textContent = slider.value;
-        });
+  const resourceLinks = {
+    1: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-assessment" target="_blank">SBA Assessment Guide</a>, <a href="https://www.cisecurity.org/controls/1-5/" target="_blank">CIS Controls 1–5</a>',
+    2: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-access-control" target="_blank">SBA Access Control</a>, <a href="https://www.cisecurity.org/controls/4/" target="_blank">CIS Control 4</a>',
+    3: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-endpoint-protection" target="_blank">SBA Endpoint Protection</a>, <a href="https://www.cisecurity.org/controls/7/" target="_blank">CIS Control 7</a>',
+    4: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-vulnerability" target="_blank">SBA Vulnerability Management</a>, <a href="https://www.cisecurity.org/controls/3/" target="_blank">CIS Control 3</a>',
+    5: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-cloud-security" target="_blank">SBA Cloud Security</a>, <a href="https://www.cisecurity.org/controls/16/" target="_blank">CIS Control 16</a>',
+    6: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-inventory" target="_blank">SBA Asset Inventory</a>, <a href="https://www.cisecurity.org/controls/1/" target="_blank">CIS Control 1</a>',
+    7: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-incident-response" target="_blank">SBA Incident Response</a>, <a href="https://www.cisecurity.org/controls/17/" target="_blank">CIS Control 17</a>',
+    8: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-training" target="_blank">SBA Training</a>, <a href="https://www.cisecurity.org/controls/14/" target="_blank">CIS Control 14</a>',
+    9: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-backup" target="_blank">SBA Backup & Recovery</a>, <a href="https://www.cisecurity.org/controls/10/" target="_blank">CIS Control 10</a>',
+    10:'<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-compliance" target="_blank">SBA Compliance</a>, <a href="https://www.cisecurity.org/controls/18/" target="_blank">CIS Control 18</a>'
+  };
+
+  function showStep(i){
+    steps.forEach((s,j)=> s.classList.toggle('active', j===i));
+    prevBtn.disabled = (i===0);
+    nextBtn.textContent = (i===total-1?'Finish':'Next');
+  }
+
+  function buildPlan(){
+    const results = [];
+    for(let i=1;i<=total;i++){
+      const sel = +document.querySelector(`input[name="r${i}"]:checked`).value;
+      const label = document.querySelector(`label[for="r${i}-${sel}"]`).innerText;
+      const desc = document.querySelector(`.step-card[data-step="${i}"] .importance`).innerText;
+      results.push({ idx: i, score: sel, answer: label, description: desc });
+    }
+    results.sort((a,b)=> a.score - b.score);
+    planContainer.innerHTML = '';
+    results.forEach(item=>{
+      let cls = item.score===1 ? 'action-high' : item.score===2 ? 'action-medium' : 'action-good';
+      let header = `<h5>${questionTitles[item.idx-1]}</h5>`;
+      let body = `<p><strong>Your answer:</strong> ${item.answer}</p>`;
+      if(item.score<3){
+        body += `<p>${item.description}</p>`;
+        body += `<p>Recommendation: Follow ${resourceLinks[item.idx]} to improve this control.</p>`;
+      } else {
+        body += `<p>Great job! You have strong protection here. For a third-party review, <a href="#contact">contact us</a>.</p>`;
       }
+      planContainer.insertAdjacentHTML('beforeend', `<div class="${cls}">${header}${body}</div>`);
+    });
+  }
 
-      function showStep(index) {
-        steps.forEach((step, i) => {
-          step.classList.toggle('active', i === index);
-        });
-        prevBtn.disabled = index === 0;
-        nextBtn.textContent = index === total - 1 ? 'Finish' : 'Next';
-      }
-
-      function showSummary() {
-        document.getElementById('confidence-quiz').style.display = 'none';
-        summary.style.display = 'block';
-        resultsList.innerHTML = '';
-        const questions = [
-          'Endpoint Detection & Response',
-          'Vulnerability Scanning',
-          'Cloud Monitoring',
-          'Asset Inventory',
-          'Adversary Deception',
-          'Quarterly Security Reviews'
-        ];
-        for (let i = 1; i <= total; i++) {
-          const score = document.getElementById('s' + i).value;
-          const item = document.createElement('div');
-          item.className = 'list-group-item';
-          item.innerHTML = `<h5>${questions[i-1]}</h5><p>Confidence: ${score}%</p>`;
-          resultsList.appendChild(item);
-        }
-      }
-
-      nextBtn.addEventListener('click', () => {
-        if (current < total - 1) {
-          current++;
-          showStep(current);
-        } else {
-          showSummary();
-        }
-      });
-      prevBtn.addEventListener('click', () => {
-        if (current > 0) {
-          current--;
-          showStep(current);
-        }
-      });
-      showStep(current);
-    })();
-  </script>
-
+  nextBtn.addEventListener('click', ()=>{
+    if(current<total-1){ current++; showStep(current); }
+    else{
+      document.getElementById('quiz').style.display='none';
+      summary.style.display='block';
+      buildPlan();
+    }
+  });
+  prevBtn.addEventListener('click', ()=>{ if(current>0){ current--; showStep(current); } });
+  showStep(0);
+})();
+</script>
 </body>
 </html>
