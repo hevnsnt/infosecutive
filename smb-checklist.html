@@ -378,8 +378,9 @@
   const nextBtn = document.getElementById('nextBtn');
   const summary = document.getElementById('summary');
   const planContainer = document.getElementById('action-plan');
+
   const questionTitles = [
-    'Organizational Security Assessment',
+    'Email Security & Phishing Protection',
     'Access Controls & Multi-Factor Authentication',
     'Endpoint Detection & Response (EDR)',
     'Vulnerability Scanning & Patch Management',
@@ -391,58 +392,90 @@
     'Compliance & Framework Mapping'
   ];
 
+  // Marketing-forward guidance for each section
+  const customGuidance = {
+    1: 'Deploy email security that catches phishing links and quarantines malicious attachments before they reach any inbox. SixCyber’s AI-driven gateway inspects every message in real time so your team never clicks a bad link.',
+    2: 'Roll out company-wide MFA using push notifications or hardware tokens. SixCyber makes it painless to enforce second factors everywhere, blocking over 90% of account-takeover attempts.',
+    3: 'Ensure every workstation and server runs enterprise-grade EDR with 24×7 monitoring. SixCyber’s EDR gathers deep forensic data so you can see, investigate and contain threats in real time.',
+    4: 'Deploy continuous, hacker-style vulnerability scans plus automated patch orchestration. SixCyber finds and fixes software and config flaws before attackers can strike.',
+    5: 'Implement a unified cloud security platform that watches SaaS apps and data stores nonstop. SixCyber alerts on misconfigurations, strange file access, and potential data leaks immediately.',
+    6: 'Use automated discovery to track every laptop, server, phone and IoT device. SixCyber keeps your inventory current, enforces secure settings, and notifies you the moment a new asset appears.',
+    7: 'Build and test a documented incident-response playbook with quarterly drills. SixCyber’s on-demand IR team helps you practice scenarios, so you react swiftly and smoothly when real incidents happen.',
+    8: 'Launch engaging micro-trainings and realistic phishing tests for your team. SixCyber’s platform boosts awareness and cuts human-error breaches by over 70%.',
+    9: 'Configure continuous, encrypted backups with routine restore exercises. SixCyber’s backup service ensures you can recover data and resume operations in minutes.',
+    10: 'Map your controls to CIS, NIST or ISO frameworks and track progress in real time. SixCyber’s compliance dashboard keeps you audit-ready and insurer-friendly.'
+  };
+
   const resourceLinks = {
-    1: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-assessment" target="_blank">SBA Assessment Guide</a>, <a href="https://www.cisa.gov/cyber-guidance-small-businesses#email-security" target="_blank">CIS Email Security</a>',
-    2: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-access-control" target="_blank">SBA Access Control</a>, <a href="https://www.cisecurity.org/controls/4/" target="_blank">CIS Control 4</a>',
-    3: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-endpoint-protection" target="_blank">SBA Endpoint Protection</a>, <a href="https://www.cisecurity.org/controls/7/" target="_blank">CIS Control 7</a>',
-    4: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-vulnerability" target="_blank">SBA Vulnerability Management</a>, <a href="https://www.cisecurity.org/controls/3/" target="_blank">CIS Control 3</a>',
-    5: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-cloud-security" target="_blank">SBA Cloud Security</a>, <a href="https://www.cisecurity.org/controls/16/" target="_blank">CIS Control 16</a>',
-    6: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-inventory" target="_blank">SBA Asset Inventory</a>, <a href="https://www.cisecurity.org/controls/1/" target="_blank">CIS Control 1</a>',
-    7: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-incident-response" target="_blank">SBA Incident Response</a>, <a href="https://www.cisecurity.org/controls/17/" target="_blank">CIS Control 17</a>',
-    8: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-training" target="_blank">SBA Training</a>, <a href="https://www.cisecurity.org/controls/14/" target="_blank">CIS Control 14</a>',
-    9: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-backup" target="_blank">SBA Backup & Recovery</a>, <a href="https://www.cisecurity.org/controls/10/" target="_blank">CIS Control 10</a>',
-    10:'<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-compliance" target="_blank">SBA Compliance</a>, <a href="https://www.cisecurity.org/controls/18/" target="_blank">CIS Control 18</a>'
+    1: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#email-security" target="_blank">SBA Email Security</a>, <a href="https://www.cisecurity.org/controls/email-and-web-browser-protection/" target="_blank">CIS Control 7</a>',
+    2: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-access-control" target="_blank">SBA Access Control</a>, <a href="https://www.cisecurity.org/controls/access-control-management/" target="_blank">CIS Control 6</a>',
+    3: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-endpoint-protection" target="_blank">SBA Endpoint Protection</a>, <a href="https://www.cisecurity.org/controls/endpoint-detection-and-response/" target="_blank">CIS Control 10</a>',
+    4: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-vulnerability" target="_blank">SBA Vulnerability Management</a>, <a href="https://www.cisecurity.org/controls/vulnerability-management/" target="_blank">CIS Control 3</a>',
+    5: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-cloud-security" target="_blank">SBA Cloud Security</a>, <a href="https://www.cisecurity.org/controls/cloud-security/" target="_blank">CIS Control 16</a>',
+    6: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-inventory" target="_blank">SBA Asset Inventory</a>, <a href="https://www.cisecurity.org/controls/hardware-software-inventory/" target="_blank">CIS Control 1</a>',
+    7: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-incident-response" target="_blank">SBA Incident Response</a>, <a href="https://www.cisecurity.org/controls/incident-response-management/" target="_blank">CIS Control 17</a>',
+    8: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-training" target="_blank">SBA Training</a>, <a href="https://www.cisecurity.org/controls/security-awareness-and-skills-training/" target="_blank">CIS Control 14</a>',
+    9: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-backup" target="_blank">SBA Backup & Recovery</a>, <a href="https://www.cisecurity.org/controls/data-protection/" target="_blank">CIS Control 11</a>',
+    10: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#section-compliance" target="_blank">SBA Compliance</a>, <a href="https://www.cisecurity.org/controls/supply-chain-management/" target="_blank">CIS Control 15</a>'
   };
 
   function showStep(i){
     steps.forEach((s,j)=> s.classList.toggle('active', j===i));
     prevBtn.disabled = (i===0);
-    nextBtn.textContent = (i===total-1?'Finish':'Next');
+    nextBtn.textContent = (i===total-1 ? 'Finish' : 'Next');
   }
 
   function buildPlan(){
     const results = [];
-    for(let i=1;i<=total;i++){
-      const sel = +document.querySelector(`input[name="r${i}"]:checked`).value;
+    for(let i=1; i<=total; i++){
+      const sel   = +document.querySelector(`input[name="r${i}"]:checked`).value;
       const label = document.querySelector(`label[for="r${i}-${sel}"]`).innerText;
-      const desc = document.querySelector(`.step-card[data-step="${i}"] .importance`).innerText;
-      results.push({ idx: i, score: sel, answer: label, description: desc });
+      const desc  = document.querySelector(`.step-card[data-step="${i}"] .importance`).innerText;
+      results.push({ idx:i, score:sel, answer:label, description:desc });
     }
     results.sort((a,b)=> a.score - b.score);
     planContainer.innerHTML = '';
+
     results.forEach(item=>{
-      let cls = item.score===1 ? 'action-high' : item.score===2 ? 'action-medium' : 'action-good';
-      let header = `<h5>${questionTitles[item.idx-1]}</h5>`;
-      let body = `<p><strong>Your answer:</strong> ${item.answer}</p>`;
-      if(item.score<3){
+      const cls    = item.score===1 ? 'action-high'
+                     : item.score===2 ? 'action-medium'
+                     : 'action-good';
+      let header   = `<h5>${questionTitles[item.idx-1]}</h5>`;
+      let body     = `<p><strong>Your answer:</strong> ${item.answer}</p>`;
+
+      if(item.score < 3){
         body += `<p>${item.description}</p>`;
+        body += `<p>${customGuidance[item.idx]}</p>`;
         body += `<p>Recommendation: Follow ${resourceLinks[item.idx]} to improve this control.</p>`;
       } else {
-        body += `<p>Great job! You have strong protection here. For a third-party review, <a href="#contact">contact us</a>.</p>`;
+        body += `<p>Great job! You have strong protection here. For a detailed review, <a href="#contact">contact us</a>.</p>`;
       }
-      planContainer.insertAdjacentHTML('beforeend', `<div class="${cls}">${header}${body}</div>`);
+
+      planContainer.insertAdjacentHTML(
+        'beforeend',
+        `<div class="${cls}">${header}${body}</div>`
+      );
     });
   }
 
   nextBtn.addEventListener('click', ()=>{
-    if(current<total-1){ current++; showStep(current); }
-    else{
-      document.getElementById('quiz').style.display='none';
-      summary.style.display='block';
+    if(current < total - 1){
+      current++;
+      showStep(current);
+    } else {
+      document.getElementById('quiz').style.display = 'none';
+      summary.style.display = 'block';
       buildPlan();
     }
   });
-  prevBtn.addEventListener('click', ()=>{ if(current>0){ current--; showStep(current); } });
+
+  prevBtn.addEventListener('click', ()=>{
+    if(current > 0){
+      current--;
+      showStep(current);
+    }
+  });
+
   showStep(0);
 })();
 </script>
