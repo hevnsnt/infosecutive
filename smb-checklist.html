@@ -445,8 +445,8 @@
 
       if(item.score < 3){
         body += `<p>${item.description}</p>`;
-        body += `<p>${customGuidance[item.idx]}</p>`;
-        body += `<p>Recommendation: Follow ${resourceLinks[item.idx]} to improve this control.</p>`;
+        body += `<p>Recommendation: ${customGuidance[item.idx]}</p>`;
+        body += `<p>Follow ${resourceLinks[item.idx]} to improve this control.</p>`;
       } else {
         body += `<p>Great job! You have strong protection here. For a detailed review, <a href="#contact">contact us</a>.</p>`;
       }
