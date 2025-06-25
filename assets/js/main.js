@@ -1,10 +1,8 @@
 /**
-* Template Name: Visible
-* Template URL: https://bootstrapmade.com/visible-bootstrap-agency-template/
-* Updated: May 22 2025 with Bootstrap v5.3.6
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Template Name: Visible
+ * Template URL: https://bootstrapmade.com/visible-bootstrap-agency-template/
+ * Updated: Revised for SixCyber interactive checklist page fix
+ */
 
 (function() {
   "use strict";
@@ -15,7 +13,9 @@
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
+    if (!selectHeader.classList.contains('scroll-up-sticky') &&
+        !selectHeader.classList.contains('sticky-top') &&
+        !selectHeader.classList.contains('fixed-top')) return;
     window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
 
@@ -26,7 +26,6 @@
    * Mobile nav toggle
    */
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-
   function mobileNavToogle() {
     document.querySelector('body').classList.toggle('mobile-nav-active');
     mobileNavToggleBtn.classList.toggle('bi-list');
@@ -45,7 +44,6 @@
         mobileNavToogle();
       }
     });
-
   });
 
   /**
@@ -71,25 +69,23 @@
   }
 
   /**
-   * Scroll top button
+   * Scroll top (back-to-top) button
+   * Guard ensures code only runs if element exists
    */
-  let scrollTop = document.querySelector('.scroll-top');
-
+  const scrollTopBtn = document.querySelector('.back-to-top');
   function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+    if (scrollTopBtn) {
+      window.scrollY > 100 ? scrollTopBtn.classList.add('active') : scrollTopBtn.classList.remove('active');
     }
   }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-  });
-
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
+    window.addEventListener('load', toggleScrollTop);
+    document.addEventListener('scroll', toggleScrollTop);
+  }
 
   /**
    * Animation on scroll function and init
@@ -112,9 +108,7 @@
   /**
    * Initiate glightbox
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+  const glightbox = GLightbox({ selector: '.glightbox' });
 
   /**
    * Init isotope layout and filters
@@ -122,7 +116,7 @@
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+    let sort   = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
     imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
@@ -138,19 +132,14 @@
       filters.addEventListener('click', function() {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        if (typeof aosInit === 'function') {
-          aosInit();
-        }
+        initIsotope.arrange({ filter: this.getAttribute('data-filter') });
+        if (typeof aosInit === 'function') aosInit();
       }, false);
     });
-
   });
 
   /**
-   * Frequently Asked Questions Toggle
+   * FAQ Toggle
    */
   document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle, .faq-item .faq-header').forEach((faqItem) => {
     faqItem.addEventListener('click', () => {
@@ -174,24 +163,18 @@
       }
     });
   }
-
   window.addEventListener("load", initSwiper);
 
   /**
-   * Correct scrolling position upon page load for URLs containing hash links.
+   * Correct hash link scrolling
    */
-  window.addEventListener('load', function(e) {
-    if (window.location.hash) {
-      if (document.querySelector(window.location.hash)) {
-        setTimeout(() => {
-          let section = document.querySelector(window.location.hash);
-          let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
-          window.scrollTo({
-            top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
-          });
-        }, 100);
-      }
+  window.addEventListener('load', function() {
+    if (window.location.hash && document.querySelector(window.location.hash)) {
+      setTimeout(() => {
+        let section = document.querySelector(window.location.hash);
+        let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
+        window.scrollTo({ top: section.offsetTop - parseInt(scrollMarginTop), behavior: 'smooth' });
+      }, 100);
     }
   });
 
@@ -199,7 +182,6 @@
    * Navmenu Scrollspy
    */
   let navmenulinks = document.querySelectorAll('.navmenu a');
-
   function navmenuScrollspy() {
     navmenulinks.forEach(navmenulink => {
       if (!navmenulink.hash) return;
@@ -212,7 +194,7 @@
       } else {
         navmenulink.classList.remove('active');
       }
-    })
+    });
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
