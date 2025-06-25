@@ -102,6 +102,94 @@
   color: #842029;                  /* make all text inside dark red */
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Email Security & Phishing Protection",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most breaches start in the inbox. Filtering and scanning every message stops spam, scams and malicious attachments before they reach your team."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Access Controls & Multi-Factor Authentication",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Strong login rules block stolen passwords and stop over 90% of account-takeover attempts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Endpoint Detection & Response (EDR)",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seeing activity on every device lets you catch and stop attacks fast—before they spread and disrupt your operations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vulnerability Scanning & Patch Management",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unpatched software is hacker gold. Automated scans and updates close holes before criminals can exploit them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cloud Application & Data Security",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One mis-set in SaaS or cloud can leak your data. Continuous monitoring stops misconfigurations and unauthorized access instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Asset Inventory & Configuration",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can’t secure what you don’t see. A live device list ensures every PC, phone and printer is up-to-date and protected."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Incident Response Planning & Testing",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When seconds count, a practiced playbook stops panic, cuts damage and gets you back to normal fast."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Staff Training & Phishing Simulations",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your team is your first line of defense. Short drills and simulations turn employees into cyber-aware allies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Data Backup & Recovery",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lost data can shut you down. Automated backups and restore tests ensure you recover quickly and fully."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Compliance & Framework Mapping",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Following CIS, NIST or ISO shows you exactly which steps matter and simplifies audits or insurance reviews."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body class="starter-page-page smb-checklist-page">
 <script>document.documentElement.classList.add('js-enabled');</script>
@@ -408,10 +496,17 @@
     </ol>
 
     <!-- Navigation Buttons -->
-    <div class="d-flex justify-content-between progress-nav">
-      <button id="prevBtn" class="btn btn-outline-primary" disabled>Previous</button>
-      <button id="nextBtn" class="btn btn-primary">Next</button>
-    </div>
+<nav aria-label="Quiz navigation" class="d-flex justify-content-between progress-nav">
+  <button id="prevBtn" class="btn btn-outline-primary" disabled aria-describedby="nav-desc">
+    Previous
+  </button>
+  <button id="nextBtn" class="btn btn-primary" aria-describedby="nav-desc">
+    Next
+  </button>
+  <p id="nav-desc" class="visually-hidden">
+    Use Previous and Next to step through the questions.
+  </p>
+</nav>
   </section>
 
   <section id="summary" class="container" style="display:none;" data-aos="fade-up">
@@ -435,6 +530,10 @@
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/aos/aos.js"></script>
 <script src="assets/js/main.js"></script>
+  <!-- Charting & PDF export libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
 (function(){
   const steps = document.querySelectorAll('.step-card'),
@@ -473,30 +572,30 @@
   };
 
     const resourceLinks = {
-    1: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#email-security" target="_blank">SBA small business phishing protection best practices</a>, <a href="https://www.cisecurity.org/controls/email-and-web-browser-protections" target="_blank">CIS Control 9 – Email & Web Browser Protections</a>',  //  [oai_citation:0‡cisecurity.org](https://www.cisecurity.org/controls/email-and-web-browser-protections?utm_source=chatgpt.com)
-    2: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#access-control" target="_blank">SBA small business access control best practices</a>, <a href="https://www.cisecurity.org/controls/access-control-management" target="_blank">CIS Control 6 – Access Control Management</a>',  //  [oai_citation:1‡cisecurity.org](https://www.cisecurity.org/controls/access-control-management?utm_source=chatgpt.com)
+    1: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#email-security" target="_blank">SBA small business phishing protection best practices for SMBs</a>, <a href="https://www.cisecurity.org/controls/email-and-web-browser-protections" target="_blank">CIS Control 9 – Email & Web Browser Protections</a>',  //  [oai_citation:0‡cisecurity.org](https://www.cisecurity.org/controls/email-and-web-browser-protections?utm_source=chatgpt.com)
+    2: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#access-control" target="_blank">SBA small business access control best practices for SMBs</a>, <a href="https://www.cisecurity.org/controls/access-control-management" target="_blank">CIS Control 6 – Access Control Management</a>',  //  [oai_citation:1‡cisecurity.org](https://www.cisecurity.org/controls/access-control-management?utm_source=chatgpt.com)
     3: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#endpoint-protection" target="_blank">SBA endpoint protection guidance for small businesses</a>, <a href="https://www.cisecurity.org/controls/malware-defenses" target="_blank">CIS Control 10 – Malware Defenses</a>',  //  [oai_citation:2‡cisecurity.org](https://www.cisecurity.org/controls/malware-defenses?utm_source=chatgpt.com)
-    4: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#vulnerability-management" target="_blank">SBA vulnerability scanning & patch management tips</a>, <a href="https://www.cisecurity.org/controls/continuous-vulnerability-management" target="_blank">CIS Control 7 – Continuous Vulnerability Management</a>',  //  [oai_citation:3‡cisecurity.org](https://www.cisecurity.org/controls/continuous-vulnerability-management?utm_source=chatgpt.com)
-    5: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#cloud-security" target="_blank">SBA cloud application & data security guidance</a>, <a href="https://www.cisecurity.org/controls/application-software-security" target="_blank">CIS Control 16 – Application Software Security</a>',  //  [oai_citation:4‡cisecurity.org](https://www.cisecurity.org/controls/application-software-security?utm_source=chatgpt.com)
+    4: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#vulnerability-management" target="_blank">SBA vulnerability scanning & patch management tips for SMBs</a>, <a href="https://www.cisecurity.org/controls/continuous-vulnerability-management" target="_blank">CIS Control 7 – Continuous Vulnerability Management</a>',  //  [oai_citation:3‡cisecurity.org](https://www.cisecurity.org/controls/continuous-vulnerability-management?utm_source=chatgpt.com)
+    5: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#cloud-security" target="_blank">SBA cloud application & data security guidance for SMBs</a>, <a href="https://www.cisecurity.org/controls/application-software-security" target="_blank">CIS Control 16 – Application Software Security</a>',  //  [oai_citation:4‡cisecurity.org](https://www.cisecurity.org/controls/application-software-security?utm_source=chatgpt.com)
     6: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#asset-inventory" target="_blank">SBA asset inventory best practices for SMBs</a>, <a href="https://www.cisecurity.org/controls/inventory-and-control-of-enterprise-assets" target="_blank">CIS Control 1 – Inventory & Control of Enterprise Assets</a>',  //  [oai_citation:5‡cisecurity.org](https://www.cisecurity.org/controls/inventory-and-control-of-enterprise-assets?utm_source=chatgpt.com)
-    7: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#incident-response" target="_blank">SBA incident response planning guide</a>, <a href="https://www.cisecurity.org/controls/incident-response-management" target="_blank">CIS Control 17 – Incident Response & Management</a>',  //  [oai_citation:6‡cisecurity.org](https://www.cisecurity.org/controls/incident-response-management?utm_source=chatgpt.com)
-    8: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#training" target="_blank">SBA cybersecurity training & awareness tips</a>, <a href="https://www.cisecurity.org/controls/security-awareness-and-skills-training" target="_blank">CIS Control 14 – Security Awareness & Skills Training</a>',  //  [oai_citation:7‡cisecurity.org](https://www.cisecurity.org/controls/security-awareness-and-skills-training?utm_source=chatgpt.com)
-    9: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#backup-recovery" target="_blank">SBA data backup & disaster recovery best practices</a>, <a href="https://www.cisecurity.org/controls/data-recovery" target="_blank">CIS Control 11 – Data Recovery</a>',  //  [oai_citation:8‡cisecurity.org](https://www.cisecurity.org/controls/data-recovery?utm_source=chatgpt.com)
-    10: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#compliance" target="_blank">SBA compliance & framework mapping guide</a>, <a href="https://www.cisecurity.org/controls/service-provider-management" target="_blank">CIS Control 15 – Service Provider Management</a>'  //  [oai_citation:9‡cisecurity.org](https://www.cisecurity.org/controls/policy-templates?utm_source=chatgpt.com)
+    7: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#incident-response" target="_blank">SBA incident response planning guide for SMBs</a>, <a href="https://www.cisecurity.org/controls/incident-response-management" target="_blank">CIS Control 17 – Incident Response & Management</a>',  //  [oai_citation:6‡cisecurity.org](https://www.cisecurity.org/controls/incident-response-management?utm_source=chatgpt.com)
+    8: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#training" target="_blank">SBA cybersecurity training & awareness tips for SMBs</a>, <a href="https://www.cisecurity.org/controls/security-awareness-and-skills-training" target="_blank">CIS Control 14 – Security Awareness & Skills Training</a>',  //  [oai_citation:7‡cisecurity.org](https://www.cisecurity.org/controls/security-awareness-and-skills-training?utm_source=chatgpt.com)
+    9: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#backup-recovery" target="_blank">SBA data backup & disaster recovery best practices for SMBs</a>, <a href="https://www.cisecurity.org/controls/data-recovery" target="_blank">CIS Control 11 – Data Recovery</a>',  //  [oai_citation:8‡cisecurity.org](https://www.cisecurity.org/controls/data-recovery?utm_source=chatgpt.com)
+    10: '<a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity#compliance" target="_blank">SBA compliance & framework mapping guide for SMBs</a>, <a href="https://www.cisecurity.org/controls/service-provider-management" target="_blank">CIS Control 15 – Service Provider Management</a>'  //  [oai_citation:9‡cisecurity.org](https://www.cisecurity.org/controls/policy-templates?utm_source=chatgpt.com)
     };
 
-  const alertQuestions = {
-    1: 'Ask your MSP: “What email filters and sandboxing solutions are currently protecting us from phishing?”',
-    2: 'Ask your MSP: “Can you confirm MFA is enforced on every user account, including remote access?”',
-    3: 'Ask your MSP: “How is EDR monitored and what is our average response time?”',
-    4: 'Ask your MSP: “How often do you run vulnerability scans and automatically apply patches?”',
-    5: 'Ask your MSP: “What cloud services monitoring do we have and how do we review alerts?”',
-    6: 'Ask your MSP: “Do we have real-time device discovery and configuration tracking?”',
-    7: 'Ask your MSP: “Can you walk me through our incident response plan and last drill results?”',
-    8: 'Ask your MSP: “What phishing simulations and staff trainings have been conducted this year?”',
-    9: 'Ask your MSP: “How frequently are our backups tested for a full recovery?”',
-    10:'Ask your MSP: “Which security framework do we follow and when was our last compliance review?”'
-  };
+    const alertQuestions = {
+    1: 'Ask your IT provider: “Which email security solution (sandboxing, URL rewriting, DMARC/SPF/DKIM enforcement) is protecting my employees, and can you show me last month’s phishing block logs?”',
+    2: 'Ask your IT provider: “Exactly which applications and systems enforce MFA, what factors are used (app push, token, SMS), and can you provide metrics on blocked login attempts?”',
+    3: 'Ask your IT provider: “What EDR product is deployed, which alerts are configured, what’s your SLA for event investigation, and can I see a sample incident timeline?”',
+    4: 'Ask your IT provider: “Which vulnerability scanner do you use, how often are scans run, and what is your patch deployment timeline from discovery to installation?”',
+    5: 'Ask your IT provider: “How are our cloud assets monitored (CSPM/CASB), what misconfigurations were flagged last month, and how were they remediated?”',
+    6: 'Ask your IT provider: “What automated discovery tool tracks our hardware and software assets, how often is the inventory updated, and can you share the current asset report?”',
+    7: 'Ask your IT provider: “Can you walk me through our incident response plan, tell me when we last tested it, and share the results of that exercise?”',
+    8: 'Ask your IT provider: “What security awareness training platform do we use, how frequently is training delivered, and what were our latest phishing simulation click-rates?”',
+    9: 'Ask your IT provider: “What systems are backed up and how often? How often are backups tested?”',
+    10:'Ask your IT provider: “Which cybersecurity framework guide do we follow (CIS, NIST, ISO), can you show me our gap analysis, and when was our last audit?”'
+    };
 
   function showStep(i){
     steps.forEach((s,j)=> s.classList.toggle('active', j===i));
@@ -535,7 +634,7 @@
 
         if(item.score === 4){
         // Immediate alert card
-        html += `<p class="importance">⚠️ <strong>IMMEDIATE ALERT:</strong> ⚠️ You indicated you’re unsure—this is a critical gap.</p>
+        html += `<p class="importance">⚠️ <strong>IMMEDIATE ALERT:</strong> This critical protection could be missing. Essential safeguards often slip through the cracks when they haven’t been explicitly requested. Reach out to your IT provider today to confirm it’s fully in place.</p>
                 <p><em>${alertQuestions[item.idx]}</em></p>`;
         }
         else if(item.score < 3){
@@ -571,94 +670,6 @@
 
   showStep(0);
 })();
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Email Security & Phishing Protection",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most breaches start in the inbox. Filtering and scanning every message stops spam, scams and malicious attachments before they reach your team."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Access Controls & Multi-Factor Authentication",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Strong login rules block stolen passwords and stop over 90% of account-takeover attempts."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Endpoint Detection & Response (EDR)",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Seeing activity on every device lets you catch and stop attacks fast—before they spread and disrupt your operations."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Vulnerability Scanning & Patch Management",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Unpatched software is hacker gold. Automated scans and updates close holes before criminals can exploit them."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Cloud Application & Data Security",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "One mis-set in SaaS or cloud can leak your data. Continuous monitoring stops misconfigurations and unauthorized access instantly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Asset Inventory & Configuration",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can’t secure what you don’t see. A live device list ensures every PC, phone and printer is up-to-date and protected."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Incident Response Planning & Testing",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "When seconds count, a practiced playbook stops panic, cuts damage and gets you back to normal fast."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Staff Training & Phishing Simulations",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Your team is your first line of defense. Short drills and simulations turn employees into cyber-aware allies."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Data Backup & Recovery",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Lost data can shut you down. Automated backups and restore tests ensure you recover quickly and fully."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Compliance & Framework Mapping",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Following CIS, NIST or ISO shows you exactly which steps matter and simplifies audits or insurance reviews."
-      }
-    }
-  ]
-}
 </script>
 </body>
 </html>
