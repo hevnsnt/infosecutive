@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>SMB Cybersecurity Checklist – SixCyber</title>
+  <title>SMB Cybersecurity Confidence Assessment – SixCyber</title>
   <meta name="description"
-        content="SixCyber provides enterprise-grade cybersecurity help for small and medium businesses nationwide. Use our interactive checklist to audit your security posture and ask the right questions of your IT provider.">
+        content="Evaluate your small or medium business cybersecurity readiness with our interactive confidence assessment. Learn why EDR, vulnerability scanning, cloud monitoring and more are critical for SMB cybersecurity." >
   <meta name="keywords"
-        content="SMB cybersecurity, small business cybersecurity checklist, cybersecurity help for small business, cybersecurity audit, IT provider security review">
+        content="SMB cybersecurity assessment, small business cybersecurity confidence, cybersecurity readiness quiz, EDR importance, vulnerability scanning benefits, cloud security for SMB, asset inventory, adversary deception, compliance reviews">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,17 +21,21 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .step-card { display: none; }
+    .step-card.active { display: block; }
+    .slider-label { font-weight: 600; margin-top: 1rem; }
+    .progress-nav { margin-top: 1.5rem; }
+  </style>
 </head>
 
 <body class="starter-page-page">
 
   <header id="header" class="header d-flex align-items-center position-relative">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
+    <div class="container-fluid d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <h1 class="sitename">SixCyber</h1>
       </a>
-
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html#hero">Home</a></li>
@@ -47,123 +45,118 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
     </div>
   </header>
 
   <main class="main">
-
-    <!-- Page Title -->
     <div class="page-title" data-aos="fade">
       <div class="container text-center">
-        <h1>SMB Cybersecurity Checklist</h1>
-        <p class="mb-0">Audit your small or medium business's security posture with our interactive tool.</p>
+        <h1>SMB Cybersecurity Confidence Assessment</h1>
+        <p class="mb-0">Rate your confidence on each key cybersecurity practice and discover where to strengthen your defenses.</p>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
-    <!-- Interactive Checklist Section -->
-    <section id="smb-checklist" class="section">
+    <section id="confidence-quiz" class="section">
       <div class="container" data-aos="fade-up">
-
-        <div class="section-title text-center">
-          <span class="description-title">Interactive Audit</span>
-          <h2>SMB Cybersecurity Checklist</h2>
-          <p>Check off each item and ask your IT provider the right questions to uncover hidden risks.</p>
-        </div>
-
-        <form id="checklist-form">
-          <div class="row gy-3">
-            <div class="col-md-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="q1">
-                <label class="form-check-label" for="q1">
-                  Do you have Endpoint Detection &amp; Response (EDR) on all endpoints?
-                </label>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="q2">
-                <label class="form-check-label" for="q2">
-                  Are real-time vulnerability scans running against your public and internal systems?
-                </label>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="q3">
-                <label class="form-check-label" for="q3">
-                  Do you monitor cloud applications and data stores for suspicious activity?
-                </label>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="q4">
-                <label class="form-check-label" for="q4">
-                  Has your MSP or IT provider implemented internal honeypots or deception traps?
-                </label>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="q5">
-                <label class="form-check-label" for="q5">
-                  Do you maintain a live inventory of all devices on your network?
-                </label>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="q6">
-                <label class="form-check-label" for="q6">
-                  Are multi-factor authentication (MFA) and strong password policies enforced?
-                </label>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="q7">
-                <label class="form-check-label" for="q7">
-                  Do you have an incident response plan tested quarterly?
-                </label>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="q8">
-                <label class="form-check-label" for="q8">
-                  Is all sensitive data encrypted at rest and in transit?
-                </label>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="q9">
-                <label class="form-check-label" for="q9">
-                  Have you reviewed firewall and VPN configurations for known vulnerabilities?
-                </label>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="q10">
-                <label class="form-check-label" for="q10">
-                  Do you conduct quarterly reviews mapping progress against CIS, NIST, or ISO standards?
-                </label>
+        <!-- Step cards -->
+        <div id="steps-container">
+          <!-- Step 1: EDR -->
+          <div class="step-card active" data-step="1">
+            <div class="card">
+              <div class="card-body">
+                <h3>Endpoint Detection &amp; Response</h3>
+                <p>How confident are you that all your workstations and laptops are protected by enterprise-grade EDR, continuously monitoring for malicious behavior and automated response?</p>
+                <label class="slider-label" for="s1">Confidence: <span id="s1-val">50</span>%</label>
+                <input type="range" id="s1" min="0" max="100" value="50" class="form-range">
+                <p>EDR solutions detect and mitigate advanced malware, fileless attacks, and zero-day threats. For SMB cybersecurity, robust EDR ensures quick incident containment and minimal downtime.</p>
               </div>
             </div>
           </div>
-        </form>
-
-        <div class="text-center mt-4">
-          <button class="btn btn-primary" onclick="evaluateChecklist()">See Your Results</button>
+          <!-- Step 2: Vulnerability Scanning -->
+          <div class="step-card" data-step="2">
+            <div class="card">
+              <div class="card-body">
+                <h3>Vulnerability Scanning</h3>
+                <p>How confident are you that you run daily, hacker-style vulnerability scans to uncover misconfigurations, unpatched software, and open ports before attackers exploit them?</p>
+                <label class="slider-label" for="s2">Confidence: <span id="s2-val">50</span>%</label>
+                <input type="range" id="s2" min="0" max="100" value="50" class="form-range">
+                <p>Continuous vulnerability scanning is essential for SMB risk management. Early detection of security weaknesses helps prioritize remediation and prevents costly data breaches.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Step 3: Cloud Monitoring -->
+          <div class="step-card" data-step="3">
+            <div class="card">
+              <div class="card-body">
+                <h3>Cloud Application &amp; Data Monitoring</h3>
+                <p>How confident are you that your cloud apps and data stores are monitored 24/7 for suspicious activities, unauthorized access attempts, and data exfiltration?</p>
+                <label class="slider-label" for="s3">Confidence: <span id="s3-val">50</span>%</label>
+                <input type="range" id="s3" min="0" max="100" value="50" class="form-range">
+                <p>Cloud monitoring provides visibility into user behavior, configuration drift, and detect threats in SaaS and IaaS environments. It’s vital for comprehensive SMB cybersecurity coverage.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Step 4: Asset Inventory -->
+          <div class="step-card" data-step="4">
+            <div class="card">
+              <div class="card-body">
+                <h3>Asset Inventory</h3>
+                <p>How confident are you that you maintain a real-time inventory of every device on your network, including servers, desktops, mobile devices, and IoT endpoints?</p>
+                <label class="slider-label" for="s4">Confidence: <span id="s4-val">50</span>%</label>
+                <input type="range" id="s4" min="0" max="100" value="50" class="form-range">
+                <p>Complete asset inventory enables targeted patching, vulnerability management, and insider threat detection. For SMBs, knowing all networked devices eliminates blind spots.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Step 5: Adversary Deception -->
+          <div class="step-card" data-step="5">
+            <div class="card">
+              <div class="card-body">
+                <h3>Adversary Deception</h3>
+                <p>How confident are you that you’ve deployed decoy systems or honeypots to trap intruders and trigger real-time alerts if attackers bypass perimeter defenses?</p>
+                <label class="slider-label" for="s5">Confidence: <span id="s5-val">50</span>%</label>
+                <input type="range" id="s5" min="0" max="100" value="50" class="form-range">
+                <p>Adversary deception adds an extra stealth layer of defense. Honeytokens and decoys inside your network provide early breach detection and forensic insights for SMB threat mitigation.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Step 6: Compliance &amp; Reviews -->
+          <div class="step-card" data-step="6">
+            <div class="card">
+              <div class="card-body">
+                <h3>Quarterly Security Reviews</h3>
+                <p>How confident are you that you conduct formal quarterly reviews mapping progress against CIS, NIST, or ISO cybersecurity frameworks and update your security roadmap?</p>
+                <label class="slider-label" for="s6">Confidence: <span id="s6-val">50</span>%</label>
+                <input type="range" id="s6" min="0" max="100" value="50" class="form-range">
+                <p>Regular security assessments keep pace with evolving SMB cyber threats. Framework-based reviews ensure continuous improvement, compliance readiness, and ROI visibility.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div id="recommendations" class="mt-4 text-center"></div>
+        <!-- Navigation Buttons -->
+        <div class="d-flex justify-content-between progress-nav">
+          <button id="prevBtn" class="btn btn-outline-primary" disabled>Previous</button>
+          <button id="nextBtn" class="btn btn-primary">Next</button>
+        </div>
 
       </div>
-    </section><!-- End Interactive Checklist Section -->
+    </section>
+
+    <!-- Summary Section -->
+    <section id="summary" class="section" style="display:none;">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <span class="description-title">Your Assessment</span>
+          <h2>Review Your Cybersecurity Confidence</h2>
+          <p>Based on your inputs, here’s where your strengths are and where to focus improvements.</p>
+        </div>
+        <div id="results-list" class="list-group mb-4"></div>
+        <div class="text-center">
+          <a href="#contact" class="btn btn-success">Schedule a Free Security Review</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -172,21 +165,14 @@
       <a href="index.html" class="logo d-flex align-items-center justify-content-center">
         <span class="sitename">SixCyber</span>
       </a>
-      <p>Enterprise-grade cybersecurity for small and medium businesses. Nationwide coverage with local expertise.</p>
-      <div class="social-links d-flex justify-content-center mt-3">
-        <a href="#"><i class="bi bi-twitter"></i></a>
-        <a href="#"><i class="bi bi-facebook"></i></a>
-        <a href="#"><i class="bi bi-instagram"></i></a>
-        <a href="#"><i class="bi bi-linkedin"></i></a>
-      </div>
+      <p>Enterprise-grade cybersecurity for SMBs nationwide. Local expertise, global standards.</p>
     </div>
-
-    <div class="container text-center mt-4">
+    <div class="container text-center mt-3">
       <p>© <strong>SixCyber LLC</strong> • All Rights Reserved</p>
     </div>
   </footer>
 
-  <!-- Back to top button-->
+  <!-- Back to top -->
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
     <i class="bi bi-arrow-up-short"></i>
   </a>
@@ -199,18 +185,70 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    function evaluateChecklist() {
-      const total = document.querySelectorAll('#checklist-form input[type="checkbox"]').length;
-      const checked = document.querySelectorAll('#checklist-form input[type="checkbox"]:checked').length;
-      const rec = document.getElementById('recommendations');
-      if (checked < total) {
-        rec.innerHTML = `<p>You checked ${checked} of ${total} items. Several critical protections are missing. <a href="#contact" class="link-primary">Schedule a free security review</a> to close the gaps.</p>`;
-      } else {
-        rec.innerHTML = `<p>Excellent work! You’ve addressed all ${total} checklist items. <a href="#contact" class="link-primary">Book a free advanced security consultation</a> for continuous improvement.</p>`;
+    (function() {
+      const steps = document.querySelectorAll('.step-card');
+      let current = 0;
+      const total = steps.length;
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const summary = document.getElementById('summary');
+      const resultsList = document.getElementById('results-list');
+
+      // Update slider labels
+      for (let i = 1; i <= total; i++) {
+        const slider = document.getElementById('s' + i);
+        const label = document.getElementById('s' + i + '-val');
+        slider.addEventListener('input', () => {
+          label.textContent = slider.value;
+        });
       }
-    }
+
+      function showStep(index) {
+        steps.forEach((step, i) => {
+          step.classList.toggle('active', i === index);
+        });
+        prevBtn.disabled = index === 0;
+        nextBtn.textContent = index === total - 1 ? 'Finish' : 'Next';
+      }
+
+      function showSummary() {
+        document.getElementById('confidence-quiz').style.display = 'none';
+        summary.style.display = 'block';
+        resultsList.innerHTML = '';
+        const questions = [
+          'Endpoint Detection & Response',
+          'Vulnerability Scanning',
+          'Cloud Monitoring',
+          'Asset Inventory',
+          'Adversary Deception',
+          'Quarterly Security Reviews'
+        ];
+        for (let i = 1; i <= total; i++) {
+          const score = document.getElementById('s' + i).value;
+          const item = document.createElement('div');
+          item.className = 'list-group-item';
+          item.innerHTML = `<h5>${questions[i-1]}</h5><p>Confidence: ${score}%</p>`;
+          resultsList.appendChild(item);
+        }
+      }
+
+      nextBtn.addEventListener('click', () => {
+        if (current < total - 1) {
+          current++;
+          showStep(current);
+        } else {
+          showSummary();
+        }
+      });
+      prevBtn.addEventListener('click', () => {
+        if (current > 0) {
+          current--;
+          showStep(current);
+        }
+      });
+      showStep(current);
+    })();
   </script>
 
 </body>
-
 </html>

@@ -1,254 +1,202 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+/**
+ * Template Name: Visible
+ * Template URL: https://bootstrapmade.com/visible-bootstrap-agency-template/
+ * Updated: Revised for SixCyber interactive checklist page fix
+ */
 
-  <title>SMB Cybersecurity Confidence Assessment – SixCyber</title>
-  <meta name="description"
-        content="Evaluate your small or medium business cybersecurity readiness with our interactive confidence assessment. Learn why EDR, vulnerability scanning, cloud monitoring and more are critical for SMB cybersecurity." >
-  <meta name="keywords"
-        content="SMB cybersecurity assessment, small business cybersecurity confidence, cybersecurity readiness quiz, EDR importance, vulnerability scanning benefits, cloud security for SMB, asset inventory, adversary deception, compliance reviews">
+(function() {
+  "use strict";
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  /**
+   * Apply .scrolled class to the body as the page is scrolled down
+   */
+  function toggleScrolled() {
+    const selectBody = document.querySelector('body');
+    const selectHeader = document.querySelector('#header');
+    if (!selectHeader.classList.contains('scroll-up-sticky') &&
+        !selectHeader.classList.contains('sticky-top') &&
+        !selectHeader.classList.contains('fixed-top')) return;
+    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+  }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  document.addEventListener('scroll', toggleScrolled);
+  window.addEventListener('load', toggleScrolled);
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <style>
-    .step-card { display: none; }
-    .step-card.active { display: block; }
-    .slider-label { font-weight: 600; margin-top: 1rem; }
-    .progress-nav { margin-top: 1.5rem; }
-  </style>
-</head>
+  /**
+   * Mobile nav toggle
+   */
+  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+  function mobileNavToogle() {
+    document.querySelector('body').classList.toggle('mobile-nav-active');
+    mobileNavToggleBtn.classList.toggle('bi-list');
+    mobileNavToggleBtn.classList.toggle('bi-x');
+  }
+  if (mobileNavToggleBtn) {
+    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+  }
 
-<body class="starter-page-page">
-
-  <header id="header" class="header d-flex align-items-center position-relative">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">SixCyber</h1>
-      </a>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-    </div>
-  </header>
-
-  <main class="main">
-    <div class="page-title" data-aos="fade">
-      <div class="container text-center">
-        <h1>SMB Cybersecurity Confidence Assessment</h1>
-        <p class="mb-0">Rate your confidence on each key cybersecurity practice and discover where to strengthen your defenses.</p>
-      </div>
-    </div>
-
-    <section id="confidence-quiz" class="section">
-      <div class="container" data-aos="fade-up">
-        <!-- Step cards -->
-        <div id="steps-container">
-          <!-- Step 1: EDR -->
-          <div class="step-card active" data-step="1">
-            <div class="card">
-              <div class="card-body">
-                <h3>Endpoint Detection &amp; Response</h3>
-                <p>How confident are you that all your workstations and laptops are protected by enterprise-grade EDR, continuously monitoring for malicious behavior and automated response?</p>
-                <label class="slider-label" for="s1">Confidence: <span id="s1-val">50</span>%</label>
-                <input type="range" id="s1" min="0" max="100" value="50" class="form-range">
-                <p>EDR solutions detect and mitigate advanced malware, fileless attacks, and zero-day threats. For SMB cybersecurity, robust EDR ensures quick incident containment and minimal downtime.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Step 2: Vulnerability Scanning -->
-          <div class="step-card" data-step="2">
-            <div class="card">
-              <div class="card-body">
-                <h3>Vulnerability Scanning</h3>
-                <p>How confident are you that you run daily, hacker-style vulnerability scans to uncover misconfigurations, unpatched software, and open ports before attackers exploit them?</p>
-                <label class="slider-label" for="s2">Confidence: <span id="s2-val">50</span>%</label>
-                <input type="range" id="s2" min="0" max="100" value="50" class="form-range">
-                <p>Continuous vulnerability scanning is essential for SMB risk management. Early detection of security weaknesses helps prioritize remediation and prevents costly data breaches.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Step 3: Cloud Monitoring -->
-          <div class="step-card" data-step="3">
-            <div class="card">
-              <div class="card-body">
-                <h3>Cloud Application &amp; Data Monitoring</h3>
-                <p>How confident are you that your cloud apps and data stores are monitored 24/7 for suspicious activities, unauthorized access attempts, and data exfiltration?</p>
-                <label class="slider-label" for="s3">Confidence: <span id="s3-val">50</span>%</label>
-                <input type="range" id="s3" min="0" max="100" value="50" class="form-range">
-                <p>Cloud monitoring provides visibility into user behavior, configuration drift, and detect threats in SaaS and IaaS environments. It’s vital for comprehensive SMB cybersecurity coverage.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Step 4: Asset Inventory -->
-          <div class="step-card" data-step="4">
-            <div class="card">
-              <div class="card-body">
-                <h3>Asset Inventory</h3>
-                <p>How confident are you that you maintain a real-time inventory of every device on your network, including servers, desktops, mobile devices, and IoT endpoints?</p>
-                <label class="slider-label" for="s4">Confidence: <span id="s4-val">50</span>%</label>
-                <input type="range" id="s4" min="0" max="100" value="50" class="form-range">
-                <p>Complete asset inventory enables targeted patching, vulnerability management, and insider threat detection. For SMBs, knowing all networked devices eliminates blind spots.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Step 5: Adversary Deception -->
-          <div class="step-card" data-step="5">
-            <div class="card">
-              <div class="card-body">
-                <h3>Adversary Deception</h3>
-                <p>How confident are you that you’ve deployed decoy systems or honeypots to trap intruders and trigger real-time alerts if attackers bypass perimeter defenses?</p>
-                <label class="slider-label" for="s5">Confidence: <span id="s5-val">50</span>%</label>
-                <input type="range" id="s5" min="0" max="100" value="50" class="form-range">
-                <p>Adversary deception adds an extra stealth layer of defense. Honeytokens and decoys inside your network provide early breach detection and forensic insights for SMB threat mitigation.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Step 6: Compliance &amp; Reviews -->
-          <div class="step-card" data-step="6">
-            <div class="card">
-              <div class="card-body">
-                <h3>Quarterly Security Reviews</h3>
-                <p>How confident are you that you conduct formal quarterly reviews mapping progress against CIS, NIST, or ISO cybersecurity frameworks and update your security roadmap?</p>
-                <label class="slider-label" for="s6">Confidence: <span id="s6-val">50</span>%</label>
-                <input type="range" id="s6" min="0" max="100" value="50" class="form-range">
-                <p>Regular security assessments keep pace with evolving SMB cyber threats. Framework-based reviews ensure continuous improvement, compliance readiness, and ROI visibility.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <div class="d-flex justify-content-between progress-nav">
-          <button id="prevBtn" class="btn btn-outline-primary" disabled>Previous</button>
-          <button id="nextBtn" class="btn btn-primary">Next</button>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Summary Section -->
-    <section id="summary" class="section" style="display:none;">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title text-center">
-          <span class="description-title">Your Assessment</span>
-          <h2>Review Your Cybersecurity Confidence</h2>
-          <p>Based on your inputs, here’s where your strengths are and where to focus improvements.</p>
-        </div>
-        <div id="results-list" class="list-group mb-4"></div>
-        <div class="text-center">
-          <a href="#contact" class="btn btn-success">Schedule a Free Security Review</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer id="footer" class="footer">
-    <div class="container footer-top text-center">
-      <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-        <span class="sitename">SixCyber</span>
-      </a>
-      <p>Enterprise-grade cybersecurity for SMBs nationwide. Local expertise, global standards.</p>
-    </div>
-    <div class="container text-center mt-3">
-      <p>© <strong>SixCyber LLC</strong> • All Rights Reserved</p>
-    </div>
-  </footer>
-
-  <!-- Back to top -->
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <script>
-    (function() {
-      const steps = document.querySelectorAll('.step-card');
-      let current = 0;
-      const total = steps.length;
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
-      const summary = document.getElementById('summary');
-      const resultsList = document.getElementById('results-list');
-
-      // Update slider labels
-      for (let i = 1; i <= total; i++) {
-        const slider = document.getElementById('s' + i);
-        const label = document.getElementById('s' + i + '-val');
-        slider.addEventListener('input', () => {
-          label.textContent = slider.value;
-        });
+  /**
+   * Hide mobile nav on same-page/hash links
+   */
+  document.querySelectorAll('#navmenu a').forEach(navmenu => {
+    navmenu.addEventListener('click', () => {
+      if (document.querySelector('.mobile-nav-active')) {
+        mobileNavToogle();
       }
+    });
+  });
 
-      function showStep(index) {
-        steps.forEach((step, i) => {
-          step.classList.toggle('active', i === index);
-        });
-        prevBtn.disabled = index === 0;
-        nextBtn.textContent = index === total - 1 ? 'Finish' : 'Next';
-      }
+  /**
+   * Toggle mobile nav dropdowns
+   */
+  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
+    navmenu.addEventListener('click', function(e) {
+      e.preventDefault();
+      this.parentNode.classList.toggle('active');
+      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
+      e.stopImmediatePropagation();
+    });
+  });
 
-      function showSummary() {
-        document.getElementById('confidence-quiz').style.display = 'none';
-        summary.style.display = 'block';
-        resultsList.innerHTML = '';
-        const questions = [
-          'Endpoint Detection & Response',
-          'Vulnerability Scanning',
-          'Cloud Monitoring',
-          'Asset Inventory',
-          'Adversary Deception',
-          'Quarterly Security Reviews'
-        ];
-        for (let i = 1; i <= total; i++) {
-          const score = document.getElementById('s' + i).value;
-          const item = document.createElement('div');
-          item.className = 'list-group-item';
-          item.innerHTML = `<h5>${questions[i-1]}</h5><p>Confidence: ${score}%</p>`;
-          resultsList.appendChild(item);
-        }
-      }
+  /**
+   * Preloader
+   */
+  const preloader = document.querySelector('#preloader');
+  if (preloader) {
+    window.addEventListener('load', () => {
+      preloader.remove();
+    });
+  }
 
-      nextBtn.addEventListener('click', () => {
-        if (current < total - 1) {
-          current++;
-          showStep(current);
-        } else {
-          showSummary();
-        }
+  /**
+   * Scroll top (back-to-top) button
+   * Guard ensures code only runs if element exists
+   */
+  const scrollTopBtn = document.querySelector('.back-to-top');
+  function toggleScrollTop() {
+    if (scrollTopBtn) {
+      window.scrollY > 100 ? scrollTopBtn.classList.add('active') : scrollTopBtn.classList.remove('active');
+    }
+  }
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    window.addEventListener('load', toggleScrollTop);
+    document.addEventListener('scroll', toggleScrollTop);
+  }
+
+  /**
+   * Animation on scroll function and init
+   */
+  function aosInit() {
+    AOS.init({
+      duration: 600,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+  }
+  window.addEventListener('load', aosInit);
+
+  /**
+   * Initiate Pure Counter
+   */
+  new PureCounter();
+
+  /**
+   * Initiate glightbox
+   */
+  const glightbox = GLightbox({ selector: '.glightbox' });
+
+  /**
+   * Init isotope layout and filters
+   */
+  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
+    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
+    let sort   = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+
+    let initIsotope;
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
+        itemSelector: '.isotope-item',
+        layoutMode: layout,
+        filter: filter,
+        sortBy: sort
       });
-      prevBtn.addEventListener('click', () => {
-        if (current > 0) {
-          current--;
-          showStep(current);
-        }
-      });
-      showStep(current);
-    })();
-  </script>
+    });
 
-</body>
-</html>
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
+      filters.addEventListener('click', function() {
+        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
+        this.classList.add('filter-active');
+        initIsotope.arrange({ filter: this.getAttribute('data-filter') });
+        if (typeof aosInit === 'function') aosInit();
+      }, false);
+    });
+  });
+
+  /**
+   * FAQ Toggle
+   */
+  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle, .faq-item .faq-header').forEach((faqItem) => {
+    faqItem.addEventListener('click', () => {
+      faqItem.parentNode.classList.toggle('faq-active');
+    });
+  });
+
+  /**
+   * Init swiper sliders
+   */
+  function initSwiper() {
+    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+      let config = JSON.parse(
+        swiperElement.querySelector(".swiper-config").innerHTML.trim()
+      );
+
+      if (swiperElement.classList.contains("swiper-tab")) {
+        initSwiperWithCustomPagination(swiperElement, config);
+      } else {
+        new Swiper(swiperElement, config);
+      }
+    });
+  }
+  window.addEventListener("load", initSwiper);
+
+  /**
+   * Correct hash link scrolling
+   */
+  window.addEventListener('load', function() {
+    if (window.location.hash && document.querySelector(window.location.hash)) {
+      setTimeout(() => {
+        let section = document.querySelector(window.location.hash);
+        let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
+        window.scrollTo({ top: section.offsetTop - parseInt(scrollMarginTop), behavior: 'smooth' });
+      }, 100);
+    }
+  });
+
+  /**
+   * Navmenu Scrollspy
+   */
+  let navmenulinks = document.querySelectorAll('.navmenu a');
+  function navmenuScrollspy() {
+    navmenulinks.forEach(navmenulink => {
+      if (!navmenulink.hash) return;
+      let section = document.querySelector(navmenulink.hash);
+      if (!section) return;
+      let position = window.scrollY + 200;
+      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
+        navmenulink.classList.add('active');
+      } else {
+        navmenulink.classList.remove('active');
+      }
+    });
+  }
+  window.addEventListener('load', navmenuScrollspy);
+  document.addEventListener('scroll', navmenuScrollspy);
+
+})();
