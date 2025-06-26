@@ -10,6 +10,9 @@
   <meta property="og:description" content="Interactive 10-step checklist to discover gaps in your small business cyber defenses and get a prioritized plan.">
   <meta property="og:image" content="https://sixcyber.com/assets/img/og-smb-checklist.png">
   <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,179 +20,179 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <link rel="canonical" href="https://sixcyber.com/smb-checklist.html">
-<style>
-  /* Default for indexers */
-  .step-card { display: block; opacity: 1; }
+    <style>
+    /* Default for indexers */
+    .step-card { display: block; opacity: 1; }
 
-  /* JS-enabled: one-at-a-time UI */
-  .js-enabled .step-card { display: none; }
-  .js-enabled .step-card.active { display: block; }
+    /* JS-enabled: one-at-a-time UI */
+    .js-enabled .step-card { display: none; }
+    .js-enabled .step-card.active { display: block; }
 
-  /* Card and text colors */
-  body.smb-checklist-page .card {
-    background-color: #ffffff;
-    color: #212529;
-  }
-  body.smb-checklist-page .card-body h2,
-  body.smb-checklist-page .card-body p,
-  body.smb-checklist-page .form-check-label {
-    color: #212529;
-  }
-  .importance {
-    font-style: italic;
-    color: #333333;
-    margin-bottom: 1rem;
-  }
-
-  /* Navigation buttons */
-  .progress-nav { margin-top: 1.5rem; }
-  body.smb-checklist-page .btn-outline-primary {
-    color: #0d6efd;
-    border-color: #0d6efd;
-  }
-  body.smb-checklist-page .btn-outline-primary:hover {
-    background-color: #0d6efd;
-    color: #ffffff;
-  }
-
-  /* High-priority (gaps): darker red/pink background */
-  .action-high {
-    background-color: #ffe5e5;
-    border-left: 4px solid #dc3545;
-    padding: 1rem;
-    margin-bottom: .75rem;
-    color: #842029;
-  }
-  .action-high h5, .action-high p {
-    color: #842029;
-  }
-
-  /* Medium-priority: softer yellow */
-  .action-medium {
-    background-color: #fff8e5;
-    border-left: 4px solid #ffc107;
-    padding: 1rem;
-    margin-bottom: .75rem;
-    color: #664d03;
-  }
-  .action-medium h5, .action-medium p {
-    color: #664d03;
-  }
-
-  /* Good-job (strongest): light green */
-  .action-good {
-    background-color: #e6f4ea;
-    border-left: 4px solid #198754;
-    padding: 1rem;
-    margin-bottom: .75rem;
-    color: #0f5132;
-  }
-  .action-good h5, .action-good p {
-    color: #0f5132;
-  }
-.action-alert {
-  border: 4px solid #dc3545;       /* match the same thickness as action-high */
-  background-color: #ffe5e5;
-  padding: 1rem;
-  margin-bottom: 0.75rem;
-  border-radius: 0.25rem;
-}
-
-.action-alert h5,
-.action-alert p,
-.action-alert em,
-.action-alert strong {
-  color: #842029;                  /* make all text inside dark red */
-}
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Email Security & Phishing Protection",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most breaches start in the inbox. Filtering and scanning every message stops spam, scams and malicious attachments before they reach your team."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Access Controls & Multi-Factor Authentication",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Strong login rules block stolen passwords and stop over 90% of account-takeover attempts."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Endpoint Detection & Response (EDR)",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Seeing activity on every device lets you catch and stop attacks fast—before they spread and disrupt your operations."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Vulnerability Scanning & Patch Management",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Unpatched software is hacker gold. Automated scans and updates close holes before criminals can exploit them."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Cloud Application & Data Security",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "One mis-set in SaaS or cloud can leak your data. Continuous monitoring stops misconfigurations and unauthorized access instantly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Asset Inventory & Configuration",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can’t secure what you don’t see. A live device list ensures every PC, phone and printer is up-to-date and protected."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Incident Response Planning & Testing",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "When seconds count, a practiced playbook stops panic, cuts damage and gets you back to normal fast."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Staff Training & Phishing Simulations",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Your team is your first line of defense. Short drills and simulations turn employees into cyber-aware allies."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Data Backup & Recovery",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Lost data can shut you down. Automated backups and restore tests ensure you recover quickly and fully."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Compliance & Framework Mapping",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Following CIS, NIST or ISO shows you exactly which steps matter and simplifies audits or insurance reviews."
-      }
+    /* Card and text colors */
+    body.smb-checklist-page .card {
+        background-color: #ffffff;
+        color: #212529;
     }
-  ]
-}
-</script>
+    body.smb-checklist-page .card-body h2,
+    body.smb-checklist-page .card-body p,
+    body.smb-checklist-page .form-check-label {
+        color: #212529;
+    }
+    .importance {
+        font-style: italic;
+        color: #333333;
+        margin-bottom: 1rem;
+    }
+
+    /* Navigation buttons */
+    .progress-nav { margin-top: 1.5rem; }
+    body.smb-checklist-page .btn-outline-primary {
+        color: #0d6efd;
+        border-color: #0d6efd;
+    }
+    body.smb-checklist-page .btn-outline-primary:hover {
+        background-color: #0d6efd;
+        color: #ffffff;
+    }
+
+    /* High-priority (gaps): darker red/pink background */
+    .action-high {
+        background-color: #ffe5e5;
+        border-left: 4px solid #dc3545;
+        padding: 1rem;
+        margin-bottom: .75rem;
+        color: #842029;
+    }
+    .action-high h5, .action-high p {
+        color: #842029;
+    }
+
+    /* Medium-priority: softer yellow */
+    .action-medium {
+        background-color: #fff8e5;
+        border-left: 4px solid #ffc107;
+        padding: 1rem;
+        margin-bottom: .75rem;
+        color: #664d03;
+    }
+    .action-medium h5, .action-medium p {
+        color: #664d03;
+    }
+
+    /* Good-job (strongest): light green */
+    .action-good {
+        background-color: #e6f4ea;
+        border-left: 4px solid #198754;
+        padding: 1rem;
+        margin-bottom: .75rem;
+        color: #0f5132;
+    }
+    .action-good h5, .action-good p {
+        color: #0f5132;
+    }
+    .action-alert {
+    border: 4px solid #dc3545;       /* match the same thickness as action-high */
+    background-color: #ffe5e5;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0.25rem;
+    }
+
+    .action-alert h5,
+    .action-alert p,
+    .action-alert em,
+    .action-alert strong {
+    color: #842029;                  /* make all text inside dark red */
+    }
+    </style>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+        "@type": "Question",
+        "name": "Email Security & Phishing Protection",
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most breaches start in the inbox. Filtering and scanning every message stops spam, scams and malicious attachments before they reach your team."
+        }
+        },
+        {
+        "@type": "Question",
+        "name": "Access Controls & Multi-Factor Authentication",
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Strong login rules block stolen passwords and stop over 90% of account-takeover attempts."
+        }
+        },
+        {
+        "@type": "Question",
+        "name": "Endpoint Detection & Response (EDR)",
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Seeing activity on every device lets you catch and stop attacks fast—before they spread and disrupt your operations."
+        }
+        },
+        {
+        "@type": "Question",
+        "name": "Vulnerability Scanning & Patch Management",
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unpatched software is hacker gold. Automated scans and updates close holes before criminals can exploit them."
+        }
+        },
+        {
+        "@type": "Question",
+        "name": "Cloud Application & Data Security",
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One mis-set in SaaS or cloud can leak your data. Continuous monitoring stops misconfigurations and unauthorized access instantly."
+        }
+        },
+        {
+        "@type": "Question",
+        "name": "Asset Inventory & Configuration",
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can’t secure what you don’t see. A live device list ensures every PC, phone and printer is up-to-date and protected."
+        }
+        },
+        {
+        "@type": "Question",
+        "name": "Incident Response Planning & Testing",
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When seconds count, a practiced playbook stops panic, cuts damage and gets you back to normal fast."
+        }
+        },
+        {
+        "@type": "Question",
+        "name": "Staff Training & Phishing Simulations",
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your team is your first line of defense. Short drills and simulations turn employees into cyber-aware allies."
+        }
+        },
+        {
+        "@type": "Question",
+        "name": "Data Backup & Recovery",
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lost data can shut you down. Automated backups and restore tests ensure you recover quickly and fully."
+        }
+        },
+        {
+        "@type": "Question",
+        "name": "Compliance & Framework Mapping",
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Following CIS, NIST or ISO shows you exactly which steps matter and simplifies audits or insurance reviews."
+        }
+        }
+    ]
+    }
+    </script>
 </head>
 <body class="starter-page-page smb-checklist-page">
 <script>document.documentElement.classList.add('js-enabled');</script>
