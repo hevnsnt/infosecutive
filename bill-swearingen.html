@@ -31,19 +31,107 @@
   <link href="assets/img/favicon.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Premium Fonts - Inter & Space Grotesk -->
+  <!-- Modern CSS Framework - Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'cyber-dark': '#0a0a0b',
+            'cyber-surface': '#1a1a1d', 
+            'cyber-elevated': '#252529',
+            'cyber-blue': '#3b82f6',
+            'cyber-blue-hover': '#2563eb',
+            'cyber-accent': '#10b981',
+            'cyber-text': '#f1f5f9',
+            'cyber-muted': '#94a3b8',
+            'cyber-border': '#334155'
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+            'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
+            'mono': ['JetBrains Mono', 'monospace']
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-out',
+            'slide-up': 'slideUp 0.8s ease-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(40px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Premium Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- AOS Animation Library -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    .glass-card {
+      background: rgba(26, 26, 29, 0.8);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #0a0a0b 0%, #1a1a1d 50%, #252529 100%);
+    }
+    
+    .text-gradient {
+      background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .nav-blur {
+      background: rgba(10, 10, 11, 0.95);
+      backdrop-filter: blur(20px);
+    }
+    
+    .timeline-line {
+      position: relative;
+    }
+    
+    .timeline-line::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, #3b82f6, #10b981);
+    }
+    
+    .timeline-dot {
+      position: relative;
+      left: -6px;
+      width: 14px;
+      height: 14px;
+      background: #3b82f6;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+    }
+  </style>
 
   <!-- Enhanced JSON-LD Schema Markup -->
   <script type="application/ld+json">
@@ -97,79 +185,6 @@
         "@type": "EducationalOccupationalCredential", 
         "name": "CISM",
         "description": "Certified Information Security Manager"
-      },
-      {
-        "@type": "EducationalOccupationalCredential",
-        "name": "CMMC Registered Practitioner",
-        "description": "RP-57281 - Department of Defense cybersecurity compliance"
-      },
-      {
-        "@type": "EducationalOccupationalCredential",
-        "name": "Top Secret/SCI Clearance",
-        "description": "Former DoD sponsored security clearance (inactive)"
-      }
-    ],
-    "knowsAbout": [
-      "Ransomware Incident Response",
-      "Nation-State Attack Analysis", 
-      "National Cybersecurity Strategy",
-      "Advanced Persistent Threats",
-      "Red Team Operations",
-      "Penetration Testing Leadership",
-      "Cyber Kill Chain Methodology",
-      "Threat Hunting Programs",
-      "Enterprise Security Architecture",
-      "Private Equity Cybersecurity",
-      "M&A Cyber Due Diligence",
-      "SOC 2 Compliance",
-      "NIST Cybersecurity Framework",
-      "ISO 27001 Implementation",
-      "Bug Bounty Programs",
-      "Tabletop Exercise Design",
-      "Crisis Prediction and Management",
-      "FBI Cyber Coordination",
-      "Ransom Negotiation",
-      "MSP Security Failures",
-      "OSINT Threat Intelligence",
-      "SIEM Implementation",
-      "Automated APT Detection"
-    ],
-    "memberOf": [
-      {
-        "@type": "Organization",
-        "name": "SecKC",
-        "description": "Founder - World's largest monthly hacker meetup"
-      },
-      {
-        "@type": "Organization",
-        "name": "Cowtown Computer Congress",
-        "description": "Founder - Premier Kansas City cybersecurity conference"
-      },
-      {
-        "@type": "Organization",
-        "name": "FBI InfraGard Kansas City",
-        "description": "Former President"
-      }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://sixcyber.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2, 
-        "name": "Bill Swearingen Biography",
-        "item": "https://sixcyber.com/bill-swearingen.html"
       }
     ]
   }
@@ -177,216 +192,577 @@
 
 </head>
 
-<body class="about-page">
+<body class="bg-cyber-dark text-cyber-text dark">
 
-  <header id="header" class="header sticky-top">
-
-    <div class="topbar d-flex align-items-center dark-background">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-shield-check d-flex align-items-center"><span>Kansas City's Premier Cybersecurity Experts</span></i>
+  <!-- Navigation -->
+  <nav class="fixed w-full top-0 z-50 nav-blur border-b border-cyber-border" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <img src="assets/img/logo.png" alt="SixCyber" class="h-8 w-8">
+          <span class="text-xl font-display font-bold text-cyber-text">SixCyber</span>
         </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <a href="tel:+1913xxxxxxx" class="btn btn-sm btn-outline-light me-2">
-            <i class="bi bi-telephone"></i> Emergency Response
-          </a>
-          <a href="mailto:info@sixcyber.com" class="btn btn-sm btn-primary">
-            <i class="bi bi-envelope"></i> Get Quote
-          </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-cyber-text hover:text-cyber-accent transition-colors">Home</a>
+          <a href="index.html#services" class="text-cyber-text hover:text-cyber-accent transition-colors">Services</a>
+          <a href="index.html#about" class="text-cyber-text hover:text-cyber-accent transition-colors">About</a>
+          <a href="index.html#contact" class="text-cyber-text hover:text-cyber-accent transition-colors">Contact</a>
+          <div class="flex space-x-3">
+            <a href="tel:+1913xxxxxxx" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors font-medium">
+              <i class="bi bi-telephone mr-2"></i>Emergency
+            </a>
+            <a href="index.html#contact" class="px-4 py-2 bg-cyber-blue hover:bg-cyber-blue-hover text-white rounded-lg transition-colors font-medium">
+              Get Quote
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-btn" class="text-cyber-text hover:text-cyber-accent">
+            <i class="bi bi-list text-2xl"></i>
+          </button>
         </div>
       </div>
     </div>
 
-    <div class="branding d-flex align-items-center">
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-cyber-surface border-t border-cyber-border">
+      <div class="px-4 py-2 space-y-2">
+        <a href="index.html" class="block px-3 py-2 text-cyber-text hover:text-cyber-accent">Home</a>
+        <a href="index.html#services" class="block px-3 py-2 text-cyber-text hover:text-cyber-accent">Services</a>
+        <a href="index.html#about" class="block px-3 py-2 text-cyber-text hover:text-cyber-accent">About</a>
+        <a href="index.html#contact" class="block px-3 py-2 text-cyber-text hover:text-cyber-accent">Contact</a>
+        <div class="pt-2 space-y-2">
+          <a href="tel:+1913xxxxxxx" class="block w-full px-4 py-2 bg-red-600 text-white rounded-lg text-center">
+            <i class="bi bi-telephone mr-2"></i>Emergency
+          </a>
+          <a href="index.html#contact" class="block w-full px-4 py-2 bg-cyber-blue text-white rounded-lg text-center">
+            Get Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <img src="assets/img/logo.png" alt="SixCyber Logo">
-          <h1 class="sitename">SixCyber</h1>
-        </a>
+  <main class="pt-16">
 
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#team">Team</a></li>
-            <li><a href="index.html#faq">FAQ</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-            <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="bill-swearingen.html" class="active">Bill Swearingen Bio</a></li>
-                <li><a href="smb-checklist.html">SMB Security Checklist</a></li>
-                <li><a href="#blog">Security Blog</a></li>
-                <li><a href="#case-studies">Case Studies</a></li>
+    <!-- Hero Section -->
+    <section class="relative py-20 hero-gradient">
+      <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.3) 1px, transparent 0); background-size: 20px 20px;"></div>
+      
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8" data-aos="fade-right">
+            <div class="space-y-6">
+              <div class="inline-flex items-center px-4 py-2 bg-cyber-elevated rounded-full border border-cyber-border">
+                <i class="bi bi-award text-yellow-400 mr-2"></i>
+                <span class="text-sm text-cyber-muted">Global Cybersecurity Authority</span>
+              </div>
+              
+              <h1 class="font-display font-bold text-5xl lg:text-6xl leading-tight">
+                <span class="text-gradient">Bill Swearingen</span>
+              </h1>
+              
+              <p class="text-2xl lg:text-3xl font-display font-medium text-cyber-text leading-relaxed">
+                The Executive Who Shapes National Security Strategy
+              </p>
+              
+              <p class="text-xl text-cyber-muted leading-relaxed">
+                Former CenturyLink CISO • SecKC Co-founder • Nation-State Strategist • 
+                The cybersecurity professional trusted when failure is not an option.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 bg-cyber-blue/20 text-cyber-blue rounded-full font-medium">CISSP</span>
+              <span class="px-4 py-2 bg-cyber-accent/20 text-cyber-accent rounded-full font-medium">CISM</span>
+              <span class="px-4 py-2 bg-yellow-500/20 text-yellow-400 rounded-full font-medium">Former TS/SCI</span>
+              <span class="px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full font-medium">DEF CON Speaker</span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="https://www.linkedin.com/in/billswearingen" class="inline-flex items-center justify-center px-8 py-4 bg-cyber-blue hover:bg-cyber-blue-hover text-white rounded-xl font-semibold transition-all">
+                <i class="bi bi-linkedin mr-2"></i>
+                LinkedIn Profile
+              </a>
+              <a href="index.html#contact" class="inline-flex items-center justify-center px-8 py-4 border-2 border-cyber-border text-cyber-text hover:bg-cyber-surface rounded-xl font-semibold transition-all">
+                <i class="bi bi-envelope mr-2"></i>
+                Work With Bill
+              </a>
+            </div>
+          </div>
+          
+          <div class="relative" data-aos="fade-left">
+            <div class="aspect-square bg-gradient-to-br from-cyber-blue/20 to-cyber-accent/20 rounded-3xl flex items-center justify-center p-8">
+              <img src="assets/img/team/bill-swearingen.jpg" alt="Bill Swearingen" class="w-full h-full rounded-2xl object-cover shadow-2xl">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="py-20 bg-cyber-surface">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-display font-bold mb-6">
+            <span class="text-gradient">Executive Summary</span>
+          </h2>
+          <div class="prose prose-lg prose-invert max-w-none">
+            <p class="text-xl text-cyber-muted leading-relaxed">
+              Bill Swearingen is a globally recognized cybersecurity authority whose expertise has shaped national security strategy 
+              and guided the world's largest organizations through their most critical cyber events. As former CISO of CenturyLink—one 
+              of America's largest telecommunications companies—he managed a $50M+ security budget and led a 217-person global security team 
+              protecting critical infrastructure serving millions of customers.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="glass-card rounded-2xl p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 bg-cyber-blue/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <i class="bi bi-building text-2xl text-cyber-blue"></i>
+            </div>
+            <div class="text-3xl font-display font-bold text-cyber-accent mb-2">$50M+</div>
+            <div class="text-cyber-muted">Security Budget Managed</div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-cyber-accent/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <i class="bi bi-people text-2xl text-cyber-accent"></i>
+            </div>
+            <div class="text-3xl font-display font-bold text-cyber-accent mb-2">217</div>
+            <div class="text-cyber-muted">Global Security Team</div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <i class="bi bi-award text-2xl text-yellow-400"></i>
+            </div>
+            <div class="text-3xl font-display font-bold text-cyber-accent mb-2">20+</div>
+            <div class="text-cyber-muted">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Timeline -->
+    <section class="py-20 bg-cyber-dark">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-display font-bold mb-4">
+            Career <span class="text-gradient">Timeline</span>
+          </h2>
+          <p class="text-xl text-cyber-muted">
+            A distinguished career spanning enterprise security, national strategy, and industry leadership.
+          </p>
+        </div>
+
+        <div class="relative pl-8">
+          <div class="timeline-line absolute left-0 top-0 h-full"></div>
+          
+          <div class="space-y-12">
+            <!-- Present -->
+            <div class="relative" data-aos="fade-up">
+              <div class="timeline-dot absolute"></div>
+              <div class="glass-card rounded-2xl p-8 ml-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                  <h3 class="text-2xl font-display font-bold">TRIFIDENT Advisory</h3>
+                  <span class="text-cyber-accent font-medium">2023 - Present</span>
+                </div>
+                <p class="text-cyber-blue font-semibold mb-3">Founding Partner & Global Cybersecurity Authority</p>
+                <p class="text-cyber-muted mb-4">
+                  Co-founded elite cybersecurity advisory firm serving private equity funds, family offices, and Fortune 100 enterprises. 
+                  Leads ransomware incident response, M&A due diligence, and strategic security advisory for organizations 
+                  managing multi-billion dollar portfolios.
+                </p>
+                <ul class="space-y-2 text-sm text-cyber-muted">
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Commands ransomware incident response for major organizations</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Leads cybersecurity due diligence for $15B+ private equity funds</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Strategic advisor to Fortune 100 executive teams</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- SixCyber -->
+            <div class="relative" data-aos="fade-up">
+              <div class="timeline-dot absolute"></div>
+              <div class="glass-card rounded-2xl p-8 ml-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                  <h3 class="text-2xl font-display font-bold">SixCyber</h3>
+                  <span class="text-cyber-accent font-medium">2020 - Present</span>
+                </div>
+                <p class="text-cyber-blue font-semibold mb-3">Founder & CEO</p>
+                <p class="text-cyber-muted mb-4">
+                  Founded premier cybersecurity services firm delivering Fortune 150-level expertise to organizations 
+                  across the Kansas City metro area and nationwide. Specializes in penetration testing, incident response, 
+                  CISO consulting, and CMMC compliance.
+                </p>
+                <ul class="space-y-2 text-sm text-cyber-muted">
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>24/7 incident response with 1-hour response time</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>CMMC Registered Practitioner with security clearance experience</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>500+ organizations protected across multiple industries</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CenturyLink -->
+            <div class="relative" data-aos="fade-up">
+              <div class="timeline-dot absolute"></div>
+              <div class="glass-card rounded-2xl p-8 ml-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                  <h3 class="text-2xl font-display font-bold">CenturyLink</h3>
+                  <span class="text-cyber-accent font-medium">2013 - 2020</span>
+                </div>
+                <p class="text-cyber-blue font-semibold mb-3">Chief Information Security Officer</p>
+                <p class="text-cyber-muted mb-4">
+                  Led cybersecurity for one of America's largest telecommunications companies, managing $50M+ annual security budget 
+                  and 217-person global security organization. Responsible for protecting critical infrastructure serving millions 
+                  of customers and handling sensitive government communications.
+                </p>
+                <ul class="space-y-2 text-sm text-cyber-muted">
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Managed $50M+ annual cybersecurity budget</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Led 217-person global security team</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Protected critical telecommunications infrastructure</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Guided company through world-class cyber events</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- IronNet -->
+            <div class="relative" data-aos="fade-up">
+              <div class="timeline-dot absolute"></div>
+              <div class="glass-card rounded-2xl p-8 ml-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                  <h3 class="text-2xl font-display font-bold">IronNet Cybersecurity</h3>
+                  <span class="text-cyber-accent font-medium">2020 - 2023</span>
+                </div>
+                <p class="text-cyber-blue font-semibold mb-3">Senior Cyber Strategist & Red Team Lead</p>
+                <p class="text-cyber-muted mb-4">
+                  Strategic cybersecurity advisor and red team operations leader at NSA-founded cybersecurity firm. 
+                  Led advanced threat emulation exercises and contributed to national cybersecurity strategy development 
+                  for allied nations.
+                </p>
+                <ul class="space-y-2 text-sm text-cyber-muted">
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Led red team operations for Fortune 500 companies</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Contributed to foreign national cyber security strategy</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Advanced threat emulation and detection development</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Early Career -->
+            <div class="relative" data-aos="fade-up">
+              <div class="timeline-dot absolute"></div>
+              <div class="glass-card rounded-2xl p-8 ml-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                  <h3 class="text-2xl font-display font-bold">Enterprise Security Leadership</h3>
+                  <span class="text-cyber-accent font-medium">2000 - 2013</span>
+                </div>
+                <p class="text-cyber-blue font-semibold mb-3">Various Security Leadership Roles</p>
+                <p class="text-cyber-muted mb-4">
+                  Progressive leadership roles in enterprise cybersecurity, building expertise in incident response, 
+                  security architecture, and team management across multiple industries including telecommunications, 
+                  finance, and critical infrastructure.
+                </p>
+                <ul class="space-y-2 text-sm text-cyber-muted">
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Built and led enterprise security teams</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Developed incident response capabilities</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Earned CISSP and CISM certifications</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise Areas -->
+    <section class="py-20 bg-cyber-surface">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-display font-bold mb-4">
+            <span class="text-gradient">Core Expertise</span>
+          </h2>
+          <p class="text-xl text-cyber-muted max-w-3xl mx-auto">
+            Specialized domains where Bill's experience creates decisive advantage for organizations facing their most critical challenges.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="glass-card rounded-2xl p-8 hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 bg-red-600/20 rounded-xl flex items-center justify-center mb-6">
+              <i class="bi bi-shield-exclamation text-2xl text-red-400"></i>
+            </div>
+            <h3 class="text-xl font-display font-semibold mb-4">Crisis Leadership</h3>
+            <p class="text-cyber-muted mb-4">
+              Commands incident response operations for world-class cyber events. Expertise in ransomware negotiation, 
+              FBI coordination, and crisis communication.
+            </p>
+            <ul class="space-y-2 text-sm text-cyber-muted">
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>Ransomware Response & Negotiation</li>
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>Federal Agency Coordination</li>
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>Executive Crisis Communication</li>
+            </ul>
+          </div>
+
+          <div class="glass-card rounded-2xl p-8 hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-cyber-blue/20 rounded-xl flex items-center justify-center mb-6">
+              <i class="bi bi-building text-2xl text-cyber-blue"></i>
+            </div>
+            <h3 class="text-xl font-display font-semibold mb-4">Enterprise Security</h3>
+            <p class="text-cyber-muted mb-4">
+              Proven experience building and leading enterprise security programs that protect critical infrastructure 
+              and sensitive data at scale.
+            </p>
+            <ul class="space-y-2 text-sm text-cyber-muted">
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>$50M+ Budget Management</li>
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>Global Team Leadership (217 staff)</li>
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>Critical Infrastructure Protection</li>
+            </ul>
+          </div>
+
+          <div class="glass-card rounded-2xl p-8 hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-6">
+              <i class="bi bi-globe text-2xl text-yellow-400"></i>
+            </div>
+            <h3 class="text-xl font-display font-semibold mb-4">Nation-State Strategy</h3>
+            <p class="text-cyber-muted mb-4">
+              Contributed to foreign national cybersecurity strategy development. Deep understanding of 
+              geopolitical cyber threats and defense frameworks.
+            </p>
+            <ul class="space-y-2 text-sm text-cyber-muted">
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>National Strategy Contribution</li>
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>Former TS/SCI Clearance</li>
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>Geopolitical Threat Analysis</li>
+            </ul>
+          </div>
+
+          <div class="glass-card rounded-2xl p-8 hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="400">
+            <div class="w-16 h-16 bg-purple-600/20 rounded-xl flex items-center justify-center mb-6">
+              <i class="bi bi-bank text-2xl text-purple-400"></i>
+            </div>
+            <h3 class="text-xl font-display font-semibold mb-4">Private Equity Security</h3>
+            <p class="text-cyber-muted mb-4">
+              Specialized expertise in cybersecurity due diligence, portfolio company security, and 
+              M&A cyber risk assessment for private equity firms.
+            </p>
+            <ul class="space-y-2 text-sm text-cyber-muted">
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>M&A Due Diligence</li>
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>Portfolio Company Security</li>
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>Investment Risk Assessment</li>
+            </ul>
+          </div>
+
+          <div class="glass-card rounded-2xl p-8 hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="500">
+            <div class="w-16 h-16 bg-cyber-accent/20 rounded-xl flex items-center justify-center mb-6">
+              <i class="bi bi-award text-2xl text-cyber-accent"></i>
+            </div>
+            <h3 class="text-xl font-display font-semibold mb-4">Compliance Excellence</h3>
+            <p class="text-cyber-muted mb-4">
+              CMMC Registered Practitioner with deep understanding of DoD requirements, NIST frameworks, 
+              and regulatory compliance across multiple industries.
+            </p>
+            <ul class="space-y-2 text-sm text-cyber-muted">
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>CMMC 2.0 Certification</li>
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>NIST Framework Implementation</li>
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>DoD Security Requirements</li>
+            </ul>
+          </div>
+
+          <div class="glass-card rounded-2xl p-8 hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="600">
+            <div class="w-16 h-16 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-6">
+              <i class="bi bi-people text-2xl text-cyan-400"></i>
+            </div>
+            <h3 class="text-xl font-display font-semibold mb-4">Community Leadership</h3>
+            <p class="text-cyber-muted mb-4">
+              Co-founder of SecKC, the region's premier cybersecurity community. Regular speaker at DEF CON, 
+              Black Hat, and industry conferences worldwide.
+            </p>
+            <ul class="space-y-2 text-sm text-cyber-muted">
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>SecKC Co-founder</li>
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>DEF CON & Black Hat Speaker</li>
+              <li class="flex items-center"><i class="bi bi-check text-cyber-accent mr-2"></i>Industry Thought Leadership</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credentials & Education -->
+    <section class="py-20 bg-cyber-dark">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-display font-bold mb-4">
+            Credentials & <span class="text-gradient">Education</span>
+          </h2>
+          <p class="text-xl text-cyber-muted">
+            Professional certifications and educational foundation supporting decades of cybersecurity excellence.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Certifications -->
+          <div class="glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-2xl font-display font-bold mb-6 flex items-center">
+              <i class="bi bi-award text-cyber-accent mr-3"></i>
+              Professional Certifications
+            </h3>
+            <div class="space-y-4">
+              <div class="flex items-center justify-between p-4 bg-cyber-elevated rounded-xl">
+                <div>
+                  <div class="font-semibold">CISSP</div>
+                  <div class="text-sm text-cyber-muted">Certified Information Systems Security Professional</div>
+                </div>
+                <div class="w-12 h-12 bg-cyber-blue/20 rounded-xl flex items-center justify-center">
+                  <i class="bi bi-shield-check text-cyber-blue"></i>
+                </div>
+              </div>
+              
+              <div class="flex items-center justify-between p-4 bg-cyber-elevated rounded-xl">
+                <div>
+                  <div class="font-semibold">CISM</div>
+                  <div class="text-sm text-cyber-muted">Certified Information Security Manager</div>
+                </div>
+                <div class="w-12 h-12 bg-cyber-accent/20 rounded-xl flex items-center justify-center">
+                  <i class="bi bi-gear text-cyber-accent"></i>
+                </div>
+              </div>
+              
+              <div class="flex items-center justify-between p-4 bg-cyber-elevated rounded-xl">
+                <div>
+                  <div class="font-semibold">CMMC Registered Practitioner</div>
+                  <div class="text-sm text-cyber-muted">DoD Cybersecurity Maturity Model Certification</div>
+                </div>
+                <div class="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center">
+                  <i class="bi bi-star text-yellow-400"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-2xl font-display font-bold mb-6 flex items-center">
+              <i class="bi bi-mortarboard text-cyber-accent mr-3"></i>
+              Education
+            </h3>
+            <div class="space-y-6">
+              <div class="p-4 bg-cyber-elevated rounded-xl">
+                <div class="flex items-start justify-between mb-3">
+                  <div>
+                    <h4 class="font-semibold">Kansas State University</h4>
+                    <div class="text-sm text-cyber-muted">Graduated 2000</div>
+                  </div>
+                  <div class="w-12 h-12 bg-purple-600/20 rounded-xl flex items-center justify-center">
+                    <i class="bi bi-building text-purple-400"></i>
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-cyber-text">B.S. Management of Information Systems</div>
+                  <div class="text-cyber-text">B.S. Business Administration</div>
+                </div>
+              </div>
+
+              <div class="p-4 bg-cyber-elevated rounded-xl">
+                <h4 class="font-semibold mb-2">Continuous Learning</h4>
+                <ul class="space-y-1 text-sm text-cyber-muted">
+                  <li>• Advanced cybersecurity training programs</li>
+                  <li>• Industry conference participation</li>
+                  <li>• Government security briefings</li>
+                  <li>• Executive leadership development</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Involvement -->
+    <section class="py-20 bg-cyber-surface">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-display font-bold mb-4">
+            Community <span class="text-gradient">Leadership</span>
+          </h2>
+          <p class="text-xl text-cyber-muted max-w-3xl mx-auto">
+            Building stronger cybersecurity communities through education, collaboration, and thought leadership.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- SecKC -->
+          <div class="glass-card rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <div class="p-8">
+              <div class="flex items-center mb-6">
+                <div class="w-16 h-16 bg-cyber-accent/20 rounded-xl flex items-center justify-center mr-4">
+                  <i class="bi bi-people text-2xl text-cyber-accent"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-display font-bold">SecKC</h3>
+                  <p class="text-cyber-muted">Co-founder & Community Leader</p>
+                </div>
+              </div>
+              <p class="text-cyber-muted mb-6">
+                Co-founded SecKC (Security Kansas City), the region's premier cybersecurity community bringing together 
+                professionals, researchers, and enthusiasts for education, networking, and collaboration. The organization 
+                has grown to become a cornerstone of the local cybersecurity ecosystem.
+              </p>
+              <ul class="space-y-2 text-sm text-cyber-muted mb-6">
+                <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Monthly meetings and workshops</li>
+                <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Industry expert presentations</li>
+                <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Networking and collaboration</li>
+                <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Education and career development</li>
               </ul>
-            </li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-
-      </div>
-
-    </div>
-
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title dark-background">
-      <div class="container">
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Bill Swearingen Biography</li>
-          </ol>
-        </nav>
-        <h1>Bill Swearingen</h1>
-        <p class="lead">Global Cybersecurity Legend | Ransomware IR Commander | Nation-State Strategist</p>
-      </div>
-    </div>
-
-    <!-- Legendary Hero Section -->
-    <section class="legendary-hero section light-background">
-      <div class="container">
-        <div class="row gy-4 align-items-center">
-          <div class="col-lg-5" data-aos="fade-right">
-            <div class="legend-image-wrapper">
-              <img src="assets/img/bill-swearingen-profile.jpg" alt="Bill Swearingen - Global Cybersecurity Legend" class="img-fluid rounded-3 shadow-lg">
-              <div class="legend-overlay">
-                <div class="legendary-badges">
-                  <span class="badge bg-danger">Ransomware Commander</span>
-                  <span class="badge bg-primary">Nation-State Strategist</span>
-                  <span class="badge bg-success">GitHub Author</span>
-                  <span class="badge bg-warning">DEF CON Speaker</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-7" data-aos="fade-left">
-            <div class="legend-intro">
-              <h2 class="legend-name">Bill Swearingen</h2>
-              <h3 class="legend-title">Global Cybersecurity Legend & Crisis Commander</h3>
-              <div class="legend-summary">
-                <p class="lead">
-                  <strong>Bill Swearingen isn't just a cybersecurity expert — he's a living cybersecurity legend who operates at the absolute pinnacle of global cybersecurity.</strong> He commands ransomware incident response for organizations under attack by major criminal groups, authors widely-referenced cybersecurity resources, predicts future attacks through prescient tabletop exercises, and serves as the cybersecurity strategist trusted by foreign governments and the world's largest corporations.
-                </p>
-                <p>
-                  When major ransomware groups strike Fortune 500 companies, when nation-states launch sophisticated attacks, when $15 billion private equity firms need cybersecurity leadership — they call Bill Swearingen. He doesn't just respond to cybersecurity crises; he commands them, negotiates with criminal organizations, coordinates with the FBI, and leads technical recovery efforts that restore operations and save organizations millions.
-                </p>
-              </div>
-              <div class="legendary-achievements mt-4">
-                <div class="row">
-                  <div class="col-6 col-md-3">
-                    <div class="legend-stat">
-                      <div class="legend-number">$15B</div>
-                      <div class="legend-label">PE Firm Secured</div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-3">
-                    <div class="legend-stat">
-                      <div class="legend-number">$50M+</div>
-                      <div class="legend-label">Budget Commanded</div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-3">
-                    <div class="legend-stat">
-                      <div class="legend-number">217</div>
-                      <div class="legend-label">Team Led</div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-3">
-                    <div class="legend-stat">
-                      <div class="legend-number">3000+</div>
-                      <div class="legend-label">Community Built</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="legendary-credentials mt-4">
-                <div class="alert alert-danger">
-                  <i class="bi bi-lightning-fill"></i>
-                  <strong>Crisis Commander:</strong> Commands complex ransomware incident response, negotiates with criminal organizations, coordinates with FBI, leads full technical recovery
-                </div>
-                <div class="alert alert-primary">
-                  <i class="bi bi-star-fill"></i>
-                  <strong>Future Predictor:</strong> Tabletop exercise scenario played out in REAL LIFE 3 months later — CISO confirmed perfect preparation
-                </div>
-                <div class="alert alert-success">
-                  <i class="bi bi-github"></i>
-                  <strong>Industry Author:</strong> Created "Awesome Incident Response" — widely-referenced open-source guide used globally
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Current Elite Operations -->
-    <section class="elite-operations section">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Elite Global Cybersecurity Operations</h2>
-          <p>Bill currently commands cybersecurity operations at the highest levels globally, from ransomware crisis response to foreign government strategy.</p>
-        </div>
-
-        <div class="row gy-4">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="operation-card legendary">
-              <div class="operation-header">
-                <img src="assets/img/trifident-logo.png" alt="TRIFIDENT Advisory Logo" class="operation-logo">
-                <div class="operation-info">
-                  <h4>Founding Partner (June 2022 - Present)</h4>
-                  <h3>TRIFIDENT Advisory</h3>
-                  <p class="operation-focus">Global Elite Crisis Command & Strategic Cybersecurity</p>
-                </div>
-              </div>
-              <div class="operation-description">
-                <p><strong>TRIFIDENT Advisory represents the absolute pinnacle of cybersecurity crisis management and strategic consulting.</strong> Bill commands the most complex, high-stakes cybersecurity operations in the world — from major ransomware attacks to multi-billion dollar private equity security.</p>
-                
-                <div class="legendary-ops">
-                  <h5>🚨 Crisis Command Operations:</h5>
-                  <ul class="crisis-ops">
-                    <li><strong>Ransomware Incident Commander:</strong> Commands complex IR for firms hit by major ransomware groups — eradicates threat actors, negotiates ransom, coordinates with FBI, leads full technical recovery</li>
-                    <li><strong>$15B Private Equity Security:</strong> Directed cybersecurity maturity assessment for $15 billion private equity firm and its portfolio company (major European sports club)</li>
-                    <li><strong>MSP Failure Diagnosis:</strong> Diagnosed critical MSP failures for family office — 10-day delay alerting on 1000x increase in brute-force attacks, architected replacement security model</li>
-                    <li><strong>Prophetic Exercise Design:</strong> One tabletop exercise scenario PLAYED OUT IN REAL LIFE 3 months later — CISO confirmed the exercise prepared them perfectly</li>
-                  </ul>
-
-                  <h5>🔍 Strategic Excellence:</h5>
-                  <ul class="strategic-ops">
-                    <li><strong>M&A Cyber Due Diligence:</strong> Cybersecurity assessment for merger and acquisition activities</li>
-                    <li><strong>Compliance Mastery:</strong> SOC 2 audits, NIST Cybersecurity Framework, ISO 27001 assessments</li>
-                    <li><strong>vCISO for Multi-Nationals:</strong> Virtual CISO services for global corporations</li>
-                    <li><strong>Executive War Games:</strong> Advanced tabletop exercises for C-suite crisis preparedness</li>
-                    <li><strong>CMMC Leadership:</strong> Certified CMMC RP (RP-57281) for defense contractor compliance</li>
-                  </ul>
-                </div>
-              </div>
+              <a href="https://seckc.org" class="inline-flex items-center text-cyber-accent hover:text-cyber-blue transition-colors">
+                Visit SecKC.org <i class="bi bi-arrow-right ml-2"></i>
+              </a>
             </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="operation-card premium">
-              <div class="operation-header">
-                <img src="assets/img/sixcyber-logo.png" alt="SixCyber Logo" class="operation-logo">
-                <div class="operation-info">
-                  <h4>Founder & CEO</h4>
-                  <h3>SIXCYBER LLC</h3>
-                  <p class="operation-focus">Enterprise-Grade Security for Kansas City</p>
-                </div>
+          <!-- Speaking & Contributions -->
+          <div class="glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center mb-6">
+              <div class="w-16 h-16 bg-purple-600/20 rounded-xl flex items-center justify-center mr-4">
+                <i class="bi bi-mic text-2xl text-purple-400"></i>
               </div>
-              <div class="operation-description">
-                <p>SixCyber democratizes Bill's world-class cybersecurity expertise for Kansas City businesses, bringing Fortune 500 and government-level security capabilities to organizations of all sizes.</p>
-                <ul class="sixcyber-services">
-                  <li><strong>Crisis Response:</strong> 24/7 incident response with global-class expertise</li>
-                  <li><strong>Penetration Testing:</strong> Advanced security assessments led by former Red Team commander</li>
-                  <li><strong>CMMC Compliance:</strong> Defense contractor requirements with RP-57281 certification</li>
-                  <li><strong>Strategic CISO:</strong> Executive cybersecurity guidance and leadership</li>
-                  <li><strong>Security Training:</strong> Employee awareness with real-world attack scenarios</li>
-                  <li><strong>Managed Services:</strong> Ongoing security monitoring and management</li>
+              <div>
+                <h3 class="text-2xl font-display font-bold">Speaking & Contributions</h3>
+                <p class="text-cyber-muted">Industry Thought Leadership</p>
+              </div>
+            </div>
+            
+            <div class="space-y-6">
+              <div>
+                <h4 class="font-semibold mb-3">Conference Speaking</h4>
+                <ul class="space-y-2 text-sm text-cyber-muted">
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>DEF CON presentations</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Black Hat security conferences</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Industry summit keynotes</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Executive briefings</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-semibold mb-3">Open Source Contributions</h4>
+                <ul class="space-y-2 text-sm text-cyber-muted">
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>"Awesome Incident Response" (GitHub)</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Security tools and frameworks</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Best practice documentation</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-semibold mb-3">Industry Advisory</h4>
+                <ul class="space-y-2 text-sm text-cyber-muted">
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Cybersecurity standards development</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Government advisory committees</li>
+                  <li class="flex items-center"><i class="bi bi-check-circle text-cyber-accent mr-2"></i>Industry working groups</li>
                 </ul>
               </div>
             </div>
@@ -395,647 +771,162 @@
       </div>
     </section>
 
-    <!-- Legendary Career Timeline -->
-    <section class="legendary-timeline section light-background">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Legendary Career: Building Global Cybersecurity Excellence</h2>
-          <p>A journey through the most significant cybersecurity roles of the modern era — from nation-state strategy to Fortune 500 crisis command.</p>
-        </div>
-
-        <div class="timeline legendary">
-          <!-- TRIFIDENT -->
-          <div class="timeline-item legendary" data-aos="fade-up" data-aos-delay="100">
-            <div class="timeline-marker crisis">
-              <i class="bi bi-lightning-fill"></i>
-            </div>
-            <div class="timeline-content legendary">
-              <div class="timeline-date">June 2022 - Present</div>
-              <h4>Founding Partner — Crisis Commander</h4>
-              <h5>TRIFIDENT Advisory</h5>
-              <p><strong>Commands the most complex, high-stakes cybersecurity crises in the world.</strong> When major organizations face existential cyber threats, TRIFIDENT — and Bill — are who they call.</p>
-              
-              <div class="crisis-highlights">
-                <div class="crisis-category">
-                  <h6><i class="bi bi-exclamation-triangle-fill text-danger"></i> Ransomware Crisis Command</h6>
-                  <ul>
-                    <li><strong>Major Ransomware IR Commander:</strong> Commands complex incident response for firms hit by major ransomware groups — complete operational command from threat eradication to ransom negotiation to FBI coordination to full technical recovery</li>
-                    <li><strong>Criminal Organization Negotiation:</strong> Direct negotiation with sophisticated ransomware groups to minimize organizational damage and maximize recovery options</li>
-                    <li><strong>Federal Coordination:</strong> Coordinates with FBI cybersecurity units during major incident response operations</li>
-                    <li><strong>Technical Recovery Leadership:</strong> Leads comprehensive technical recovery efforts to restore operations and prevent reinfection</li>
-                  </ul>
-                </div>
-
-                <div class="crisis-category">
-                  <h6><i class="bi bi-cash-stack text-primary"></i> Ultra-High-Value Security Leadership</h6>
-                  <ul>
-                    <li><strong>$15 Billion Private Equity Security:</strong> Directed comprehensive cybersecurity maturity assessment for $15B private equity firm and its portfolio company (major European sports club)</li>
-                    <li><strong>Family Office Crisis Diagnosis:</strong> Diagnosed critical MSP security failures — 10-day delay in alerting on 1000x increase in brute-force attacks, architected replacement security model</li>
-                    <li><strong>M&A Cyber Due Diligence:</strong> Cybersecurity risk assessment for high-value merger and acquisition activities</li>
-                    <li><strong>Multi-National vCISO Services:</strong> Virtual CISO for global corporations with complex threat landscapes</li>
-                  </ul>
-                </div>
-
-                <div class="crisis-category prophetic">
-                  <h6><i class="bi bi-crystal-ball text-warning"></i> Prophetic Crisis Preparation</h6>
-                  <ul>
-                    <li><strong>Future Attack Prediction:</strong> One tabletop exercise scenario PLAYED OUT IN REAL LIFE exactly 3 months later — CISO confirmed the exercise prepared them perfectly for the real event</li>
-                    <li><strong>Executive War Games:</strong> Develops and facilitates advanced tabletop exercises and crisis simulations for C-suite executives</li>
-                    <li><strong>Strategic Threat Modeling:</strong> Creates detailed cybersecurity roadmaps and organizational maturity assessments</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- IronNet -->
-          <div class="timeline-item legendary" data-aos="fade-up" data-aos-delay="200">
-            <div class="timeline-marker nation-state">
-              <i class="bi bi-globe"></i>
-            </div>
-            <div class="timeline-content legendary">
-              <div class="timeline-date">October 2019 - June 2022</div>
-              <h4>Senior Cyber Strategist & Red Team Leader</h4>
-              <h5>IronNet Cybersecurity</h5>
-              <p><strong>Elite cybersecurity leadership at the nexus of national security and Fortune 500 enterprise protection.</strong> IronNet, founded by former NSA Director Keith Alexander, represents the pinnacle of nation-state level cybersecurity capability.</p>
-              
-              <div class="ironnet-legends">
-                <div class="legend-category">
-                  <h6><i class="bi bi-flag-fill text-primary"></i> National Security Strategy</h6>
-                  <ul>
-                    <li><strong>Foreign National Cyber Strategy:</strong> Primary contributor to develop a NATIONAL CYBER SECURITY STRATEGY for foreign government — representing the highest level of international cybersecurity consultation possible</li>
-                    <li><strong>Nation-State APT Consultation:</strong> Private consultation and media contact regarding ongoing Advanced Persistent Threat activities and nation-state attacks</li>
-                    <li><strong>Government Relations Leadership:</strong> Executive sponsor for foreign and domestic government cybersecurity activities and partnerships</li>
-                  </ul>
-                </div>
-
-                <div class="legend-category">
-                  <h6><i class="bi bi-building text-success"></i> Fortune 500 Crisis Leadership</h6>
-                  <ul>
-                    <li><strong>World's Largest Company Support:</strong> Guided one of the WORLD'S LARGEST COMPANIES through a major cyber event — providing strategic leadership during existential cybersecurity crisis</li>
-                    <li><strong>Red Team Command:</strong> Red Team Leader for ALL penetration testing activities — network, cloud, mobile, web application security assessments</li>
-                    <li><strong>Executive Client Engagement:</strong> Strategic direction for product and marketing, engaging Fortune 500 CISOs at the executive level</li>
-                  </ul>
-                </div>
-
-                <div class="legend-category">
-                  <h6><i class="bi bi-shield-shaded text-warning"></i> Advanced Defense Innovation</h6>
-                  <ul>
-                    <li><strong>Collective Defense Architecture:</strong> Built IronNet's revolutionary Collective Defense capability for real-time threat sharing across organizations</li>
-                    <li><strong>MITRE ATT&CK Integration:</strong> Advanced threat framework integration and collective defense strategies implementation</li>
-                    <li><strong>Strategic Product Direction:</strong> Guided product development and go-to-market strategy for cutting-edge cybersecurity solutions</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- CenturyLink CISO Era -->
-          <div class="timeline-item legendary" data-aos="fade-up" data-aos-delay="300">
-            <div class="timeline-marker empire">
-              <i class="bi bi-building-fill"></i>
-            </div>
-            <div class="timeline-content legendary">
-              <div class="timeline-date">2015 - 2019</div>
-              <h4>Chief Information Security Officer</h4>
-              <h5>CenturyLink (3rd Largest US Telecommunications)</h5>
-              <p><strong>Built and commanded a cybersecurity empire protecting critical national telecommunications infrastructure.</strong> Unprecedented scale of leadership managing the cybersecurity of America's 3rd largest telecom company.</p>
-              
-              <div class="empire-achievements">
-                <div class="empire-category">
-                  <h6><i class="bi bi-cash-stack text-success"></i> Massive Scale Command</h6>
-                  <ul>
-                    <li><strong>$50+ Million Annual Budget:</strong> Commanded one of the largest enterprise cybersecurity budgets in the telecommunications industry</li>
-                    <li><strong>217 Global Personnel:</strong> Led massive cybersecurity organization spanning all security disciplines across global operations</li>
-                    <li><strong>National Infrastructure Protection:</strong> Secured critical telecommunications infrastructure serving millions of Americans</li>
-                    <li><strong>Board-Level Leadership:</strong> Regular presentations to Board of Directors and C-Level executives on cybersecurity strategy and risk</li>
-                  </ul>
-                </div>
-
-                <div class="empire-category">
-                  <h6><i class="bi bi-tools text-primary"></i> Empire Building from Scratch</h6>
-                  <ul>
-                    <li><strong>Built ALL Security Teams FROM SCRATCH:</strong> Created comprehensive enterprise security organization including Incident Response, Digital Forensics, Application Security, Risk Management, and Vulnerability Management teams</li>
-                    <li><strong>Pioneered Threat Hunting:</strong> Among the first to implement comprehensive cyber threat hunting programs in enterprise telecommunications</li>
-                    <li><strong>Bug Bounty Pioneer:</strong> Implemented enterprise Bug Bounty program for continuous security improvement</li>
-                    <li><strong>Incident Readiness Innovation:</strong> Developed and executed large-scale cybersecurity preparedness exercises</li>
-                  </ul>
-                </div>
-
-                <div class="empire-category">
-                  <h6><i class="bi bi-gear-fill text-warning"></i> Customer Security Product Empire</h6>
-                  <ul>
-                    <li><strong>DDoS Mitigation Products:</strong> Architected customer-facing DDoS protection services</li>
-                    <li><strong>Adaptive Network Security:</strong> Developed advanced network security solutions for enterprise customers</li>
-                    <li><strong>Adaptive Threat Intelligence:</strong> Created threat intelligence products leveraging CenturyLink's global network visibility</li>
-                    <li><strong>Cyber Kill Chain Mastery:</strong> Keynote presenter on Cyber Kill-Chain methodology implementation</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- CenturyLink Empire Building -->
-          <div class="timeline-item legendary" data-aos="fade-up" data-aos-delay="400">
-            <div class="timeline-marker builder">
-              <i class="bi bi-hammer"></i>
-            </div>
-            <div class="timeline-content legendary">
-              <div class="timeline-date">2009 - 2015</div>
-              <h4>Senior Manager, Cybersecurity Empire Architect</h4>
-              <h5>CenturyLink</h5>
-              <p><strong>The foundation years where Bill built the cybersecurity capabilities that would become legendary.</strong> This is where he pioneered many techniques that became industry standard.</p>
-              
-              <div class="builder-achievements">
-                <h6><i class="bi bi-cpu-fill text-primary"></i> Technical Innovation & Automation</h6>
-                <ul class="builder-list">
-                  <li><strong>100% Server Vulnerability Coverage:</strong> Expanded vulnerability assessment to achieve 100% coverage of all IT servers — unprecedented scale and completeness</li>
-                  <li><strong>Automated APT Detection:</strong> Built automated Advanced Persistent Threat detection using OSINT + internal + private threat intelligence — years ahead of industry adoption</li>
-                  <li><strong>Lockheed Martin Cyber Kill Chain:</strong> Benchmarked security operations against Lockheed Martin Cyber Kill Chain methodology</li>
-                  <li><strong>Enterprise SIEM Deployment:</strong> Deployed and optimized ArcSight SIEM for massive-scale security event correlation</li>
-                  <li><strong>Advanced Tool Integration:</strong> Implemented Archer eGRC, FireEye advanced threat detection, Encase Enterprise forensics platform</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Industry Legend Status -->
-    <section class="industry-legend section">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Industry Legend Recognition</h2>
-          <p>Bill's contributions to the global cybersecurity community have established him as a true industry legend, shaping cybersecurity practices worldwide.</p>
-        </div>
-
-        <div class="row gy-4">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="legend-contribution">
-              <div class="contribution-header">
-                <i class="bi bi-github contribution-icon"></i>
-                <h4>Global Open Source Impact</h4>
-              </div>
-              <div class="contribution-content">
-                <h5>"Awesome Incident Response" Author</h5>
-                <p>Bill authored <strong>"Awesome Incident Response"</strong> — a comprehensive, widely-referenced open-source guide on GitHub that has become an essential resource for cybersecurity professionals worldwide.</p>
-                <div class="github-impact">
-                  <div class="impact-stats">
-                    <div class="stat">
-                      <span class="stat-label">Global Usage</span>
-                      <span class="stat-desc">Referenced by cybersecurity professionals worldwide</span>
-                    </div>
-                    <div class="stat">
-                      <span class="stat-label">Industry Standard</span>
-                      <span class="stat-desc">Considered essential incident response resource</span>
-                    </div>
-                  </div>
-                  <a href="https://github.com/meirwah/awesome-incident-response" class="btn btn-outline-primary" target="_blank">
-                    <i class="bi bi-github"></i> View on GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="legend-contribution">
-              <div class="contribution-header">
-                <i class="bi bi-mic-fill contribution-icon"></i>
-                <h4>Premier Conference Speaker</h4>
-              </div>
-              <div class="contribution-content">
-                <h5>Elite Conference Circuit</h5>
-                <div class="speaking-venues">
-                  <div class="venue-item premier">
-                    <strong>DEF CON:</strong> The world's largest and most prestigious hacker convention
-                  </div>
-                  <div class="venue-item premier">
-                    <strong>BlackHat:</strong> Premier technical cybersecurity conference for professionals
-                  </div>
-                  <div class="venue-item">
-                    <strong>SaintCon:</strong> Regional cybersecurity conference leadership
-                  </div>
-                  <div class="venue-item">
-                    <strong>SecKC:</strong> Founder and regular presenter at Kansas City's premier meetup
-                  </div>
-                  <div class="venue-item">
-                    <strong>Industry Events:</strong> Keynote presenter at major cybersecurity conferences
-                  </div>
-                </div>
-                <p class="speaking-note">Bill's presentations on Cyber Kill Chain methodology, incident response, and threat hunting have influenced cybersecurity practices across the industry.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="legend-contribution">
-              <div class="contribution-header">
-                <i class="bi bi-people-fill contribution-icon"></i>
-                <h4>Community Architect</h4>
-              </div>
-              <div class="contribution-content">
-                <h5>Kansas City Cybersecurity Empire</h5>
-                <div class="community-empire">
-                  <div class="empire-item flagship">
-                    <h6>SecKC — World's Largest Monthly Hacker Meetup</h6>
-                    <p><strong>FOUNDER</strong> (not co-founder) of what became the world's largest monthly cybersecurity meetup. Built from zero to 3000+ members, defining cybersecurity community culture across Kansas City.</p>
-                    <div class="empire-stats">
-                      <span class="empire-stat">3000+ Members</span>
-                      <span class="empire-stat">15+ Years</span>
-                      <span class="empire-stat">Global Recognition</span>
-                    </div>
-                  </div>
-                  
-                  <div class="empire-item">
-                    <h6>Additional Empire Building</h6>
-                    <ul class="empire-list">
-                      <li><strong>Cowtown Computer Congress Founder:</strong> Premier Kansas City technology conference</li>
-                      <li><strong>FBI InfraGard President:</strong> Led Kansas City chapter of critical infrastructure protection</li>
-                      <li><strong>Professional Association Leadership:</strong> Active in ISC2, ISSA, ISACA, and multiple industry organizations</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Legendary Credentials -->
-    <section class="legendary-credentials section light-background">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Legendary Credentials & Recognition</h2>
-          <p>Elite certifications, prestigious education, and industry recognition that establish Bill as a true cybersecurity authority.</p>
-        </div>
-
-        <div class="row gy-4">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="credentials-legendary">
-              <h4><i class="bi bi-award-fill"></i> Elite Cybersecurity Certifications</h4>
-              <div class="credential-showcase">
-                <div class="credential-legend cissp">
-                  <div class="cred-icon">🛡️</div>
-                  <div class="cred-details">
-                    <span class="cred-name">CISSP</span>
-                    <span class="cred-desc">Certified Information Systems Security Professional — Gold standard of cybersecurity expertise</span>
-                  </div>
-                </div>
-                <div class="credential-legend cism">
-                  <div class="cred-icon">⚡</div>
-                  <div class="cred-details">
-                    <span class="cred-name">CISM</span>
-                    <span class="cred-desc">Certified Information Security Manager — Executive-level security management</span>
-                  </div>
-                </div>
-                <div class="credential-legend cmmc">
-                  <div class="cred-icon">🎯</div>
-                  <div class="cred-details">
-                    <span class="cred-name">CMMC RP-57281</span>
-                    <span class="cred-desc">CMMC Registered Practitioner — Official DoD cybersecurity compliance certification</span>
-                  </div>
-                </div>
-                <div class="credential-legend clearance">
-                  <div class="cred-icon">🔒</div>
-                  <div class="cred-details">
-                    <span class="cred-name">Former TS/SCI</span>
-                    <span class="cred-desc">Top Secret/SCI Clearance — DoD Sponsored, highest government security levels (inactive)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="credentials-legendary">
-              <h4><i class="bi bi-mortarboard-fill"></i> Academic Excellence</h4>
-              <div class="education-showcase">
-                <div class="institution-highlight">
-                  <h5>Kansas State University</h5>
-                  <div class="graduation-year">Graduated 2000</div>
-                  <div class="dual-degree">
-                    <div class="degree-showcase">
-                      <span class="degree-type">Bachelor of Science</span>
-                      <span class="degree-field">Management of Information Systems</span>
-                    </div>
-                    <div class="degree-showcase">
-                      <span class="degree-type">Bachelor of Science</span>
-                      <span class="degree-field">Business Administration</span>
-                    </div>
-                  </div>
-                  <p class="academic-note">Dual-degree foundation combining deep technical expertise with strategic business acumen — the perfect preparation for cybersecurity leadership at the intersection of technology, business, and national security.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-12" data-aos="fade-up" data-aos-delay="300">
-            <div class="expertise-legendary">
-              <h4>Legendary Areas of Expertise</h4>
-              <p class="expertise-intro">Two decades of experience at the absolute pinnacle of cybersecurity, from commanding ransomware crises to contributing to national security strategy:</p>
-              <div class="expertise-matrix">
-                <div class="expertise-domain crisis">
-                  <h6>🚨 Crisis Command</h6>
-                  <div class="domain-tags">
-                    <span class="tag">Ransomware Incident Command</span>
-                    <span class="tag">Criminal Negotiation</span>
-                    <span class="tag">FBI Coordination</span>
-                    <span class="tag">Technical Recovery Leadership</span>
-                    <span class="tag">Crisis Prediction</span>
-                  </div>
-                </div>
-                
-                <div class="expertise-domain national">
-                  <h6>🏛️ National Security</h6>
-                  <div class="domain-tags">
-                    <span class="tag">National Cyber Strategy</span>
-                    <span class="tag">Nation-State Analysis</span>
-                    <span class="tag">APT Investigation</span>
-                    <span class="tag">Government Relations</span>
-                    <span class="tag">International Consultation</span>
-                  </div>
-                </div>
-                
-                <div class="expertise-domain enterprise">
-                  <h6>🏢 Enterprise Mastery</h6>
-                  <div class="domain-tags">
-                    <span class="tag">$50M+ Budget Command</span>
-                    <span class="tag">217-Person Team Leadership</span>
-                    <span class="tag">Board Presentation</span>
-                    <span class="tag">$15B PE Firm Security</span>
-                    <span class="tag">M&A Due Diligence</span>
-                  </div>
-                </div>
-                
-                <div class="expertise-domain technical">
-                  <h6>⚙️ Technical Innovation</h6>
-                  <div class="domain-tags">
-                    <span class="tag">Red Team Leadership</span>
-                    <span class="tag">Threat Hunting Pioneer</span>
-                    <span class="tag">MITRE ATT&CK Expert</span>
-                    <span class="tag">Automated APT Detection</span>
-                    <span class="tag">Cyber Kill Chain</span>
-                  </div>
-                </div>
-                
-                <div class="expertise-domain compliance">
-                  <h6>📋 Compliance Excellence</h6>
-                  <div class="domain-tags">
-                    <span class="tag">SOC 2 Audits</span>
-                    <span class="tag">NIST Cybersecurity Framework</span>
-                    <span class="tag">ISO 27001 Implementation</span>
-                    <span class="tag">CMMC 2.0 Mastery</span>
-                    <span class="tag">Defense Contractor Compliance</span>
-                  </div>
-                </div>
-                
-                <div class="expertise-domain community">
-                  <h6>👥 Community Building</h6>
-                  <div class="domain-tags">
-                    <span class="tag">SecKC Empire Building</span>
-                    <span class="tag">Conference Organization</span>
-                    <span class="tag">Open Source Authoring</span>
-                    <span class="tag">Industry Speaking</span>
-                    <span class="tag">Mentorship & Development</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Engaging the Legend -->
-    <section class="engaging-legend section">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Engage a Global Cybersecurity Legend</h2>
-          <p>Whether you're facing a cybersecurity crisis, need strategic guidance, or require the highest levels of cybersecurity expertise, Bill operates at the pinnacle of global cybersecurity capability.</p>
-        </div>
-
-        <div class="row gy-4">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="legend-engagement">
-              <h4>Crisis & Elite Consulting</h4>
-              
-              <div class="engagement-legend crisis-tier">
-                <i class="bi bi-lightning-fill"></i>
-                <div class="legend-content">
-                  <h5>🚨 CRISIS COMMAND — TRIFIDENT Advisory</h5>
-                  <p>When your organization faces existential cybersecurity threats — ransomware attacks, nation-state intrusions, or catastrophic breaches — you need crisis command leadership.</p>
-                  <ul>
-                    <li>Ransomware incident command and recovery</li>
-                    <li>Nation-state attack response and coordination</li>
-                    <li>$15B+ scale security architecture</li>
-                    <li>M&A cybersecurity due diligence</li>
-                    <li>Executive crisis war games and preparation</li>
-                  </ul>
-                  <div class="crisis-contact">
-                    <strong>Crisis Hotline:</strong> For existential cybersecurity threats requiring immediate legend-level response.
-                    <a href="mailto:crisis@trifident.com" class="btn btn-danger">Crisis Contact</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="engagement-legend professional-tier">
-                <i class="bi bi-shield-check"></i>
-                <div class="legend-content">
-                  <h5>🛡️ PROFESSIONAL EXCELLENCE — SixCyber</h5>
-                  <p>Access Bill's world-class cybersecurity expertise for Kansas City businesses — bringing Fortune 500 and government-level capabilities to organizations of all sizes.</p>
-                  <ul>
-                    <li>Penetration testing by former Red Team leader</li>
-                    <li>24/7 incident response with global expertise</li>
-                    <li>CMMC compliance with RP-57281 certification</li>
-                    <li>Strategic CISO consulting and guidance</li>
-                    <li>Security training with real-world scenarios</li>
-                  </ul>
-                  <a href="index.html#contact" class="btn btn-primary">Professional Consultation</a>
-                </div>
-              </div>
-
-              <div class="engagement-legend speaking-tier">
-                <i class="bi bi-mic-fill"></i>
-                <div class="legend-content">
-                  <h5>🎤 THOUGHT LEADERSHIP — Speaking & Education</h5>
-                  <p>Book the cybersecurity legend for keynotes, conferences, and executive education. DEF CON and BlackHat-level expertise for your event.</p>
-                  <ul>
-                    <li>Conference keynotes and technical presentations</li>
-                    <li>Executive cybersecurity education and roundtables</li>
-                    <li>Crisis simulation and tabletop exercises</li>
-                    <li>Industry panel discussions and expert commentary</li>
-                  </ul>
-                  <a href="mailto:speaking@sixcyber.com" class="btn btn-outline-primary">Speaking Inquiry</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="legend-contact">
-              <h4>Connect with the Legend</h4>
-              
-              <div class="contact-legend primary">
-                <i class="bi bi-envelope-fill"></i>
-                <div class="contact-content">
-                  <h5>Direct Executive Contact</h5>
-                  <p>For urgent cybersecurity matters, strategic consultations, or crisis situations requiring immediate attention from a global cybersecurity authority.</p>
-                  <a href="mailto:bill@sixcyber.com" class="legend-link">bill@sixcyber.com</a>
-                </div>
-              </div>
-
-              <div class="contact-legend github">
-                <i class="bi bi-github"></i>
-                <div class="contact-content">
-                  <h5>Open Source Impact</h5>
-                  <p>Explore Bill's "Awesome Incident Response" — the globally-referenced cybersecurity resource that has educated thousands of professionals worldwide.</p>
-                  <a href="https://github.com/meirwah/awesome-incident-response" target="_blank" class="legend-link">Awesome Incident Response</a>
-                </div>
-              </div>
-
-              <div class="contact-legend community">
-                <i class="bi bi-people-fill"></i>
-                <div class="contact-content">
-                  <h5>Community Empire</h5>
-                  <p>Join the SecKC community Bill founded — the world's largest monthly cybersecurity meetup and Kansas City's cybersecurity empire.</p>
-                  <a href="https://seckc.org" target="_blank" class="legend-link">SecKC Community</a>
-                </div>
-              </div>
-
-              <div class="contact-legend linkedin">
-                <i class="bi bi-linkedin"></i>
-                <div class="contact-content">
-                  <h5>Professional Network</h5>
-                  <p>Connect with Bill for cybersecurity insights, industry intelligence, and professional networking at the highest levels.</p>
-                  <a href="https://www.linkedin.com/in/billswearingen" target="_blank" class="legend-link">LinkedIn Profile</a>
-                </div>
-              </div>
-
-              <div class="legend-emergency">
-                <div class="alert alert-danger">
-                  <i class="bi bi-exclamation-triangle-fill"></i>
-                  <strong>Cybersecurity Emergency?</strong><br>
-                  24/7 crisis response with global cybersecurity legend-level expertise:
-                  <a href="tel:+1913xxxxxxx" class="alert-link"><strong>(913) XXX-XXXX</strong></a><br>
-                  <small>Ransomware command • Nation-state response • Critical infrastructure protection</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="300">
-            <div class="legend-statement">
-              <h4>When the Stakes Are Highest, Legends Step Forward</h4>
-              <p class="lead">Bill Swearingen operates where cybersecurity expertise meets crisis command, where technical innovation meets national security strategy, and where community building meets global impact. He doesn't just practice cybersecurity — he defines it, commands it, and teaches others to master it.</p>
-              <div class="legend-indicators">
-                <span class="legend-indicator">🚨 Crisis Commander</span>
-                <span class="legend-indicator">🏛️ Nation-State Strategist</span>
-                <span class="legend-indicator">📚 Industry Author</span>
-                <span class="legend-indicator">🎤 Global Speaker</span>
-                <span class="legend-indicator">👑 Community Empire Builder</span>
-                <span class="legend-indicator">🛡️ Kansas City's Cybersecurity Legend</span>
-              </div>
-              <div class="legend-finale">
-                <p><strong>This is what cybersecurity leadership looks like at its absolute pinnacle.</strong></p>
-              </div>
-            </div>
-          </div>
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-cyber-blue to-cyber-accent">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+        <h2 class="text-4xl font-display font-bold text-white mb-6">
+          Work with a Proven Leader
+        </h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          When your organization faces its most critical cybersecurity challenges, experience matters. 
+          Connect with the executive who's guided Fortune 150 companies and shaped national security strategy.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="index.html#contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-cyber-blue font-semibold rounded-xl hover:bg-gray-100 transition-colors">
+            <i class="bi bi-envelope mr-2"></i>
+            Schedule a Consultation
+          </a>
+          <a href="https://www.linkedin.com/in/billswearingen" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-cyber-blue transition-colors">
+            <i class="bi bi-linkedin mr-2"></i>
+            Connect on LinkedIn
+          </a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">SixCyber</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>Founded by a global cybersecurity legend</p>
-            <p>Bill Swearingen — Crisis commander, nation-state strategist, community empire builder</p>
-            <p class="mt-3"><strong>Crisis Hotline:</strong> <span>+1 (913) XXX-XXXX</span></p>
-            <p><strong>Email:</strong> <span>bill@sixcyber.com</span></p>
+  <!-- Footer -->
+  <footer class="bg-cyber-dark border-t border-cyber-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3">
+            <img src="assets/img/logo.png" alt="SixCyber" class="h-8 w-8">
+            <span class="text-xl font-display font-bold">SixCyber</span>
           </div>
-          <div class="social-links d-flex mt-4">
-            <a href="https://www.linkedin.com/in/billswearingen"><i class="bi bi-linkedin"></i></a>
-            <a href="https://github.com/meirwah/awesome-incident-response"><i class="bi bi-github"></i></a>
-            <a href="https://seckc.org"><i class="bi bi-globe"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="index.html#services">Crisis Response</a></li>
-            <li><a href="index.html#services">Penetration Testing</a></li>
-            <li><a href="index.html#services">CISO Consulting</a></li>
-            <li><a href="index.html#services">CMMC Compliance</a></li>
-            <li><a href="index.html#services">Security Training</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Legend</h4>
-          <ul>
-            <li><a href="bill-swearingen.html">Bill Swearingen</a></li>
-            <li><a href="https://github.com/meirwah/awesome-incident-response">Awesome IR</a></li>
-            <li><a href="https://seckc.org">SecKC Community</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Cybersecurity Intelligence from a Legend</h4>
-          <p>Receive cybersecurity insights from someone who commands ransomware crises and shapes national cyber strategy.</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form">
-              <input type="email" name="email" placeholder="Enter your email">
-              <input type="submit" value="Subscribe">
+          <p class="text-cyber-muted">
+            Elite cybersecurity services backed by Fortune 150 experience and national security expertise.
+          </p>
+          <div class="space-y-2 text-sm">
+            <div class="flex items-center space-x-2">
+              <i class="bi bi-telephone text-cyber-accent"></i>
+              <span>(913) XXX-XXXX</span>
             </div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Welcome to legend-level cybersecurity insights!</div>
-          </form>
+            <div class="flex items-center space-x-2">
+              <i class="bi bi-envelope text-cyber-accent"></i>
+              <span>info@sixcyber.com</span>
+            </div>
+          </div>
+          <div class="flex space-x-4">
+            <a href="https://www.linkedin.com/company/sixcyber" class="text-cyber-muted hover:text-cyber-accent transition-colors">
+              <i class="bi bi-linkedin text-xl"></i>
+            </a>
+            <a href="https://seckc.org" class="text-cyber-muted hover:text-cyber-accent transition-colors">
+              <i class="bi bi-globe text-xl"></i>
+            </a>
+          </div>
         </div>
 
+        <div>
+          <h4 class="font-semibold mb-4">Services</h4>
+          <ul class="space-y-2 text-cyber-muted">
+            <li><a href="index.html#services" class="hover:text-cyber-accent transition-colors">Advanced Testing</a></li>
+            <li><a href="index.html#services" class="hover:text-cyber-accent transition-colors">Crisis Response</a></li>
+            <li><a href="index.html#services" class="hover:text-cyber-accent transition-colors">Executive Leadership</a></li>
+            <li><a href="index.html#services" class="hover:text-cyber-accent transition-colors">Compliance Excellence</a></li>
+            <li><a href="index.html#services" class="hover:text-cyber-accent transition-colors">Security Operations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Company</h4>
+          <ul class="space-y-2 text-cyber-muted">
+            <li><a href="index.html#about" class="hover:text-cyber-accent transition-colors">About Us</a></li>
+            <li><a href="bill-swearingen.html" class="hover:text-cyber-accent transition-colors">Leadership</a></li>
+            <li><a href="index.html#contact" class="hover:text-cyber-accent transition-colors">Contact</a></li>
+            <li><a href="privacy-policy.html" class="hover:text-cyber-accent transition-colors">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html" class="hover:text-cyber-accent transition-colors">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Resources</h4>
+          <ul class="space-y-2 text-cyber-muted">
+            <li><a href="smb-checklist.html" class="hover:text-cyber-accent transition-colors">SMB Security Checklist</a></li>
+            <li><a href="index.html#faq" class="hover:text-cyber-accent transition-colors">FAQ</a></li>
+            <li><a href="index.html#contact" class="hover:text-cyber-accent transition-colors">Emergency Response</a></li>
+            <li><a href="accessibility.html" class="hover:text-cyber-accent transition-colors">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-cyber-border mt-12 pt-8 text-center">
+        <p class="text-cyber-muted">
+          © 2026 <strong>SixCyber LLC</strong>. All rights reserved. 
+          Founded by <a href="bill-swearingen.html" class="text-cyber-accent hover:underline">Bill Swearingen</a>.
+        </p>
       </div>
     </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright 2026</span> <strong class="px-1 sitename">SixCyber LLC</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        Founded by <a href="bill-swearingen.html">Bill Swearingen</a> — Global Cybersecurity Legend
-      </div>
-    </div>
-
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Scroll to Top -->
+  <button id="scroll-top" class="fixed bottom-8 right-8 w-12 h-12 bg-cyber-blue hover:bg-cyber-blue-hover text-white rounded-xl shadow-lg hover:scale-110 transition-all opacity-0 invisible">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Scripts -->
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 100
+    });
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          // Close mobile menu if open
+          document.getElementById('mobile-menu').classList.add('hidden');
+        }
+      });
+    });
+
+    // Scroll to top functionality
+    const scrollTopBtn = document.getElementById('scroll-top');
+    
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.remove('opacity-0', 'invisible');
+      } else {
+        scrollTopBtn.classList.add('opacity-0', 'invisible');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 
 </body>
-
 </html>
