@@ -3,7 +3,7 @@
   <url>
     <loc>https://sixcyber.com/</loc>
     <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
@@ -15,8 +15,14 @@
   <url>
     <loc>https://sixcyber.com/smb-checklist.html</loc>
     <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sixcyber.com/accessibility.html</loc>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://sixcyber.com/privacy-policy.html</loc>
@@ -26,6 +32,12 @@
   </url>
   <url>
     <loc>https://sixcyber.com/terms-of-service.html</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://sixcyber.com/security-policy.html</loc>
     <lastmod>2026-02-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

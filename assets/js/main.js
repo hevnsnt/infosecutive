@@ -24,6 +24,8 @@
 
   /**
    * Mobile nav toggle
+   * Bug fix: Toggle classes on the icon element instead of replacing innerHTML
+   * (the toggle IS an <i> element, so innerHTML was nesting icons)
    */
   function initMobileNav() {
     const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
@@ -35,11 +37,13 @@
         navMenu.classList.toggle('navmenu-active');
         mobileNavToggleBtn.classList.toggle('mobile-nav-active');
         
-        // Animate hamburger icon
+        // Toggle icon classes instead of replacing innerHTML
         if (navMenu.classList.contains('navmenu-active')) {
-          mobileNavToggleBtn.innerHTML = '<i class="bi bi-x"></i>';
+          mobileNavToggleBtn.classList.remove('bi-list');
+          mobileNavToggleBtn.classList.add('bi-x');
         } else {
-          mobileNavToggleBtn.innerHTML = '<i class="bi bi-list"></i>';
+          mobileNavToggleBtn.classList.remove('bi-x');
+          mobileNavToggleBtn.classList.add('bi-list');
         }
       });
 
@@ -50,7 +54,8 @@
           if (navMenu.classList.contains('navmenu-active')) {
             navMenu.classList.remove('navmenu-active');
             mobileNavToggleBtn.classList.remove('mobile-nav-active');
-            mobileNavToggleBtn.innerHTML = '<i class="bi bi-list"></i>';
+            mobileNavToggleBtn.classList.remove('bi-x');
+            mobileNavToggleBtn.classList.add('bi-list');
           }
         });
       });
@@ -61,7 +66,8 @@
           if (navMenu.classList.contains('navmenu-active')) {
             navMenu.classList.remove('navmenu-active');
             mobileNavToggleBtn.classList.remove('mobile-nav-active');
-            mobileNavToggleBtn.innerHTML = '<i class="bi bi-list"></i>';
+            mobileNavToggleBtn.classList.remove('bi-x');
+            mobileNavToggleBtn.classList.add('bi-list');
           }
         }
       });

@@ -4488,3 +4488,278 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# SIXCYBER Premium Enhancements - Feb 2026
+# Professional cybersecurity firm aesthetic
+--------------------------------------------------------------*/
+
+/* Enhanced Mobile Navigation */
+.mobile-nav-toggle {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.mobile-nav-toggle:hover {
+  transform: scale(1.1);
+}
+
+.mobile-nav-toggle.mobile-nav-active {
+  transform: rotate(90deg);
+}
+
+/* Navmenu Active State - Premium Slide-in */
+.navmenu.navmenu-active {
+  right: 0;
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.navmenu.navmenu-active ul {
+  background: var(--nav-mobile-background-color);
+  height: 100%;
+  padding-top: 80px;
+}
+
+.navmenu.navmenu-active a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin: 0 15px;
+  padding: 18px 15px;
+}
+
+.navmenu.navmenu-active a:hover {
+  background: rgba(16, 163, 215, 0.1);
+  border-radius: 8px;
+}
+
+/* Improved Typography Scale */
+.hero .hero-content .title {
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Premium Card Hover States */
+.feature-card,
+.pricing-item,
+.info-card,
+.service-card-inner {
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before,
+.pricing-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(16, 163, 215, 0.03),
+    transparent
+  );
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.feature-card:hover::before,
+.pricing-item:hover::before {
+  left: 100%;
+}
+
+/* Enhanced Section Titles */
+.section-title h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  border-radius: 2px;
+}
+
+/* Premium Button Styles */
+.primary-btn,
+.btn-pricing {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.primary-btn::before,
+.btn-pricing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+  z-index: -1;
+}
+
+/* Scroll Indicator Enhancement */
+.scroll-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--scroll-width, 0%);
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #00ffff 30%));
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+}
+
+/* Enhanced Experience Badge */
+.experience-badge {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 8px 32px rgba(16, 163, 215, 0.2);
+  }
+  50% {
+    box-shadow: 0 8px 40px rgba(16, 163, 215, 0.35);
+  }
+}
+
+/* Improved Spacing for Mobile */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 80px;
+    min-height: auto;
+    padding-bottom: 60px;
+  }
+
+  .hero .hero-content .title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .hero .hero-content .description p {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .section-title {
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
+
+  .section-title h2 {
+    font-size: 26px;
+  }
+
+  .section-title span {
+    font-size: 32px;
+  }
+
+  /* Better mobile nav styling */
+  .navmenu.navmenu-active ul {
+    padding-top: 100px;
+  }
+
+  .navmenu.navmenu-active a {
+    font-size: 18px;
+    padding: 16px 20px;
+  }
+}
+
+/* Premium Focus States for Accessibility */
+a:focus-visible,
+button:focus-visible,
+.btn-pricing:focus-visible,
+.primary-btn:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Smooth Scrollbar (Webkit) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--accent-color), transparent 50%);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* Enhanced Tab Content Transitions */
+.tab-pane {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Premium Contact Form Styling */
+.contact .form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-color), transparent 85%);
+}
+
+/* Improved Image Loading */
+img {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"] {
+  opacity: 0;
+}
+
+img[loading="lazy"].loaded,
+img:not([loading="lazy"]) {
+  opacity: 1;
+}
+
+/* Kansas City Local Trust Indicators */
+.achievement-badges .achievement {
+  transition: transform 0.3s ease;
+}
+
+.achievement-badges .achievement:hover {
+  transform: translateY(-3px);
+}
+
+.achievement-badges .achievement-icon {
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.achievement-badges .achievement:hover .achievement-icon {
+  background: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.achievement-badges .achievement:hover .achievement-icon i {
+  color: var(--contrast-color);
+}
