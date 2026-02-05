@@ -6292,4 +6292,1114 @@ h1, h2, h3, h4, h5, h6 {
   .timeline-content::before {
     left: -0.75rem;
   }
+}/*======================================================================
+# LEGENDARY BILL SWEARINGEN BIOGRAPHY STYLES
+# Enhanced styles for showcasing a true cybersecurity legend
+======================================================================*/
+
+/*--------------------------------------------------------------
+# Legendary Hero Section
+--------------------------------------------------------------*/
+.legendary-hero {
+  background: linear-gradient(135deg, #0a0e1a 0%, #1e293b 30%, #0f172a 70%, #000 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.legendary-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.05) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.legend-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.legendary-badges {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.legendary-badges .badge {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.legend-name {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #ef4444 0%, #0ea5e9 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(14, 165, 233, 0.3);
+}
+
+.legend-title {
+  font-size: 1.75rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(14, 165, 233, 0.3);
+}
+
+.legendary-achievements {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(239, 68, 68, 0.1));
+  border: 2px solid var(--accent-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.legend-stat {
+  text-align: center;
+}
+
+.legend-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  font-family: var(--font-display);
+  display: block;
+  line-height: 1;
+  text-shadow: 0 2px 10px rgba(14, 165, 233, 0.5);
+}
+
+.legend-label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.legendary-credentials .alert {
+  border-left: 4px solid;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  margin-bottom: 0.75rem;
+}
+
+.legendary-credentials .alert-danger {
+  border-left-color: var(--danger-color);
+  color: var(--default-color);
+}
+
+.legendary-credentials .alert-primary {
+  border-left-color: var(--accent-color);
+  color: var(--default-color);
+}
+
+.legendary-credentials .alert-success {
+  border-left-color: var(--success-color);
+  color: var(--default-color);
+}
+
+/*--------------------------------------------------------------
+# Elite Operations Cards
+--------------------------------------------------------------*/
+.operation-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  height: 100%;
+  position: relative;
+}
+
+.operation-card.legendary {
+  border: 2px solid var(--danger-color);
+  background: linear-gradient(135deg, var(--surface-color), rgba(239, 68, 68, 0.05));
+  box-shadow: 0 0 30px rgba(239, 68, 68, 0.1);
+}
+
+.operation-card.premium {
+  border: 2px solid var(--accent-color);
+  background: linear-gradient(135deg, var(--surface-color), rgba(14, 165, 233, 0.05));
+}
+
+.operation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.operation-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.operation-logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 1rem;
+  border-radius: var(--radius);
+}
+
+.operation-focus {
+  background: var(--danger-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.legendary-ops h5,
+.strategic-ops h5 {
+  color: var(--heading-color);
+  font-size: 1.125rem;
+  margin: 1.5rem 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.crisis-ops,
+.strategic-ops,
+.sixcyber-services {
+  list-style: none;
+  padding: 0;
+}
+
+.crisis-ops li,
+.strategic-ops li,
+.sixcyber-services li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  padding-left: 2rem;
+  line-height: 1.6;
+}
+
+.crisis-ops li:last-child,
+.strategic-ops li:last-child,
+.sixcyber-services li:last-child {
+  border-bottom: none;
+}
+
+.crisis-ops li::before {
+  content: '🚨';
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+}
+
+.strategic-ops li::before {
+  content: '🎯';
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+}
+
+.sixcyber-services li::before {
+  content: '⚡';
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+}
+
+/*--------------------------------------------------------------
+# Legendary Timeline
+--------------------------------------------------------------*/
+.timeline.legendary {
+  position: relative;
+  padding: 3rem 0;
+}
+
+.timeline.legendary::before {
+  content: '';
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--danger-color), var(--accent-color), var(--success-color));
+  border-radius: 2px;
+}
+
+.timeline-item.legendary {
+  position: relative;
+  margin-bottom: 4rem;
+  padding-left: 6rem;
+}
+
+.timeline-marker.crisis {
+  background: var(--danger-color);
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+}
+
+.timeline-marker.nation-state {
+  background: var(--accent-color);
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
+}
+
+.timeline-marker.empire {
+  background: var(--success-color);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+}
+
+.timeline-marker.builder {
+  background: var(--warning-color);
+  box-shadow: 0 0 20px rgba(251, 146, 60, 0.5);
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--background-color);
+  z-index: 2;
+}
+
+.timeline-marker i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.timeline-content.legendary {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+}
+
+.timeline-content.legendary::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: 3rem;
+  width: 0;
+  height: 0;
+  border: 1rem solid transparent;
+  border-right-color: var(--surface-color);
+}
+
+/*--------------------------------------------------------------
+# Crisis Highlights
+--------------------------------------------------------------*/
+.crisis-highlights,
+.ironnet-legends,
+.empire-achievements {
+  margin-top: 1.5rem;
+}
+
+.crisis-category,
+.legend-category,
+.empire-category {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.crisis-category.prophetic {
+  border-color: var(--cyber-purple);
+  background: linear-gradient(135deg, var(--background-color), rgba(124, 58, 237, 0.05));
+}
+
+.crisis-category h6,
+.legend-category h6,
+.empire-category h6 {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.crisis-category h6 i.text-danger {
+  color: var(--danger-color) !important;
+}
+
+.crisis-category h6 i.text-primary {
+  color: var(--accent-color) !important;
+}
+
+.crisis-category h6 i.text-warning {
+  color: var(--warning-color) !important;
+}
+
+.builder-achievements h6 {
+  color: var(--cyber-orange);
+  margin-bottom: 1rem;
+}
+
+.builder-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.builder-list li {
+  padding: 0.75rem 0;
+  color: var(--default-color);
+  position: relative;
+  padding-left: 2rem;
+  line-height: 1.6;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.builder-list li:last-child {
+  border-bottom: none;
+}
+
+.builder-list li::before {
+  content: '🛠️';
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+}
+
+/*--------------------------------------------------------------
+# Industry Legend Contributions
+--------------------------------------------------------------*/
+.legend-contribution {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.legend-contribution:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-cyber);
+}
+
+.contribution-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.contribution-icon {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.github-impact {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.impact-stats {
+  margin-bottom: 1rem;
+}
+
+.impact-stats .stat {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background: var(--surface-color);
+  border-radius: var(--radius);
+}
+
+.stat-label {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.stat-desc {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.speaking-venues {
+  margin: 1rem 0;
+}
+
+.venue-item {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
+}
+
+.venue-item.premier {
+  border-color: var(--accent-color);
+  background: linear-gradient(135deg, var(--background-color), rgba(14, 165, 233, 0.05));
+}
+
+.venue-item:hover {
+  transform: translateX(5px);
+}
+
+.venue-item strong {
+  color: var(--accent-color);
+}
+
+.speaking-note {
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+/*--------------------------------------------------------------
+# Community Empire
+--------------------------------------------------------------*/
+.community-empire {
+  margin-top: 1rem;
+}
+
+.empire-item {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.empire-item.flagship {
+  border-color: var(--accent-color);
+  background: linear-gradient(135deg, var(--background-color), rgba(14, 165, 233, 0.05));
+}
+
+.empire-item h6 {
+  color: var(--heading-color);
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.empire-stats {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.empire-stat {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.empire-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.empire-list li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--default-color);
+}
+
+.empire-list li::before {
+  content: '🏰';
+  position: absolute;
+  left: 0;
+}
+
+.empire-list li strong {
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Legendary Credentials
+--------------------------------------------------------------*/
+.credentials-legendary {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  height: 100%;
+}
+
+.credential-showcase {
+  margin-top: 1.5rem;
+}
+
+.credential-legend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.credential-legend:hover {
+  border-color: var(--accent-color);
+  transform: translateX(5px);
+}
+
+.credential-legend.cissp {
+  border-left: 4px solid var(--accent-color);
+}
+
+.credential-legend.cism {
+  border-left: 4px solid var(--success-color);
+}
+
+.credential-legend.cmmc {
+  border-left: 4px solid var(--warning-color);
+}
+
+.credential-legend.clearance {
+  border-left: 4px solid var(--danger-color);
+}
+
+.cred-icon {
+  font-size: 2rem;
+  text-align: center;
+  width: 3rem;
+  flex-shrink: 0;
+}
+
+.cred-name {
+  font-weight: 700;
+  color: var(--heading-color);
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.cred-desc {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+/*--------------------------------------------------------------
+# Education Showcase
+--------------------------------------------------------------*/
+.education-showcase {
+  height: 100%;
+}
+
+.institution-highlight {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+}
+
+.institution-highlight h5 {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.graduation-year {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.25rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.dual-degree {
+  margin-bottom: 1.5rem;
+}
+
+.degree-showcase {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: var(--surface-color);
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+.degree-type {
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.degree-field {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.academic-note {
+  color: var(--default-color);
+  font-style: italic;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/*--------------------------------------------------------------
+# Expertise Matrix
+--------------------------------------------------------------*/
+.expertise-legendary {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+}
+
+.expertise-matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.expertise-domain {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.expertise-domain:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.expertise-domain.crisis {
+  border-left: 4px solid var(--danger-color);
+}
+
+.expertise-domain.national {
+  border-left: 4px solid var(--accent-color);
+}
+
+.expertise-domain.enterprise {
+  border-left: 4px solid var(--success-color);
+}
+
+.expertise-domain.technical {
+  border-left: 4px solid var(--cyber-purple);
+}
+
+.expertise-domain.compliance {
+  border-left: 4px solid var(--warning-color);
+}
+
+.expertise-domain.community {
+  border-left: 4px solid var(--cyber-green);
+}
+
+.expertise-domain h6 {
+  color: var(--heading-color);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.domain-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.domain-tags .tag {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  color: var(--default-color);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.domain-tags .tag:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/*--------------------------------------------------------------
+# Legend Engagement
+--------------------------------------------------------------*/
+.engagement-legend {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.engagement-legend:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.engagement-legend.crisis-tier {
+  border: 2px solid var(--danger-color);
+  background: linear-gradient(135deg, var(--surface-color), rgba(239, 68, 68, 0.05));
+}
+
+.engagement-legend.professional-tier {
+  border: 2px solid var(--accent-color);
+  background: linear-gradient(135deg, var(--surface-color), rgba(14, 165, 233, 0.05));
+}
+
+.engagement-legend.speaking-tier {
+  border: 2px solid var(--cyber-purple);
+  background: linear-gradient(135deg, var(--surface-color), rgba(124, 58, 237, 0.05));
+}
+
+.engagement-legend i {
+  font-size: 2rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.engagement-legend.crisis-tier i {
+  color: var(--danger-color);
+}
+
+.engagement-legend.professional-tier i {
+  color: var(--accent-color);
+}
+
+.engagement-legend.speaking-tier i {
+  color: var(--cyber-purple);
+}
+
+.legend-content h5 {
+  color: var(--heading-color);
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.legend-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.legend-content ul li {
+  padding: 0.25rem 0;
+  color: var(--default-color);
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.875rem;
+}
+
+.legend-content ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.crisis-contact {
+  background: var(--danger-color);
+  color: white;
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.crisis-contact strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/*--------------------------------------------------------------
+# Legend Contact Methods
+--------------------------------------------------------------*/
+.contact-legend {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-legend:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-1px);
+}
+
+.contact-legend.primary {
+  border-color: var(--accent-color);
+  background: linear-gradient(135deg, var(--surface-color), rgba(14, 165, 233, 0.05));
+}
+
+.contact-legend.github {
+  border-color: var(--success-color);
+  background: linear-gradient(135deg, var(--surface-color), rgba(16, 185, 129, 0.05));
+}
+
+.contact-legend.community {
+  border-color: var(--cyber-green);
+  background: linear-gradient(135deg, var(--surface-color), rgba(0, 255, 136, 0.05));
+}
+
+.contact-legend.linkedin {
+  border-color: var(--cyber-blue);
+  background: linear-gradient(135deg, var(--surface-color), rgba(0, 180, 216, 0.05));
+}
+
+.contact-legend i {
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.contact-legend.primary i {
+  color: var(--accent-color);
+}
+
+.contact-legend.github i {
+  color: var(--success-color);
+}
+
+.contact-legend.community i {
+  color: var(--cyber-green);
+}
+
+.contact-legend.linkedin i {
+  color: var(--cyber-blue);
+}
+
+.contact-content h5 {
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.contact-content p {
+  color: var(--default-color);
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.legend-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.legend-link:hover {
+  color: var(--accent-secondary);
+  text-decoration: underline;
+}
+
+.legend-emergency .alert {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(251, 146, 60, 0.1));
+  border: 2px solid var(--danger-color);
+  color: var(--default-color);
+  margin-top: 2rem;
+}
+
+/*--------------------------------------------------------------
+# Legend Statement
+--------------------------------------------------------------*/
+.legend-statement {
+  background: linear-gradient(135deg, var(--surface-color), rgba(14, 165, 233, 0.1));
+  border: 3px solid var(--accent-color);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.legend-statement::before {
+  content: '👑';
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  background: var(--background-color);
+  padding: 0 1rem;
+}
+
+.legend-statement h4 {
+  color: var(--heading-color);
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.legend-indicators {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.legend-indicator {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.legend-indicator:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.legend-finale {
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+  color: white;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin-top: 2rem;
+}
+
+.legend-finale p {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+# Mobile Responsiveness for Legendary Bio
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .legend-name {
+    font-size: 2.5rem;
+  }
+  
+  .legend-title {
+    font-size: 1.25rem;
+  }
+  
+  .legendary-achievements {
+    padding: 1rem;
+  }
+  
+  .legend-number {
+    font-size: 2rem;
+  }
+  
+  .timeline.legendary::before {
+    left: 1rem;
+  }
+  
+  .timeline-item.legendary {
+    padding-left: 4rem;
+  }
+  
+  .timeline-marker {
+    left: 0;
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .timeline-content.legendary::before {
+    left: -1rem;
+  }
+  
+  .expertise-matrix {
+    grid-template-columns: 1fr;
+  }
+  
+  .engagement-legend,
+  .contact-legend {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .engagement-legend i,
+  .contact-legend i {
+    align-self: center;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+  }
+  
+  .legend-indicators {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .legend-statement {
+    padding: 2rem 1rem;
+  }
+  
+  .empire-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .operation-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .operation-logo {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
 }
