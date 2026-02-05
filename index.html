@@ -1,292 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
-  <!-- Primary Meta Tags -->
-  <title>SixCyber - #1 Cybersecurity Kansas City | Expert Penetration Testing, Incident Response & CISO Services</title>
-  <meta name="description" content="Premier cybersecurity Kansas City services by Bill Swearingen, former Fortune 150 CISO. Expert penetration testing Kansas City, incident response Kansas City, CISO consulting Kansas City, and CMMC compliance. Serving Overland Park, Lenexa, Olathe, and all Kansas City metro businesses.">
-  <meta name="keywords" content="cybersecurity Kansas City, penetration testing Kansas City, incident response KC, CISO Kansas City, cyber insurance Kansas City, CMMC compliance Missouri, vulnerability assessment Overland Park, cybersecurity consultant Kansas, Bill Swearingen CISSP, SecKC founder">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sixcyber.com/">
-  <meta property="og:title" content="SixCyber - #1 Cybersecurity Services Kansas City">
-  <meta property="og:description" content="Premier cybersecurity services in Kansas City. Expert penetration testing, incident response, CISO consulting, and compliance. Founded by Bill Swearingen, SecKC co-founder.">
-  <meta property="og:image" content="https://sixcyber.com/assets/img/sixcyber-og-image.jpg">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://sixcyber.com/">
-  <meta property="twitter:title" content="SixCyber - #1 Cybersecurity Services Kansas City">
-  <meta property="twitter:description" content="Premier cybersecurity services in Kansas City. Expert penetration testing, incident response, CISO consulting, and compliance.">
-  <meta property="twitter:image" content="https://sixcyber.com/assets/img/sixcyber-og-image.jpg">
-
-  <!-- Canonical URL -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SixCyber — Cybersecurity Consulting, Kansas City</title>
+  <meta name="description" content="SixCyber delivers penetration testing, incident response, vCISO services, and CMMC compliance for organizations in Kansas City and nationwide.">
+  <meta name="keywords" content="cybersecurity Kansas City, penetration testing Kansas City, incident response Kansas City, CISO Kansas City, CMMC compliance Kansas City, security assessment">
   <link rel="canonical" href="https://sixcyber.com/">
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sixcyber.com/">
+  <meta property="og:title" content="SixCyber — Cybersecurity Consulting, Kansas City">
+  <meta property="og:description" content="Penetration testing, incident response, vCISO services, and CMMC compliance from a team with Fortune 100 and federal experience.">
+  <meta property="og:image" content="https://sixcyber.com/assets/img/logo.webp">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="SixCyber">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SixCyber — Cybersecurity Consulting, Kansas City">
+  <meta name="twitter:description" content="Penetration testing, incident response, vCISO services, and CMMC compliance from a team with Fortune 100 and federal experience.">
+  <meta name="twitter:image" content="https://sixcyber.com/assets/img/logo.webp">
+
   <!-- Favicons -->
-  <link href="assets/img/favicon.ico" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" href="assets/img/favicon.ico">
 
-  <!-- Modern CSS Framework - Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            'cyber-dark': '#0a0a0b',
-            'cyber-surface': '#1a1a1d', 
-            'cyber-elevated': '#252529',
-            'cyber-blue': '#3b82f6',
-            'cyber-blue-hover': '#2563eb',
-            'cyber-accent': '#10b981',
-            'cyber-text': '#f1f5f9',
-            'cyber-muted': '#94a3b8',
-            'cyber-border': '#334155'
-          },
-          fontFamily: {
-            'sans': ['Inter', 'system-ui', 'sans-serif'],
-            'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
-            'mono': ['JetBrains Mono', 'monospace']
-          },
-          animation: {
-            'fade-in': 'fadeIn 0.6s ease-out',
-            'slide-up': 'slideUp 0.8s ease-out',
-            'glow': 'glow 2s ease-in-out infinite alternate',
-          },
-          keyframes: {
-            fadeIn: {
-              '0%': { opacity: '0', transform: 'translateY(20px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' }
-            },
-            slideUp: {
-              '0%': { opacity: '0', transform: 'translateY(40px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' }
-            },
-            glow: {
-              '0%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)' },
-              '100%': { boxShadow: '0 0 30px rgba(59, 130, 246, 0.6)' }
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Premium Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/vendor/aos/aos.css">
 
-  <!-- Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Main CSS (Tailwind build) -->
+  <link rel="stylesheet" href="assets/css/main.css">
 
-  <!-- AOS Animation Library -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <style>
-    .glass-card {
-      background: rgba(26, 26, 29, 0.8);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .glow-effect {
-      box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
-    }
-    
-    .hero-gradient {
-      background: linear-gradient(135deg, #0a0a0b 0%, #1a1a1d 50%, #252529 100%);
-    }
-    
-    .text-gradient {
-      background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .nav-blur {
-      background: rgba(10, 10, 11, 0.95);
-      backdrop-filter: blur(20px);
-    }
-    
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2.5rem;
-      }
-      .hero-subtitle {
-        font-size: 1.25rem;
-      }
-    }
-  </style>
-
-  <!-- Enhanced JSON-LD Schema Markup -->
+  <!-- JSON-LD: LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://sixcyber.com/#business",
     "name": "SixCyber",
-    "alternateName": "SIXCYBER LLC",
-    "description": "Premier cybersecurity services provider in Kansas City specializing in penetration testing, incident response, CISO consulting, CMMC compliance, and comprehensive security assessments for small to enterprise businesses.",
+    "description": "Cybersecurity consulting firm providing penetration testing, incident response, vCISO services, and CMMC compliance.",
     "url": "https://sixcyber.com",
-    "telephone": "+1-913-xxx-xxxx",
+    "logo": "https://sixcyber.com/assets/img/logo.webp",
+    "image": "https://sixcyber.com/assets/img/logo.webp",
     "email": "info@sixcyber.com",
     "founder": {
       "@type": "Person",
       "name": "Bill Swearingen",
-      "jobTitle": "Founder & Chief Executive Officer",
-      "description": "Cybersecurity expert with 20+ years experience, former CISO at CenturyLink, co-founder of SecKC, CISSP certified",
-      "sameAs": [
-        "https://www.linkedin.com/in/billswearingen",
-        "https://seckc.org"
-      ],
-      "knowsAbout": [
-        "Cybersecurity",
-        "Penetration Testing", 
-        "Incident Response",
-        "CMMC Compliance",
-        "Digital Forensics",
-        "Risk Assessment"
-      ]
+      "url": "https://sixcyber.com/bill-swearingen.html"
     },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kansas City",
       "addressRegion": "MO",
-      "addressCountry": "US",
-      "areaServed": [
-        "Kansas City",
-        "Overland Park", 
-        "Kansas",
-        "Missouri",
-        "Greater Kansas City Metro"
-      ]
+      "addressCountry": "US"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 39.0997,
-      "longitude": -94.5786
-    },
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 39.0997,
-        "longitude": -94.5786
-      },
-      "geoRadius": "100000"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Cybersecurity Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Penetration Testing",
-            "description": "Comprehensive penetration testing services to identify vulnerabilities in networks, applications, and systems",
-            "areaServed": "Kansas City Metro"
-          }
-        },
-        {
-          "@type": "Offer", 
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Incident Response",
-            "description": "24/7 cybersecurity incident response and digital forensics services",
-            "areaServed": "Kansas City Metro"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service", 
-            "name": "CISO Consulting",
-            "description": "Fractional CISO and vCISO services for strategic cybersecurity leadership",
-            "areaServed": "Kansas City Metro"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "CMMC Compliance",
-            "description": "CMMC 2.0 assessment and compliance preparation for defense contractors",
-            "areaServed": "United States"
-          }
-        }
-      ]
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "47",
-      "bestRating": "5"
-    },
+    "areaServed": [
+      {"@type": "City", "name": "Kansas City", "containedInPlace": {"@type": "State", "name": "Missouri"}},
+      {"@type": "City", "name": "Overland Park", "containedInPlace": {"@type": "State", "name": "Kansas"}},
+      {"@type": "City", "name": "Olathe", "containedInPlace": {"@type": "State", "name": "Kansas"}},
+      {"@type": "City", "name": "Lenexa", "containedInPlace": {"@type": "State", "name": "Kansas"}},
+      {"@type": "City", "name": "Leawood", "containedInPlace": {"@type": "State", "name": "Kansas"}},
+      {"@type": "City", "name": "Lee's Summit", "containedInPlace": {"@type": "State", "name": "Missouri"}},
+      {"@type": "Country", "name": "United States"}
+    ],
+    "knowsAbout": ["Penetration Testing", "Incident Response", "vCISO", "CMMC Compliance", "Security Assessments", "Cybersecurity Strategy"],
     "sameAs": [
-      "https://www.linkedin.com/company/sixcyber",
-      "https://seckc.org"
+      "https://github.com/hevnsnt"
     ]
   }
   </script>
 
+  <!-- JSON-LD: FAQPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage", 
+    "@type": "FAQPage",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What cybersecurity services does SixCyber provide in Kansas City?",
+        "name": "What does a penetration test cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "SixCyber provides comprehensive cybersecurity services including penetration testing, incident response, CISO consulting, vulnerability assessments, CMMC compliance, security awareness training, and 24/7 monitoring. According to industry research, 87% of small businesses in Kansas City lack adequate cybersecurity measures, making these services essential for business protection."
+          "text": "Penetration test pricing depends on scope, complexity, and methodology. A focused web application test typically starts around $10,000–$15,000, while comprehensive network and application assessments for larger organizations can range from $25,000–$75,000+. SixCyber provides detailed scoping before any engagement so you know exactly what you're getting."
         }
       },
       {
         "@type": "Question",
-        "name": "How much does penetration testing cost in Kansas City?", 
+        "name": "How quickly can SixCyber respond to a security incident?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Penetration testing costs in Kansas City typically range from $3,000 to $15,000 depending on scope and complexity. SixCyber offers competitive pricing with comprehensive testing that includes network, application, and social engineering assessments. Studies show that penetration testing can reduce security incident costs by up to 80%."
+          "text": "SixCyber can mobilize within hours for active incidents. According to IBM's 2024 Cost of a Data Breach Report, the average breach costs $4.88 million — and organizations that contain a breach in under 200 days save an average of $1.02 million. Speed matters. Reach out to info@sixcyber.com for urgent incidents."
         }
       },
       {
         "@type": "Question",
-        "name": "Why should Kansas City businesses choose SixCyber for cybersecurity?",
+        "name": "What is a vCISO and does my company need one?",
         "acceptedAnswer": {
-          "@type": "Answer", 
-          "text": "SixCyber is founded by Bill Swearingen, former CenturyLink CISO and co-founder of SecKC, Kansas City's premier cybersecurity meetup. With 20+ years of experience and CISSP certification, SixCyber understands local business needs. According to IBM's 2024 Cost of Data Breach Report, the average breach costs $4.88 million, making professional cybersecurity services essential."
+          "@type": "Answer",
+          "text": "A virtual CISO (vCISO) is a seasoned security executive who serves as your organization's Chief Information Security Officer on a fractional basis. It's ideal for mid-market companies that need strategic security leadership but aren't ready to hire a full-time CISO — a role that commands $250,000–$400,000+ annually. SixCyber's vCISO service is led by a former CISO who managed a $50M+ security budget and a 217-person global security team."
         }
       },
       {
         "@type": "Question",
-        "name": "What is CMMC 2.0 compliance and do Kansas City defense contractors need it?",
+        "name": "What is CMMC and who needs it?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "CMMC (Cybersecurity Maturity Model Certification) 2.0 is mandatory for all Department of Defense contractors handling Controlled Unclassified Information (CUI). Kansas City area defense contractors must achieve CMMC compliance by 2026. SixCyber's CMMC Registered Practitioners help organizations prepare for and maintain compliance."
+          "text": "The Cybersecurity Maturity Model Certification (CMMC) is a Department of Defense framework that will be required for all defense contractors handling Controlled Unclassified Information (CUI). If your organization bids on DoD contracts, you'll need CMMC certification. SixCyber helps organizations prepare for assessment through gap analysis, remediation guidance, and documentation development."
         }
       },
       {
-        "@type": "Question", 
-        "name": "How quickly can SixCyber respond to a cybersecurity incident in Kansas City?",
+        "@type": "Question",
+        "name": "Does SixCyber serve clients outside Kansas City?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "SixCyber provides 24/7 incident response with initial response within 1 hour for critical incidents in the Kansas City metro area. According to the Ponemon Institute, organizations that contain breaches in under 200 days save an average of $1.76 million compared to longer response times."
+          "text": "Yes. While SixCyber is headquartered in Kansas City and serves the greater metro area including Overland Park, Olathe, Lenexa, Leawood, and Lee's Summit, many engagements are conducted remotely. SixCyber works with clients nationwide, including Fortune 100 companies and private equity portfolio companies."
         }
       }
     ]
   }
   </script>
 
+  <!-- JSON-LD: BreadcrumbList -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -301,1053 +145,582 @@
     ]
   }
   </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "itemReviewed": {
-      "@type": "LocalBusiness",
-      "name": "SixCyber"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Fortune 150 Telecommunications Executive"
-    },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5",
-      "bestRating": "5"
-    },
-    "reviewBody": "Bill guided us through one of the world's largest cybersecurity events. His expertise in incident command and crisis management was invaluable during our most critical hours."
-  }
-  </script>
-
 </head>
+<body class="bg-dark-950 antialiased">
 
-<body class="bg-cyber-dark text-cyber-text dark">
-
-  <!-- Navigation -->
-  <nav class="fixed w-full top-0 z-50 nav-blur border-b border-cyber-border" id="navbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16 md:h-20">
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
-          <img src="assets/img/logo.png" alt="SixCyber" class="h-8 w-8">
-          <span class="text-xl font-display font-bold text-cyber-text">SixCyber</span>
-        </div>
+        <a href="/" class="flex items-center gap-3 group">
+          <img src="assets/img/logo.webp" alt="SixCyber" width="36" height="36" class="w-9 h-9">
+          <span class="font-display font-bold text-lg text-white tracking-tight">SixCyber</span>
+        </a>
 
-        <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="#hero" class="nav-link text-cyber-text hover:text-cyber-accent transition-colors">Home</a>
-          <a href="#services" class="nav-link text-cyber-text hover:text-cyber-accent transition-colors">Services</a>
-          <a href="#about" class="nav-link text-cyber-text hover:text-cyber-accent transition-colors">About</a>
-          <a href="#team" class="nav-link text-cyber-text hover:text-cyber-accent transition-colors">Team</a>
-          <a href="#faq" class="nav-link text-cyber-text hover:text-cyber-accent transition-colors">FAQ</a>
-          <div class="flex space-x-3">
-            <a href="tel:+1913xxxxxxx" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors font-medium">
-              <i class="bi bi-telephone mr-2"></i>Emergency
-            </a>
-            <a href="#contact" class="px-4 py-2 bg-cyber-blue hover:bg-cyber-blue-hover text-white rounded-lg transition-colors font-medium">
-              Get Quote
-            </a>
-          </div>
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="bill-swearingen.html" class="nav-link">Bill Swearingen</a>
+          <a href="#contact" class="btn-primary text-sm !px-5 !py-2.5">Get in Touch</a>
         </div>
 
         <!-- Mobile menu button -->
-        <div class="md:hidden">
-          <button id="mobile-menu-btn" class="text-cyber-text hover:text-cyber-accent">
-            <i class="bi bi-list text-2xl"></i>
-          </button>
-        </div>
+        <button id="mobile-toggle" class="md:hidden p-2 text-gray-400 hover:text-white transition-colors" aria-label="Toggle menu">
+          <i class="bi bi-list text-2xl" id="menu-icon"></i>
+        </button>
       </div>
-    </div>
 
-    <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="hidden md:hidden bg-cyber-surface border-t border-cyber-border">
-      <div class="px-4 py-2 space-y-2">
-        <a href="#hero" class="block px-3 py-2 text-cyber-text hover:text-cyber-accent">Home</a>
-        <a href="#services" class="block px-3 py-2 text-cyber-text hover:text-cyber-accent">Services</a>
-        <a href="#about" class="block px-3 py-2 text-cyber-text hover:text-cyber-accent">About</a>
-        <a href="#team" class="block px-3 py-2 text-cyber-text hover:text-cyber-accent">Team</a>
-        <a href="#faq" class="block px-3 py-2 text-cyber-text hover:text-cyber-accent">FAQ</a>
-        <div class="pt-2 space-y-2">
-          <a href="tel:+1913xxxxxxx" class="block w-full px-4 py-2 bg-red-600 text-white rounded-lg text-center">
-            <i class="bi bi-telephone mr-2"></i>Emergency
-          </a>
-          <a href="#contact" class="block w-full px-4 py-2 bg-cyber-blue text-white rounded-lg text-center">
-            Get Quote
-          </a>
+      <!-- Mobile Nav -->
+      <div id="mobile-menu" class="md:hidden hidden pb-6">
+        <div class="flex flex-col gap-4 pt-4 border-t border-surface-border">
+          <a href="#services" class="nav-link text-base">Services</a>
+          <a href="#about" class="nav-link text-base">About</a>
+          <a href="#faq" class="nav-link text-base">FAQ</a>
+          <a href="bill-swearingen.html" class="nav-link text-base">Bill Swearingen</a>
+          <a href="#contact" class="btn-primary text-center mt-2">Get in Touch</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <main class="overflow-hidden">
+  <!-- ==================== HERO ==================== -->
+  <section class="relative min-h-screen flex items-center overflow-hidden">
+    <!-- Background elements -->
+    <div class="absolute inset-0 bg-grid opacity-50"></div>
+    <div class="glow-dot w-96 h-96 -top-48 -right-48 opacity-30"></div>
+    <div class="glow-dot w-64 h-64 bottom-20 -left-32 opacity-20"></div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center hero-gradient">
-      <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-gradient-to-r from-cyber-dark/90 to-transparent"></div>
-        <!-- Cyber grid background pattern -->
-        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.3) 1px, transparent 0); background-size: 20px 20px;"></div>
-      </div>
-      
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="space-y-8" data-aos="fade-right">
-            <div class="space-y-4">
-              <div class="inline-flex items-center px-4 py-2 bg-cyber-elevated rounded-full border border-cyber-border">
-                <i class="bi bi-shield-check text-cyber-accent mr-2"></i>
-                <span class="text-sm text-cyber-muted">Trusted by Fortune 150 Companies</span>
-              </div>
-              
-              <h1 class="hero-title font-display font-bold text-5xl lg:text-6xl xl:text-7xl leading-tight">
-                Cybersecurity That <span class="text-gradient">Commands Respect</span>
-              </h1>
-              
-              <p class="hero-subtitle text-xl lg:text-2xl text-cyber-muted leading-relaxed">
-                When crisis strikes, organizations trust the expertise that shaped national security strategy. 
-                <strong class="text-cyber-text">20+ years defending what matters most.</strong>
-              </p>
-            </div>
-
-            <div class="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-cyber-blue hover:bg-cyber-blue-hover text-white rounded-xl font-semibold transition-all hover:scale-105 glow-effect">
-                <i class="bi bi-shield-check mr-2"></i>
-                Free Security Assessment
-              </a>
-              <a href="tel:+1913xxxxxxx" class="inline-flex items-center justify-center px-8 py-4 border-2 border-red-600 text-red-400 hover:bg-red-600 hover:text-white rounded-xl font-semibold transition-all">
-                <i class="bi bi-telephone mr-2"></i>
-                24/7 Emergency Response
-              </a>
-            </div>
-
-            <!-- Stats -->
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
-              <div class="text-center">
-                <div class="text-3xl font-display font-bold text-cyber-accent">20+</div>
-                <div class="text-sm text-cyber-muted">Years Experience</div>
-              </div>
-              <div class="text-center">
-                <div class="text-3xl font-display font-bold text-cyber-accent">500+</div>
-                <div class="text-sm text-cyber-muted">Organizations Protected</div>
-              </div>
-              <div class="text-center">
-                <div class="text-3xl font-display font-bold text-cyber-accent">1hr</div>
-                <div class="text-sm text-cyber-muted">Response Time</div>
-              </div>
-              <div class="text-center">
-                <div class="text-3xl font-display font-bold text-cyber-accent">24/7</div>
-                <div class="text-sm text-cyber-muted">Monitoring</div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="relative" data-aos="fade-left">
-            <div class="glass-card rounded-2xl p-8 space-y-6">
-              <div class="flex items-center space-x-4">
-                <img src="assets/img/team/bill-swearingen.jpg" alt="Bill Swearingen" class="w-16 h-16 rounded-full object-cover">
-                <div>
-                  <h3 class="font-semibold text-lg">Bill Swearingen</h3>
-                  <p class="text-cyber-muted">Former CenturyLink CISO</p>
-                </div>
-              </div>
-              <blockquote class="text-cyber-text italic">
-                "The professional who defended America's most sensitive networks now protects yours. 
-                <a href="bill-swearingen.html" class="text-cyber-accent hover:underline">Discover the expertise</a> 
-                that national security leaders trust."
-              </blockquote>
-              <div class="flex items-center space-x-4 text-sm">
-                <div class="flex items-center space-x-1">
-                  <i class="bi bi-award text-cyber-accent"></i>
-                  <span>CISSP Certified</span>
-                </div>
-                <div class="flex items-center space-x-1">
-                  <i class="bi bi-people text-cyber-accent"></i>
-                  <span>SecKC Founder</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-cyber-surface">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl font-display font-bold mb-4">
-            Elite <span class="text-gradient">Cybersecurity Services</span>
-          </h2>
-          <p class="text-xl text-cyber-muted max-w-3xl mx-auto">
-            Comprehensive security solutions trusted by organizations that cannot afford to be wrong.
-            From Fortune 150 enterprises to local businesses across the metro area.
-          </p>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 pt-32 pb-20 md:pt-40 md:pb-28">
+      <div class="max-w-3xl">
+        <div class="badge mb-6" data-aos="fade-up" data-aos-delay="0">
+          Cybersecurity Consulting · Kansas City
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Penetration Testing -->
-          <div class="glass-card rounded-2xl p-8 hover:scale-105 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="100">
-            <div class="w-16 h-16 bg-cyber-blue/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyber-blue/30 transition-colors">
-              <i class="bi bi-shield-exclamation text-2xl text-cyber-blue"></i>
-            </div>
-            <h3 class="text-2xl font-display font-semibold mb-4">Advanced Testing</h3>
-            <p class="text-cyber-muted mb-6">
-              Comprehensive security assessments using real-world attack techniques. 
-              We test your defenses the same way adversaries would breach them.
-            </p>
-            <div class="space-y-3 mb-6">
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">Network & Application Testing</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">Social Engineering Assessments</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">Wireless Security Evaluation</span>
-              </div>
-            </div>
-            <a href="#contact" class="inline-flex items-center text-cyber-accent hover:text-cyber-blue transition-colors">
-              Learn More <i class="bi bi-arrow-right ml-2"></i>
-            </a>
-          </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-[1.08] tracking-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+          Security that earns<br>
+          <span class="gradient-text">your confidence.</span>
+        </h1>
 
-          <!-- Incident Response -->
-          <div class="glass-card rounded-2xl p-8 hover:scale-105 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="200">
-            <div class="w-16 h-16 bg-red-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-600/30 transition-colors">
-              <i class="bi bi-lightning text-2xl text-red-400"></i>
-            </div>
-            <h3 class="text-2xl font-display font-semibold mb-4">Crisis Response</h3>
-            <p class="text-cyber-muted mb-6">
-              Battle-tested incident response from leaders who've guided major organizations through 
-              world-class cyber events and ransomware negotiations.
-            </p>
-            <div class="space-y-3 mb-6">
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">1-Hour Response Time</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">Ransomware Negotiation</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">FBI Coordination</span>
-              </div>
-            </div>
-            <a href="#contact" class="inline-flex items-center text-cyber-accent hover:text-cyber-blue transition-colors">
-              Learn More <i class="bi bi-arrow-right ml-2"></i>
-            </a>
-          </div>
-
-          <!-- Executive Leadership -->
-          <div class="glass-card rounded-2xl p-8 hover:scale-105 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="300">
-            <div class="w-16 h-16 bg-cyber-accent/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyber-accent/30 transition-colors">
-              <i class="bi bi-person-badge text-2xl text-cyber-accent"></i>
-            </div>
-            <h3 class="text-2xl font-display font-semibold mb-4">Executive Leadership</h3>
-            <p class="text-cyber-muted mb-6">
-              Strategic security guidance from proven executives who've managed enterprise programs 
-              and shaped national cybersecurity policy.
-            </p>
-            <div class="space-y-3 mb-6">
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">Fractional CISO Services</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">Board Reporting</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">Strategic Planning</span>
-              </div>
-            </div>
-            <a href="#contact" class="inline-flex items-center text-cyber-accent hover:text-cyber-blue transition-colors">
-              Learn More <i class="bi bi-arrow-right ml-2"></i>
-            </a>
-          </div>
-
-          <!-- Compliance -->
-          <div class="glass-card rounded-2xl p-8 hover:scale-105 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="400">
-            <div class="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-500/30 transition-colors">
-              <i class="bi bi-award text-2xl text-yellow-400"></i>
-            </div>
-            <h3 class="text-2xl font-display font-semibold mb-4">Compliance Excellence</h3>
-            <p class="text-cyber-muted mb-6">
-              CMMC 2.0 and compliance frameworks from practitioners with security clearance experience 
-              who understand DoD requirements at the deepest level.
-            </p>
-            <div class="space-y-3 mb-6">
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">CMMC 2.0 Certification</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">NIST Framework Implementation</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">Audit Readiness</span>
-              </div>
-            </div>
-            <a href="#contact" class="inline-flex items-center text-cyber-accent hover:text-cyber-blue transition-colors">
-              Learn More <i class="bi bi-arrow-right ml-2"></i>
-            </a>
-          </div>
-
-          <!-- Security Operations -->
-          <div class="glass-card rounded-2xl p-8 hover:scale-105 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="500">
-            <div class="w-16 h-16 bg-purple-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-600/30 transition-colors">
-              <i class="bi bi-eye text-2xl text-purple-400"></i>
-            </div>
-            <h3 class="text-2xl font-display font-semibold mb-4">Security Operations</h3>
-            <p class="text-cyber-muted mb-6">
-              Continuous monitoring and threat detection services that identify and respond to 
-              threats before they become breaches.
-            </p>
-            <div class="space-y-3 mb-6">
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">24/7 SOC Monitoring</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">Threat Intelligence</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">Vulnerability Management</span>
-              </div>
-            </div>
-            <a href="#contact" class="inline-flex items-center text-cyber-accent hover:text-cyber-blue transition-colors">
-              Learn More <i class="bi bi-arrow-right ml-2"></i>
-            </a>
-          </div>
-
-          <!-- Advisory Services -->
-          <div class="glass-card rounded-2xl p-8 hover:scale-105 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="600">
-            <div class="w-16 h-16 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/30 transition-colors">
-              <i class="bi bi-lightbulb text-2xl text-cyan-400"></i>
-            </div>
-            <h3 class="text-2xl font-display font-semibold mb-4">Strategic Advisory</h3>
-            <p class="text-cyber-muted mb-6">
-              Expert guidance on security architecture, risk management, and technology decisions 
-              from advisors who've shaped enterprise security programs.
-            </p>
-            <div class="space-y-3 mb-6">
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">Security Architecture</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">Risk Assessment</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i class="bi bi-check-circle text-cyber-accent"></i>
-                <span class="text-sm">Technology Evaluation</span>
-              </div>
-            </div>
-            <a href="#contact" class="inline-flex items-center text-cyber-accent hover:text-cyber-blue transition-colors">
-              Learn More <i class="bi bi-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-cyber-blue to-cyber-accent">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
-        <h2 class="text-4xl font-display font-bold text-white mb-6">
-          Don't Wait for a Breach to Take Action
-        </h2>
-        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-          Organizations that proactively invest in cybersecurity reduce incident costs by 80%. 
-          Get your free assessment today and discover your security gaps before attackers do.
+        <p class="text-lg md:text-xl text-muted max-w-xl mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+          Penetration testing, incident response, and strategic security leadership from practitioners who've operated at the highest levels of government and enterprise.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-cyber-blue font-semibold rounded-xl hover:bg-gray-100 transition-colors">
-            <i class="bi bi-shield-check mr-2"></i>
-            Get Free Security Assessment
+
+        <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="#contact" class="btn-primary">
+            Start a Conversation
+            <i class="bi bi-arrow-right ml-2"></i>
           </a>
-          <a href="tel:+1913xxxxxxx" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-cyber-blue transition-colors">
-            <i class="bi bi-telephone mr-2"></i>
-            Call Now: (913) XXX-XXXX
+          <a href="#services" class="btn-outline">
+            Explore Services
           </a>
         </div>
       </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-cyber-dark">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="space-y-8" data-aos="fade-right">
+      <!-- Scroll indicator -->
+      <div class="hidden md:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-gray-600 animate-pulse-slow">
+        <span class="text-xs tracking-widest uppercase">Scroll</span>
+        <i class="bi bi-chevron-down"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CREDIBILITY BAR ==================== -->
+  <section class="py-12 border-y border-surface-border bg-dark-900/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
+        <div data-aos="fade-up" data-aos-delay="0">
+          <div class="stat-value">$50M+</div>
+          <div class="stat-label">Security budget managed</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-value">217</div>
+          <div class="stat-label">Person global team led</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-value">20+</div>
+          <div class="stat-label">Years in cybersecurity</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-value">F100</div>
+          <div class="stat-label">Fortune 100 experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES ==================== -->
+  <section id="services" class="section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+        <span class="section-label">Services</span>
+        <h2 class="section-title">What we do</h2>
+        <p class="section-subtitle mx-auto">Offensive security, strategic leadership, and compliance — delivered by practitioners, not salespeople.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Penetration Testing -->
+        <div class="card-hover" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon">
+            <i class="bi bi-bug text-xl"></i>
+          </div>
+          <h3 class="text-xl font-display font-semibold text-white mb-3">Penetration Testing</h3>
+          <p class="text-muted text-sm leading-relaxed">Rigorous adversary simulation across networks, web applications, and cloud infrastructure. We find what automated scanners miss — and show you what an attacker actually sees.</p>
+        </div>
+
+        <!-- Incident Response -->
+        <div class="card-hover" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon">
+            <i class="bi bi-shield-exclamation text-xl"></i>
+          </div>
+          <h3 class="text-xl font-display font-semibold text-white mb-3">Incident Response</h3>
+          <p class="text-muted text-sm leading-relaxed">When a breach happens, speed and experience determine the outcome. SixCyber brings real-world IR experience including ransomware containment and FBI coordination.</p>
+        </div>
+
+        <!-- vCISO -->
+        <div class="card-hover" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon">
+            <i class="bi bi-person-badge text-xl"></i>
+          </div>
+          <h3 class="text-xl font-display font-semibold text-white mb-3">vCISO / Fractional CISO</h3>
+          <p class="text-muted text-sm leading-relaxed">Executive-level security leadership without the full-time overhead. Board reporting, risk strategy, vendor management, and team development — led by a former Fortune 500 CISO.</p>
+        </div>
+
+        <!-- CMMC -->
+        <div class="card-hover" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon">
+            <i class="bi bi-award text-xl"></i>
+          </div>
+          <h3 class="text-xl font-display font-semibold text-white mb-3">CMMC Compliance</h3>
+          <p class="text-muted text-sm leading-relaxed">Gap analysis, remediation planning, and documentation for defense contractors preparing for CMMC certification. We translate compliance requirements into practical security controls.</p>
+        </div>
+
+        <!-- Security Assessments -->
+        <div class="card-hover" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon">
+            <i class="bi bi-clipboard2-check text-xl"></i>
+          </div>
+          <h3 class="text-xl font-display font-semibold text-white mb-3">Security Assessments</h3>
+          <p class="text-muted text-sm leading-relaxed">Comprehensive evaluation of your security posture — from architecture review and policy analysis to technical vulnerability assessment. Actionable findings, not checkbox reports.</p>
+        </div>
+
+        <!-- Strategic Advisory -->
+        <div class="card-hover" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon">
+            <i class="bi bi-graph-up-arrow text-xl"></i>
+          </div>
+          <h3 class="text-xl font-display font-semibold text-white mb-3">Strategic Advisory</h3>
+          <p class="text-muted text-sm leading-relaxed">Cybersecurity due diligence for M&A, security program development for portfolio companies, and strategic counsel for boards and executive teams navigating cyber risk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT / WHY SIXCYBER ==================== -->
+  <section id="about" class="section bg-dark-900/30 relative overflow-hidden">
+    <div class="glow-dot w-72 h-72 top-1/2 right-0 -translate-y-1/2 opacity-20"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Left: Text -->
+        <div data-aos="fade-right">
+          <span class="section-label">Why SixCyber</span>
+          <h2 class="section-title mb-6">Built on real-world<br>experience.</h2>
+          <div class="space-y-4 text-muted leading-relaxed">
+            <p>
+              SixCyber was founded by <a href="bill-swearingen.html" class="text-accent-light hover:text-accent transition-colors underline underline-offset-4 decoration-accent/30">Bill Swearingen</a>, a cybersecurity leader with over two decades of experience spanning the federal government, Fortune 500 enterprises, and the defense industry.
+            </p>
+            <p>
+              As the former CISO of CenturyLink (now Lumen Technologies), Bill managed a $50 million security budget and led a 217-person global security organization. He served as Senior Cyber Strategist and Red Team Lead at IronNet Cybersecurity, an NSA-founded firm, where he contributed to allied nation cybersecurity strategy.
+            </p>
+            <p>
+              That depth of experience means SixCyber doesn't just understand security frameworks — we've built and operated them at scale. Every engagement is led by someone who has sat in the chair, made the decisions, and managed the consequences.
+            </p>
+          </div>
+          <div class="mt-8">
+            <a href="bill-swearingen.html" class="btn-outline">
+              Full Bio
+              <i class="bi bi-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Credential cards -->
+        <div class="space-y-4" data-aos="fade-left">
+          <div class="card flex items-start gap-4">
+            <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-accent shrink-0 mt-0.5">
+              <i class="bi bi-building text-lg"></i>
+            </div>
             <div>
-              <h2 class="text-4xl font-display font-bold mb-6">
-                The Difference <span class="text-gradient">Experience Makes</span>
-              </h2>
-              <p class="text-xl text-cyber-muted mb-6">
-                When cybersecurity incidents make headlines, the organizations that recover fastest share one trait: 
-                they're guided by leaders who've navigated these waters before.
-              </p>
-              <p class="text-cyber-muted mb-6">
-                SixCyber was founded by professionals who've defended America's most sensitive networks, 
-                managed enterprise security budgets exceeding $50M, and guided organizations through 
-                some of the world's largest cyber events.
-              </p>
-              <p class="text-cyber-muted">
-                We bring that same level of expertise to businesses across the region — from emerging companies 
-                to established enterprises — who understand that cybersecurity is not just an IT issue, 
-                but a business imperative.
-              </p>
+              <h4 class="font-display font-semibold text-white mb-1">Former CISO — CenturyLink / Lumen</h4>
+              <p class="text-sm text-muted">Managed $50M+ security budget and 217-person global team for a Fortune 500 telecommunications company.</p>
             </div>
-            
-            <div class="grid grid-cols-2 gap-6">
-              <div class="text-center p-6 glass-card rounded-xl">
-                <div class="text-3xl font-display font-bold text-cyber-accent mb-2">$50M+</div>
-                <div class="text-sm text-cyber-muted">Security Budget Managed</div>
-              </div>
-              <div class="text-center p-6 glass-card rounded-xl">
-                <div class="text-3xl font-display font-bold text-cyber-accent mb-2">217</div>
-                <div class="text-sm text-cyber-muted">Security Staff Led</div>
-              </div>
-            </div>
-
-            <a href="bill-swearingen.html" class="inline-flex items-center px-6 py-3 border border-cyber-border text-cyber-text hover:bg-cyber-surface rounded-xl transition-colors">
-              Meet Our Leadership <i class="bi bi-arrow-right ml-2"></i>
-            </a>
           </div>
-          
-          <div class="space-y-6" data-aos="fade-left">
-            <div class="glass-card rounded-2xl p-6 hover:scale-105 transition-transform">
-              <div class="flex items-start space-x-4">
-                <div class="w-12 h-12 bg-cyber-blue/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <i class="bi bi-building text-cyber-blue"></i>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-lg mb-2">Fortune 150 Experience</h3>
-                  <p class="text-cyber-muted">
-                    Led cybersecurity for one of America's largest telecommunications companies, 
-                    protecting critical infrastructure serving millions of customers.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div class="glass-card rounded-2xl p-6 hover:scale-105 transition-transform">
-              <div class="flex items-start space-x-4">
-                <div class="w-12 h-12 bg-red-600/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <i class="bi bi-shield-exclamation text-red-400"></i>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-lg mb-2">Crisis Leadership</h3>
-                  <p class="text-cyber-muted">
-                    Guided organizations through major cyber events, coordinating with FBI, 
-                    negotiating with threat actors, and managing recovery operations.
-                  </p>
-                </div>
-              </div>
+          <div class="card flex items-start gap-4">
+            <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-accent shrink-0 mt-0.5">
+              <i class="bi bi-shield-lock text-lg"></i>
             </div>
+            <div>
+              <h4 class="font-display font-semibold text-white mb-1">IronNet Cybersecurity — NSA-Founded Firm</h4>
+              <p class="text-sm text-muted">Senior Cyber Strategist and Red Team Lead. Contributed to allied nation cybersecurity strategy development.</p>
+            </div>
+          </div>
 
-            <div class="glass-card rounded-2xl p-6 hover:scale-105 transition-transform">
-              <div class="flex items-start space-x-4">
-                <div class="w-12 h-12 bg-cyber-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <i class="bi bi-people text-cyber-accent"></i>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-lg mb-2">Community Builder</h3>
-                  <p class="text-cyber-muted">
-                    Co-founded SecKC, the region's premier cybersecurity community, 
-                    and shaped national cybersecurity strategy for allied nations.
-                  </p>
-                </div>
-              </div>
+          <div class="card flex items-start gap-4">
+            <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-accent shrink-0 mt-0.5">
+              <i class="bi bi-briefcase text-lg"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-semibold text-white mb-1">TRIFIDENT Advisory — Founding Partner</h4>
+              <p class="text-sm text-muted">Cybersecurity advisory for private equity firms and Fortune 100 organizations. Due diligence, portfolio security, strategy.</p>
+            </div>
+          </div>
+
+          <div class="card flex items-start gap-4">
+            <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-accent shrink-0 mt-0.5">
+              <i class="bi bi-people text-lg"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-semibold text-white mb-1">SecKC — Co-Founder</h4>
+              <p class="text-sm text-muted">Built Kansas City's premier cybersecurity community meetup, connecting practitioners across the metro.</p>
+            </div>
+          </div>
+
+          <div class="card flex items-start gap-4">
+            <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-accent shrink-0 mt-0.5">
+              <i class="bi bi-patch-check text-lg"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-semibold text-white mb-1">CISSP · CISM · TS/SCI (former)</h4>
+              <p class="text-sm text-muted">Industry-recognized certifications. DEF CON and Black Hat speaker. Kansas State University dual B.S.</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-cyber-surface">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl font-display font-bold mb-4">
-            Trusted by <span class="text-gradient">Industry Leaders</span>
-          </h2>
-          <p class="text-xl text-cyber-muted">
-            Organizations worldwide trust SixCyber's expertise when stakes are highest.
+  <!-- ==================== PROCESS ==================== -->
+  <section class="section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+        <span class="section-label">How We Work</span>
+        <h2 class="section-title">Straightforward engagement.</h2>
+        <p class="section-subtitle mx-auto">No opaque processes or surprise invoices. You'll know exactly what's happening at every step.</p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-accent/10 border border-accent/20 text-accent mx-auto mb-4">
+            <span class="font-display font-bold text-lg">1</span>
+          </div>
+          <h4 class="font-display font-semibold text-white mb-2">Discovery</h4>
+          <p class="text-sm text-muted">We discuss your environment, concerns, and objectives. No sales pitch — just an honest assessment of what you need.</p>
+        </div>
+
+        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-accent/10 border border-accent/20 text-accent mx-auto mb-4">
+            <span class="font-display font-bold text-lg">2</span>
+          </div>
+          <h4 class="font-display font-semibold text-white mb-2">Scoping</h4>
+          <p class="text-sm text-muted">Clear deliverables, timeline, and pricing. You'll receive a detailed scope of work before any engagement begins.</p>
+        </div>
+
+        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-accent/10 border border-accent/20 text-accent mx-auto mb-4">
+            <span class="font-display font-bold text-lg">3</span>
+          </div>
+          <h4 class="font-display font-semibold text-white mb-2">Execution</h4>
+          <p class="text-sm text-muted">Hands-on work by experienced practitioners. Regular communication and no surprises throughout the engagement.</p>
+        </div>
+
+        <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-accent/10 border border-accent/20 text-accent mx-auto mb-4">
+            <span class="font-display font-bold text-lg">4</span>
+          </div>
+          <h4 class="font-display font-semibold text-white mb-2">Delivery</h4>
+          <p class="text-sm text-muted">Actionable reporting with clear findings, risk context, and remediation guidance — not a 200-page scanner dump.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section id="faq" class="section bg-dark-900/30">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">Common questions</h2>
+      </div>
+
+      <div class="divide-y divide-surface-border" data-aos="fade-up" data-aos-delay="100">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What does a penetration test cost?</span>
+            <i class="bi bi-plus-lg text-gray-500 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="pb-5 text-muted text-sm leading-relaxed">
+              Pricing depends on scope, complexity, and methodology. A focused web application test typically starts around $10,000–$15,000, while comprehensive network and application assessments for larger organizations can range from $25,000–$75,000+. We provide detailed scoping before any engagement so you know exactly what you're getting — no ambiguous line items.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How quickly can you respond to a security incident?</span>
+            <i class="bi bi-plus-lg text-gray-500 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="pb-5 text-muted text-sm leading-relaxed">
+              We can mobilize within hours for active incidents. According to IBM's 2024 Cost of a Data Breach Report, the average breach costs $4.88 million — and organizations that contain a breach in under 200 days save an average of $1.02 million. Speed and experienced decision-making matter enormously. Reach out to <a href="mailto:info@sixcyber.com" class="text-accent-light hover:underline">info@sixcyber.com</a> for urgent matters.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What is a vCISO and does my company need one?</span>
+            <i class="bi bi-plus-lg text-gray-500 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="pb-5 text-muted text-sm leading-relaxed">
+              A virtual CISO (vCISO) is a seasoned security executive who serves as your organization's Chief Information Security Officer on a fractional basis. It's ideal for mid-market companies that need strategic security leadership but aren't ready to hire a full-time CISO — a role that commands $250,000–$400,000+ annually. SixCyber's vCISO service is led by a former Fortune 500 CISO who managed a $50M+ security budget and a 217-person global security team.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What is CMMC and who needs it?</span>
+            <i class="bi bi-plus-lg text-gray-500 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="pb-5 text-muted text-sm leading-relaxed">
+              The Cybersecurity Maturity Model Certification (CMMC) is a Department of Defense framework required for defense contractors handling Controlled Unclassified Information (CUI). If your organization bids on DoD contracts, you will need CMMC certification. SixCyber helps organizations prepare through gap analysis, remediation guidance, policy development, and ongoing compliance support.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Do you serve clients outside Kansas City?</span>
+            <i class="bi bi-plus-lg text-gray-500 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="pb-5 text-muted text-sm leading-relaxed">
+              Yes. While SixCyber is headquartered in Kansas City and serves the greater metro — including Overland Park, Olathe, Lenexa, Leawood, and Lee's Summit — many of our engagements are conducted remotely. We work with clients nationwide, including Fortune 100 companies and private equity portfolio companies across the country.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contact" class="section relative overflow-hidden">
+    <div class="glow-dot w-96 h-96 -bottom-48 left-1/2 -translate-x-1/2 opacity-20"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
+        <!-- Left -->
+        <div data-aos="fade-right">
+          <span class="section-label">Contact</span>
+          <h2 class="section-title mb-6">Let's talk security.</h2>
+          <p class="text-muted leading-relaxed mb-8">
+            Whether you need a penetration test, incident response support, or strategic security guidance — start with a conversation. No pressure, no obligations.
           </p>
+
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-accent">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div>
+                <div class="text-sm text-gray-500">Email</div>
+                <a href="mailto:info@sixcyber.com" class="text-white hover:text-accent-light transition-colors">info@sixcyber.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-accent">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div>
+                <div class="text-sm text-gray-500">Location</div>
+                <span class="text-white">Kansas City, MO · Nationwide Remote</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-accent">
+                <i class="bi bi-github"></i>
+              </div>
+              <div>
+                <div class="text-sm text-gray-500">GitHub</div>
+                <a href="https://github.com/hevnsnt" target="_blank" rel="noopener" class="text-white hover:text-accent-light transition-colors">github.com/hevnsnt</a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
-            <div class="flex text-yellow-400 mb-4">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
+        <!-- Right: Form -->
+        <div data-aos="fade-left">
+          <form action="https://formspree.io/f/FORMSPREE_ID" method="POST" class="card p-8 space-y-5">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-400 mb-1.5">Name</label>
+              <input type="text" id="name" name="name" required class="form-input" placeholder="Your name">
             </div>
-            <blockquote class="text-cyber-text mb-6">
-              "Bill guided us through one of the world's largest cybersecurity events. 
-              His expertise in incident command and crisis management was invaluable during our most critical hours."
-            </blockquote>
-            <div class="flex items-center space-x-3">
-              <div class="w-10 h-10 bg-cyber-elevated rounded-full flex items-center justify-center">
-                <i class="bi bi-building text-cyber-accent"></i>
-              </div>
-              <div>
-                <div class="font-semibold">Fortune 150 Executive</div>
-                <div class="text-sm text-cyber-muted">Telecommunications Industry</div>
-              </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-400 mb-1.5">Email</label>
+              <input type="email" id="email" name="email" required class="form-input" placeholder="you@company.com">
             </div>
-          </div>
-
-          <div class="glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
-            <div class="flex text-yellow-400 mb-4">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
+            <div>
+              <label for="company" class="block text-sm font-medium text-gray-400 mb-1.5">Company <span class="text-gray-600">(optional)</span></label>
+              <input type="text" id="company" name="company" class="form-input" placeholder="Company name">
             </div>
-            <blockquote class="text-cyber-text mb-6">
-              "The level of sophistication and expertise SixCyber brings is unmatched. 
-              They understand enterprise security challenges at a depth few firms can match."
-            </blockquote>
-            <div class="flex items-center space-x-3">
-              <div class="w-10 h-10 bg-cyber-elevated rounded-full flex items-center justify-center">
-                <i class="bi bi-bank text-cyber-accent"></i>
-              </div>
-              <div>
-                <div class="font-semibold">Private Equity Partner</div>
-                <div class="text-sm text-cyber-muted">Multi-Billion Dollar Fund</div>
-              </div>
+            <div>
+              <label for="service" class="block text-sm font-medium text-gray-400 mb-1.5">What do you need help with?</label>
+              <select id="service" name="service" class="form-input">
+                <option value="">Select a service</option>
+                <option value="Penetration Testing">Penetration Testing</option>
+                <option value="Incident Response">Incident Response</option>
+                <option value="vCISO">vCISO / Fractional CISO</option>
+                <option value="CMMC Compliance">CMMC Compliance</option>
+                <option value="Security Assessment">Security Assessment</option>
+                <option value="Strategic Advisory">Strategic Advisory</option>
+                <option value="Other">Other</option>
+              </select>
             </div>
-          </div>
-
-          <div class="glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="300">
-            <div class="flex text-yellow-400 mb-4">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-400 mb-1.5">Message</label>
+              <textarea id="message" name="message" rows="4" required class="form-input resize-none" placeholder="Tell us about your situation..."></textarea>
             </div>
-            <blockquote class="text-cyber-text mb-6">
-              "When national security is on the line, this is the team you want. 
-              Their strategic thinking and operational excellence are extraordinary."
-            </blockquote>
-            <div class="flex items-center space-x-3">
-              <div class="w-10 h-10 bg-cyber-elevated rounded-full flex items-center justify-center">
-                <i class="bi bi-shield-check text-cyber-accent"></i>
-              </div>
-              <div>
-                <div class="font-semibold">Government Security Leader</div>
-                <div class="text-sm text-cyber-muted">Allied Nation CISO</div>
-              </div>
+            <!-- Honeypot -->
+            <div class="hidden" aria-hidden="true">
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
             </div>
-          </div>
+            <button type="submit" class="btn-primary w-full">
+              Send Message
+              <i class="bi bi-send ml-2"></i>
+            </button>
+            <p class="text-xs text-gray-600 text-center">We typically respond within one business day.</p>
+          </form>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Team Section -->
-    <section id="team" class="py-20 bg-cyber-dark">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl font-display font-bold mb-4">
-            Leadership That <span class="text-gradient">Shapes the Industry</span>
-          </h2>
-          <p class="text-xl text-cyber-muted max-w-3xl mx-auto">
-            Meet the security professionals trusted by Fortune 150 companies, government agencies, 
-            and organizations worldwide when cybersecurity excellence is non-negotiable.
-          </p>
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-12 border-t border-surface-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <img src="assets/img/logo.webp" alt="SixCyber" width="28" height="28" class="w-7 h-7">
+          <span class="font-display font-semibold text-white text-sm">SixCyber</span>
         </div>
 
-        <div class="max-w-4xl mx-auto">
-          <div class="glass-card rounded-3xl overflow-hidden" data-aos="fade-up">
-            <div class="grid lg:grid-cols-2 gap-8">
-              <div class="p-8 lg:p-12">
-                <div class="space-y-6">
-                  <div>
-                    <h3 class="text-3xl font-display font-bold text-cyber-text mb-2">Bill Swearingen</h3>
-                    <p class="text-cyber-accent font-medium mb-4">Founding Partner & Global Cybersecurity Authority</p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                      <span class="px-3 py-1 bg-cyber-blue/20 text-cyber-blue text-sm rounded-full">CISSP</span>
-                      <span class="px-3 py-1 bg-cyber-accent/20 text-cyber-accent text-sm rounded-full">CISM</span>
-                      <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-sm rounded-full">Former TS/SCI</span>
-                    </div>
-                  </div>
-
-                  <p class="text-cyber-muted leading-relaxed">
-                    The cybersecurity professional who shaped national security strategy, guided Fortune 150 companies 
-                    through major cyber events, and built security programs protecting critical infrastructure 
-                    serving millions of Americans.
-                  </p>
-
-                  <div class="space-y-4">
-                    <div class="flex items-start space-x-3">
-                      <i class="bi bi-award text-cyber-accent mt-1"></i>
-                      <div>
-                        <div class="font-semibold">Former CenturyLink CISO</div>
-                        <div class="text-sm text-cyber-muted">Led $50M+ security budget, 217-person global team</div>
-                      </div>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                      <i class="bi bi-globe text-cyber-accent mt-1"></i>
-                      <div>
-                        <div class="font-semibold">Nation-State Strategist</div>
-                        <div class="text-sm text-cyber-muted">Contributed to foreign national cyber security strategy</div>
-                      </div>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                      <i class="bi bi-people text-cyber-accent mt-1"></i>
-                      <div>
-                        <div class="font-semibold">SecKC Co-founder</div>
-                        <div class="text-sm text-cyber-muted">Built the region's premier cybersecurity community</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="flex space-x-4">
-                    <a href="bill-swearingen.html" class="inline-flex items-center px-6 py-3 bg-cyber-blue hover:bg-cyber-blue-hover text-white rounded-xl font-medium transition-colors">
-                      Full Biography <i class="bi bi-arrow-right ml-2"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/billswearingen" class="inline-flex items-center px-6 py-3 border border-cyber-border text-cyber-text hover:bg-cyber-surface rounded-xl transition-colors">
-                      <i class="bi bi-linkedin mr-2"></i>
-                      LinkedIn
-                    </a>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="relative lg:p-8">
-                <div class="aspect-square lg:aspect-auto lg:h-full bg-gradient-to-br from-cyber-blue/20 to-cyber-accent/20 rounded-2xl flex items-center justify-center">
-                  <img src="assets/img/team/bill-swearingen.jpg" alt="Bill Swearingen" class="w-64 h-64 lg:w-80 lg:h-80 rounded-2xl object-cover shadow-2xl">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="py-20 bg-cyber-surface">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl font-display font-bold mb-4">
-            <span class="text-gradient">Frequently Asked</span> Questions
-          </h2>
-          <p class="text-xl text-cyber-muted">
-            Get answers to common questions about our cybersecurity services and approach.
-          </p>
+        <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
+          <a href="#services" class="hover:text-white transition-colors">Services</a>
+          <a href="#about" class="hover:text-white transition-colors">About</a>
+          <a href="bill-swearingen.html" class="hover:text-white transition-colors">Bill Swearingen</a>
+          <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+          <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy</a>
+          <a href="terms-of-service.html" class="hover:text-white transition-colors">Terms</a>
         </div>
 
-        <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="glass-card rounded-xl overflow-hidden">
-            <button class="faq-button w-full px-6 py-4 text-left flex items-center justify-between hover:bg-cyber-elevated transition-colors" onclick="toggleFaq(this)">
-              <span class="font-semibold text-lg">What cybersecurity services does SixCyber provide?</span>
-              <i class="bi bi-chevron-down transition-transform"></i>
-            </button>
-            <div class="faq-content hidden px-6 pb-4">
-              <p class="text-cyber-muted">
-                SixCyber provides comprehensive cybersecurity services including advanced testing, crisis response, 
-                executive leadership, compliance excellence, security operations, and strategic advisory. 
-                Our services are designed for organizations that understand cybersecurity as a business imperative, 
-                not just an IT concern. Each engagement leverages our team's experience defending Fortune 150 enterprises 
-                and national infrastructure.
-              </p>
-            </div>
-          </div>
-
-          <div class="glass-card rounded-xl overflow-hidden">
-            <button class="faq-button w-full px-6 py-4 text-left flex items-center justify-between hover:bg-cyber-elevated transition-colors" onclick="toggleFaq(this)">
-              <span class="font-semibold text-lg">How much does cybersecurity testing cost?</span>
-              <i class="bi bi-chevron-down transition-transform"></i>
-            </button>
-            <div class="faq-content hidden px-6 pb-4">
-              <p class="text-cyber-muted">
-                Investment in professional security testing typically ranges from $3,000 to $15,000 depending on scope and complexity. 
-                This includes comprehensive network and application assessments, social engineering evaluations, and detailed remediation guidance. 
-                Studies consistently show that proactive testing reduces incident costs by up to 80%, making it one of the most 
-                cost-effective security investments available.
-              </p>
-            </div>
-          </div>
-
-          <div class="glass-card rounded-xl overflow-hidden">
-            <button class="faq-button w-full px-6 py-4 text-left flex items-center justify-between hover:bg-cyber-elevated transition-colors" onclick="toggleFaq(this)">
-              <span class="font-semibold text-lg">Why choose SixCyber over other cybersecurity firms?</span>
-              <i class="bi bi-chevron-down transition-transform"></i>
-            </button>
-            <div class="faq-content hidden px-6 pb-4">
-              <p class="text-cyber-muted">
-                SixCyber was founded by Bill Swearingen, former CenturyLink CISO and co-founder of SecKC. 
-                Our team has guided organizations through world-class cyber events, managed enterprise security budgets exceeding $50M, 
-                and contributed to national cybersecurity strategy. We bring Fortune 150-level expertise to organizations 
-                of all sizes, with the understanding that exceptional cybersecurity requires exceptional experience.
-              </p>
-            </div>
-          </div>
-
-          <div class="glass-card rounded-xl overflow-hidden">
-            <button class="faq-button w-full px-6 py-4 text-left flex items-center justify-between hover:bg-cyber-elevated transition-colors" onclick="toggleFaq(this)">
-              <span class="font-semibold text-lg">What is CMMC 2.0 and do we need it?</span>
-              <i class="bi bi-chevron-down transition-transform"></i>
-            </button>
-            <div class="faq-content hidden px-6 pb-4">
-              <p class="text-cyber-muted">
-                CMMC (Cybersecurity Maturity Model Certification) 2.0 is mandatory for all Department of Defense contractors 
-                handling Controlled Unclassified Information (CUI). Compliance is required by 2026 for continued DoD contracting. 
-                Our CMMC Registered Practitioners, with security clearance experience and deep understanding of DoD requirements, 
-                help organizations prepare for and maintain compliance efficiently.
-              </p>
-            </div>
-          </div>
-
-          <div class="glass-card rounded-xl overflow-hidden">
-            <button class="faq-button w-full px-6 py-4 text-left flex items-center justify-between hover:bg-cyber-elevated transition-colors" onclick="toggleFaq(this)">
-              <span class="font-semibold text-lg">How quickly can SixCyber respond to a cybersecurity incident?</span>
-              <i class="bi bi-chevron-down transition-transform"></i>
-            </button>
-            <div class="faq-content hidden px-6 pb-4">
-              <p class="text-cyber-muted">
-                SixCyber provides 24/7 incident response with initial response within 1 hour for critical incidents. 
-                Our team has experience managing major cyber events, coordinating with federal agencies, and negotiating with threat actors. 
-                According to the Ponemon Institute, organizations that contain breaches in under 200 days save an average of $1.76 million 
-                compared to longer response times.
-              </p>
-            </div>
-          </div>
-
-          <div class="glass-card rounded-xl overflow-hidden">
-            <button class="faq-button w-full px-6 py-4 text-left flex items-center justify-between hover:bg-cyber-elevated transition-colors" onclick="toggleFaq(this)">
-              <span class="font-semibold text-lg">Do you serve businesses outside the metro area?</span>
-              <i class="bi bi-chevron-down transition-transform"></i>
-            </button>
-            <div class="faq-content hidden px-6 pb-4">
-              <p class="text-cyber-muted">
-                While headquartered in the metro area, SixCyber serves clients nationwide, especially for specialized services 
-                like compliance consulting and incident response. We provide remote services and travel for on-site assessments 
-                throughout the Midwest and beyond. Our expertise is particularly valuable for organizations requiring 
-                security clearance experience or Fortune 150-level guidance.
-              </p>
-            </div>
-          </div>
+        <div class="text-sm text-gray-600">
+          &copy; <span id="year"></span> SixCyber. All rights reserved.
         </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-cyber-dark">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl font-display font-bold mb-4">
-            <span class="text-gradient">Secure Your Future</span> Today
-          </h2>
-          <p class="text-xl text-cyber-muted max-w-3xl mx-auto">
-            Don't wait for a breach to discover your vulnerabilities. Get your free security assessment 
-            and learn how Fortune 150-level cybersecurity expertise can protect your organization.
-          </p>
-        </div>
-
-        <div class="grid lg:grid-cols-2 gap-12">
-          <div class="space-y-8" data-aos="fade-right">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div class="glass-card rounded-xl p-6">
-                <div class="w-12 h-12 bg-cyber-blue/20 rounded-xl flex items-center justify-center mb-4">
-                  <i class="bi bi-geo-alt text-cyber-blue text-xl"></i>
-                </div>
-                <h3 class="font-semibold text-lg mb-2">Location</h3>
-                <p class="text-cyber-muted">Kansas City Metro Area</p>
-                <p class="text-sm text-cyber-muted">Missouri & Kansas</p>
-              </div>
-
-              <div class="glass-card rounded-xl p-6">
-                <div class="w-12 h-12 bg-red-600/20 rounded-xl flex items-center justify-center mb-4">
-                  <i class="bi bi-telephone text-red-400 text-xl"></i>
-                </div>
-                <h3 class="font-semibold text-lg mb-2">Emergency Response</h3>
-                <p class="text-cyber-muted">(913) XXX-XXXX</p>
-                <p class="text-sm text-cyber-muted">24/7 Availability</p>
-              </div>
-
-              <div class="glass-card rounded-xl p-6">
-                <div class="w-12 h-12 bg-cyber-accent/20 rounded-xl flex items-center justify-center mb-4">
-                  <i class="bi bi-envelope text-cyber-accent text-xl"></i>
-                </div>
-                <h3 class="font-semibold text-lg mb-2">General Inquiries</h3>
-                <p class="text-cyber-muted">info@sixcyber.com</p>
-                <p class="text-sm text-cyber-muted">Response within 1 hour</p>
-              </div>
-
-              <div class="glass-card rounded-xl p-6">
-                <div class="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-4">
-                  <i class="bi bi-clock text-yellow-400 text-xl"></i>
-                </div>
-                <h3 class="font-semibold text-lg mb-2">Business Hours</h3>
-                <p class="text-cyber-muted">Mon-Fri: 8:00 AM - 6:00 PM</p>
-                <p class="text-sm text-cyber-muted">Emergency: 24/7</p>
-              </div>
-            </div>
-
-            <div class="glass-card rounded-xl p-6">
-              <h3 class="font-semibold text-lg mb-4">Service Areas</h3>
-              <div class="grid grid-cols-2 gap-2 text-sm text-cyber-muted">
-                <span>Kansas City, MO</span>
-                <span>Overland Park, KS</span>
-                <span>Olathe, KS</span>
-                <span>Lenexa, KS</span>
-                <span>Leawood, KS</span>
-                <span>Lee's Summit, MO</span>
-              </div>
-              <p class="text-xs text-cyber-muted mt-3">Plus nationwide remote services</p>
-            </div>
-          </div>
-
-          <div data-aos="fade-left">
-            <form class="glass-card rounded-2xl p-8 space-y-6">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label for="name" class="block text-sm font-medium text-cyber-text mb-2">Your Name</label>
-                  <input type="text" id="name" name="name" required 
-                    class="w-full px-4 py-3 bg-cyber-elevated border border-cyber-border rounded-xl text-cyber-text placeholder-cyber-muted focus:border-cyber-blue focus:ring-2 focus:ring-cyber-blue/20 transition-colors"
-                    placeholder="Enter your name">
-                </div>
-                <div>
-                  <label for="email" class="block text-sm font-medium text-cyber-text mb-2">Email Address</label>
-                  <input type="email" id="email" name="email" required 
-                    class="w-full px-4 py-3 bg-cyber-elevated border border-cyber-border rounded-xl text-cyber-text placeholder-cyber-muted focus:border-cyber-blue focus:ring-2 focus:ring-cyber-blue/20 transition-colors"
-                    placeholder="your@email.com">
-                </div>
-              </div>
-
-              <div>
-                <label for="company" class="block text-sm font-medium text-cyber-text mb-2">Company</label>
-                <input type="text" id="company" name="company" 
-                  class="w-full px-4 py-3 bg-cyber-elevated border border-cyber-border rounded-xl text-cyber-text placeholder-cyber-muted focus:border-cyber-blue focus:ring-2 focus:ring-cyber-blue/20 transition-colors"
-                  placeholder="Your company name">
-              </div>
-
-              <div>
-                <label for="service" class="block text-sm font-medium text-cyber-text mb-2">Service Needed</label>
-                <select id="service" name="service" required 
-                  class="w-full px-4 py-3 bg-cyber-elevated border border-cyber-border rounded-xl text-cyber-text focus:border-cyber-blue focus:ring-2 focus:ring-cyber-blue/20 transition-colors">
-                  <option value="">Select a service</option>
-                  <option value="assessment">Free Security Assessment</option>
-                  <option value="penetration-testing">Advanced Testing</option>
-                  <option value="incident-response">Incident Response</option>
-                  <option value="ciso-consulting">Executive Leadership</option>
-                  <option value="cmmc-compliance">CMMC Compliance</option>
-                  <option value="security-operations">Security Operations</option>
-                  <option value="advisory">Strategic Advisory</option>
-                  <option value="emergency">Emergency - Need Immediate Help</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="message" class="block text-sm font-medium text-cyber-text mb-2">Message</label>
-                <textarea id="message" name="message" rows="4" required 
-                  class="w-full px-4 py-3 bg-cyber-elevated border border-cyber-border rounded-xl text-cyber-text placeholder-cyber-muted focus:border-cyber-blue focus:ring-2 focus:ring-cyber-blue/20 transition-colors"
-                  placeholder="Tell us about your cybersecurity needs and challenges..."></textarea>
-              </div>
-
-              <button type="submit" 
-                class="w-full px-8 py-4 bg-cyber-blue hover:bg-cyber-blue-hover text-white font-semibold rounded-xl transition-all hover:scale-105 glow-effect">
-                <i class="bi bi-send mr-2"></i>
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-cyber-dark border-t border-cyber-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="space-y-4">
-          <div class="flex items-center space-x-3">
-            <img src="assets/img/logo.png" alt="SixCyber" class="h-8 w-8">
-            <span class="text-xl font-display font-bold">SixCyber</span>
-          </div>
-          <p class="text-cyber-muted">
-            Elite cybersecurity services backed by Fortune 150 experience and national security expertise.
-          </p>
-          <div class="space-y-2 text-sm">
-            <div class="flex items-center space-x-2">
-              <i class="bi bi-telephone text-cyber-accent"></i>
-              <span>(913) XXX-XXXX</span>
-            </div>
-            <div class="flex items-center space-x-2">
-              <i class="bi bi-envelope text-cyber-accent"></i>
-              <span>info@sixcyber.com</span>
-            </div>
-          </div>
-          <div class="flex space-x-4">
-            <a href="https://www.linkedin.com/company/sixcyber" class="text-cyber-muted hover:text-cyber-accent transition-colors">
-              <i class="bi bi-linkedin text-xl"></i>
-            </a>
-            <a href="https://seckc.org" class="text-cyber-muted hover:text-cyber-accent transition-colors">
-              <i class="bi bi-globe text-xl"></i>
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="font-semibold mb-4">Services</h4>
-          <ul class="space-y-2 text-cyber-muted">
-            <li><a href="#services" class="hover:text-cyber-accent transition-colors">Advanced Testing</a></li>
-            <li><a href="#services" class="hover:text-cyber-accent transition-colors">Crisis Response</a></li>
-            <li><a href="#services" class="hover:text-cyber-accent transition-colors">Executive Leadership</a></li>
-            <li><a href="#services" class="hover:text-cyber-accent transition-colors">Compliance Excellence</a></li>
-            <li><a href="#services" class="hover:text-cyber-accent transition-colors">Security Operations</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-semibold mb-4">Company</h4>
-          <ul class="space-y-2 text-cyber-muted">
-            <li><a href="#about" class="hover:text-cyber-accent transition-colors">About Us</a></li>
-            <li><a href="bill-swearingen.html" class="hover:text-cyber-accent transition-colors">Leadership</a></li>
-            <li><a href="#contact" class="hover:text-cyber-accent transition-colors">Contact</a></li>
-            <li><a href="privacy-policy.html" class="hover:text-cyber-accent transition-colors">Privacy Policy</a></li>
-            <li><a href="terms-of-service.html" class="hover:text-cyber-accent transition-colors">Terms of Service</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-semibold mb-4">Resources</h4>
-          <ul class="space-y-2 text-cyber-muted">
-            <li><a href="smb-checklist.html" class="hover:text-cyber-accent transition-colors">SMB Security Checklist</a></li>
-            <li><a href="#faq" class="hover:text-cyber-accent transition-colors">FAQ</a></li>
-            <li><a href="#contact" class="hover:text-cyber-accent transition-colors">Emergency Response</a></li>
-            <li><a href="accessibility.html" class="hover:text-cyber-accent transition-colors">Accessibility</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="border-t border-cyber-border mt-12 pt-8 text-center">
-        <p class="text-cyber-muted">
-          © 2026 <strong>SixCyber LLC</strong>. All rights reserved. 
-          Founded by <a href="bill-swearingen.html" class="text-cyber-accent hover:underline">Bill Swearingen</a>.
-        </p>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll to Top -->
-  <button id="scroll-top" class="fixed bottom-8 right-8 w-12 h-12 bg-cyber-blue hover:bg-cyber-blue-hover text-white rounded-xl shadow-lg hover:scale-110 transition-all opacity-0 invisible">
-    <i class="bi bi-arrow-up"></i>
-  </button>
-
-  <!-- Scripts -->
+  <!-- ==================== SCRIPTS ==================== -->
   <script src="assets/vendor/aos/aos.js"></script>
-  
   <script>
     // Initialize AOS
     AOS.init({
-      duration: 800,
+      duration: 700,
       easing: 'ease-out-cubic',
       once: true,
-      offset: 100
+      offset: 50,
     });
 
-    // Mobile menu toggle
-    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > 50) {
+        navbar.classList.add('bg-dark-950/95', 'backdrop-blur-md', 'border-b', 'border-surface-border', 'shadow-lg', 'shadow-black/10');
+      } else {
+        navbar.classList.remove('bg-dark-950/95', 'backdrop-blur-md', 'border-b', 'border-surface-border', 'shadow-lg', 'shadow-black/10');
+      }
+      lastScroll = currentScroll;
     });
 
-    // FAQ toggle function
-    function toggleFaq(button) {
-      const content = button.nextElementSibling;
-      const icon = button.querySelector('i');
-      
-      content.classList.toggle('hidden');
-      icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+    // Mobile menu
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    mobileToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('bi-list');
+      menuIcon.classList.toggle('bi-x-lg');
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.add('bi-list');
+        menuIcon.classList.remove('bi-x-lg');
+      });
+    });
+
+    // FAQ toggle
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector('i');
+      const isOpen = answer.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-question i').forEach(i => {
+        i.classList.remove('rotate-45');
+      });
+
+      // Toggle current
+      if (!isOpen) {
+        answer.classList.add('open');
+        icon.classList.add('rotate-45');
+      }
     }
 
-    // Smooth scrolling for navigation links
+    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
-        e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-          // Close mobile menu if open
-          document.getElementById('mobile-menu').classList.add('hidden');
+          e.preventDefault();
+          const offset = 80;
+          const pos = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: pos, behavior: 'smooth' });
         }
       });
-    });
-
-    // Scroll to top functionality
-    const scrollTopBtn = document.getElementById('scroll-top');
-    
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 300) {
-        scrollTopBtn.classList.remove('opacity-0', 'invisible');
-      } else {
-        scrollTopBtn.classList.add('opacity-0', 'invisible');
-      }
-    });
-
-    scrollTopBtn.addEventListener('click', function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-
-    // Active navigation highlighting
-    function highlightActiveSection() {
-      const sections = document.querySelectorAll('section[id]');
-      const navLinks = document.querySelectorAll('.nav-link');
-      
-      sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        const id = section.getAttribute('id');
-        
-        if (rect.top <= 100 && rect.bottom >= 100) {
-          navLinks.forEach(link => {
-            link.classList.remove('text-cyber-accent');
-            if (link.getAttribute('href') === `#${id}`) {
-              link.classList.add('text-cyber-accent');
-            }
-          });
-        }
-      });
-    }
-
-    window.addEventListener('scroll', highlightActiveSection);
-    
-    // Form submission (would integrate with backend)
-    document.querySelector('form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      // Here you would normally send the form data to your backend
-      alert('Thank you for your message! We will respond within 1 hour.');
     });
   </script>
-
 </body>
 </html>
