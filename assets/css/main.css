@@ -5571,4 +5571,725 @@ h1, h2, h3, h4, h5, h6 {
   .expertise-tags {
     justify-content: center;
   }
+}/*======================================================================
+# BILL SWEARINGEN BIOGRAPHY PAGE ENHANCEMENTS
+# Additional styles for the comprehensive biography page
+======================================================================*/
+
+/*--------------------------------------------------------------
+# Authority & Achievement Styling
+--------------------------------------------------------------*/
+.authority-highlights {
+  background: linear-gradient(135deg, var(--surface-color), rgba(14, 165, 233, 0.05));
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.authority-item {
+  text-align: center;
+}
+
+.authority-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  font-family: var(--font-display);
+  display: block;
+  line-height: 1;
+}
+
+.authority-label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+.national-credential .alert {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(6, 182, 212, 0.1));
+  border: 1px solid var(--accent-color);
+  color: var(--default-color);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+}
+
+.national-credential .alert i {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+/*--------------------------------------------------------------
+# Featured Role Cards
+--------------------------------------------------------------*/
+.role-card.featured {
+  border: 2px solid var(--accent-color);
+  box-shadow: var(--shadow-cyber);
+  background: linear-gradient(135deg, var(--surface-color), rgba(14, 165, 233, 0.05));
+}
+
+.role-card.featured .role-focus {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/*--------------------------------------------------------------
+# CenturyLink Achievement Categories
+--------------------------------------------------------------*/
+.centurylink-achievements {
+  margin-top: 1.5rem;
+}
+
+.achievement-category {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.achievement-category h6 {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.achievement-category h6 i {
+  color: var(--accent-color);
+}
+
+.achievement-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievement-category ul li {
+  padding: 0.5rem 0;
+  color: var(--default-color);
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.achievement-category ul li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-size: 0.75rem;
+  top: 0.6rem;
+}
+
+.achievement-category ul li strong {
+  color: var(--heading-color);
+}
+
+/*--------------------------------------------------------------
+# SecKC Community Impact
+--------------------------------------------------------------*/
+.seckc-impact {
+  margin-top: 1.5rem;
+}
+
+.seckc-impact h5 {
+  color: var(--heading-color);
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.seckc-achievements {
+  margin-top: 1.5rem;
+}
+
+.achievement-list {
+  list-style: none;
+  padding: 0;
+}
+
+.achievement-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  padding-left: 2rem;
+}
+
+.achievement-list li:last-child {
+  border-bottom: none;
+}
+
+.achievement-list li::before {
+  content: '🏆';
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+}
+
+.achievement-list li strong {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+# Technical Excellence Categories
+--------------------------------------------------------------*/
+.technical-category {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  height: 100%;
+}
+
+.technical-category h4 {
+  color: var(--heading-color);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.technical-category h4 i {
+  color: var(--accent-color);
+}
+
+.tech-skills {
+  margin-bottom: 1.5rem;
+}
+
+.tech-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: var(--background-color);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+  border-color: var(--accent-color);
+}
+
+.tech-name {
+  font-weight: 600;
+  color: var(--accent-color);
+  font-size: 0.875rem;
+}
+
+.tech-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: right;
+  max-width: 60%;
+  line-height: 1.4;
+}
+
+.tech-highlight {
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+  color: white;
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-top: 1rem;
+}
+
+.tech-highlight h6 {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tech-highlight p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+/*--------------------------------------------------------------
+# Speaking & Conference Credentials
+--------------------------------------------------------------*/
+.speaking-credentials {
+  height: 100%;
+}
+
+.credential-highlight {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.credential-highlight h5 {
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.conference-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.conference-list li {
+  padding: 0.5rem 0;
+  color: var(--default-color);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.conference-list li::before {
+  content: '🎤';
+  position: absolute;
+  left: 0;
+}
+
+.conference-list li strong {
+  color: var(--accent-color);
+}
+
+.thought-leadership {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(124, 58, 237, 0.1));
+  border: 1px solid var(--accent-color);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.thought-leadership h6 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.thought-leadership p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/*--------------------------------------------------------------
+# Enhanced Credentials Section
+--------------------------------------------------------------*/
+.credential-item.premier {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(6, 182, 212, 0.1));
+  border: 1px solid var(--accent-color);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.credential-item.security {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(251, 146, 60, 0.1));
+  border: 1px solid var(--danger-color);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.credential-item.premier .credential-name,
+.credential-item.security .credential-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.credential-item.security .credential-name {
+  color: var(--danger-color);
+}
+
+.education-details {
+  height: 100%;
+}
+
+.education-institution {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.education-institution h5 {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.education-degrees {
+  margin-bottom: 1rem;
+}
+
+.degree-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: var(--surface-color);
+  border-radius: var(--radius);
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.degree-type {
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.degree-field {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.education-note {
+  color: var(--default-color);
+  font-style: italic;
+  margin: 0;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/*--------------------------------------------------------------
+# Comprehensive Expertise Grid
+--------------------------------------------------------------*/
+.expertise-comprehensive {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.expertise-intro {
+  color: var(--default-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.expertise-column {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.expertise-column h6 {
+  color: var(--accent-color);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.expertise-tag {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.expertise-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.expertise-tag.leadership {
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+  color: white;
+}
+
+.expertise-tag.technical {
+  background: linear-gradient(135deg, var(--cyber-green), var(--cyber-blue));
+  color: white;
+}
+
+.expertise-tag.compliance {
+  background: linear-gradient(135deg, var(--cyber-purple), var(--accent-color));
+  color: white;
+}
+
+.expertise-tag.innovation {
+  background: linear-gradient(135deg, var(--cyber-orange), var(--warning-color));
+  color: white;
+}
+
+/*--------------------------------------------------------------
+# Engagement Tiers
+--------------------------------------------------------------*/
+.engagement-tier {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.engagement-tier:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.engagement-tier.elite {
+  border-color: var(--accent-color);
+  background: linear-gradient(135deg, var(--surface-color), rgba(14, 165, 233, 0.05));
+}
+
+.engagement-tier.elite i {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+.engagement-tier.professional i {
+  color: var(--success-color);
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+.engagement-tier.speaking i {
+  color: var(--cyber-purple);
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+.tier-content h5 {
+  color: var(--heading-color);
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+}
+
+.tier-content p {
+  color: var(--default-color);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.tier-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.tier-content ul li {
+  padding: 0.25rem 0;
+  color: var(--default-color);
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.875rem;
+}
+
+.tier-content ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+# Contact Methods
+--------------------------------------------------------------*/
+.contact-method {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-1px);
+}
+
+.contact-method.primary {
+  border-color: var(--accent-color);
+  background: linear-gradient(135deg, var(--surface-color), rgba(14, 165, 233, 0.05));
+}
+
+.contact-method.primary i {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.contact-method.professional i {
+  color: var(--cyber-blue);
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.contact-method.community i {
+  color: var(--success-color);
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.method-content h5 {
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.method-content p {
+  color: var(--default-color);
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.contact-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--accent-secondary);
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+# Authority Statement
+--------------------------------------------------------------*/
+.authority-statement {
+  background: linear-gradient(135deg, var(--surface-color), rgba(14, 165, 233, 0.1));
+  border: 2px solid var(--accent-color);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.authority-statement h4 {
+  color: var(--heading-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.authority-statement .lead {
+  color: var(--default-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.trust-indicators {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.indicator {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/*--------------------------------------------------------------
+# Mobile Responsiveness for Bio Page
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .authority-highlights {
+    padding: 1rem;
+  }
+  
+  .authority-number {
+    font-size: 1.5rem;
+  }
+  
+  .role-header,
+  .community-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .role-logo,
+  .community-logo {
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+  }
+  
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .engagement-tier,
+  .contact-method {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .engagement-tier i,
+  .contact-method i {
+    align-self: center;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+  }
+  
+  .trust-indicators {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .authority-statement {
+    padding: 2rem 1rem;
+  }
+  
+  .timeline::before {
+    left: 1rem;
+  }
+  
+  .timeline-item {
+    padding-left: 3rem;
+  }
+  
+  .timeline-marker {
+    left: 0;
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .timeline-content::before {
+    left: -0.75rem;
+  }
 }
