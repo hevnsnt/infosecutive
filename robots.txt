@@ -1,6 +1,62 @@
-# robots.txt for SixCyber
+# robots.txt for SixCyber - Kansas City's Premier Cybersecurity Experts
+# Optimized for search engine crawling and AI bot access
+
+# Allow all bots by default
 User-agent: *
 Allow: /
 
+# Explicitly allow AI search engines and bots for maximum visibility
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Disallow sensitive areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /.htaccess
+Disallow: /config/
+Disallow: /logs/
+
+# Crawl-delay for heavy bots
+User-agent: Bingbot
+Crawl-delay: 1
+
+User-agent: Slurp
+Crawl-delay: 1
+
 # Specify the sitemap location
 Sitemap: https://sixcyber.com/sitemap.xml
+
+# Additional sitemaps
+Sitemap: https://sixcyber.com/blog-sitemap.xml
+Sitemap: https://sixcyber.com/services-sitemap.xml
