@@ -99,7 +99,7 @@
   }
   </script>
 </head>
-<body class="bg-dark-950 antialiased">
+<body class="bg-dark-950 antialiased bg-texture noise-overlay">
 
   <!-- ==================== NAVIGATION ==================== -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
@@ -137,8 +137,9 @@
 
   <!-- ==================== HERO ==================== -->
   <section class="relative pt-32 md:pt-40 pb-16 overflow-hidden">
-    <div class="absolute inset-0 bg-grid opacity-40"></div>
-    <div class="glow-dot w-80 h-80 top-20 right-10 opacity-20"></div>
+    <div class="absolute inset-0 bg-grid opacity-60"></div>
+    <div class="glow-dot w-[500px] h-[500px] top-10 right-0 opacity-20"></div>
+    <div class="absolute top-1/3 left-1/4 w-[600px] h-[350px] rounded-full bg-accent/5 blur-[120px] pointer-events-none"></div>
 
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
       <!-- Breadcrumb -->
@@ -218,7 +219,7 @@
   </section>
 
   <!-- ==================== CAREER TIMELINE ==================== -->
-  <section class="section">
+  <section class="section section-glow-border ambient-glow">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       <div class="mb-16" data-aos="fade-up">
         <span class="section-label">Career</span>
@@ -298,7 +299,7 @@
   </section>
 
   <!-- ==================== OPEN SOURCE & SPEAKING ==================== -->
-  <section class="section bg-dark-900/30 relative overflow-hidden">
+  <section class="section bg-dark-900/30 relative overflow-hidden section-glow-border">
     <div class="glow-dot w-64 h-64 top-10 -left-32 opacity-20"></div>
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
@@ -377,8 +378,9 @@
   </section>
 
   <!-- ==================== CTA ==================== -->
-  <section class="section relative overflow-hidden">
+  <section class="section relative overflow-hidden section-glow-border">
     <div class="glow-dot w-96 h-96 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-15"></div>
+    <div class="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-purple-500/4 blur-[100px] pointer-events-none"></div>
 
     <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center relative" data-aos="fade-up">
       <h2 class="section-title mb-4">Work with SixCyber</h2>
